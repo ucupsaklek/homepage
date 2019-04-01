@@ -12,6 +12,10 @@
     border: 0;
     background-color: $blue-lighter;
 
+    @media (max-width: $screen-xs) {
+      padding: 0;
+    }
+
     &:focus {
       box-shadow: none;
       border-color: none;
@@ -48,5 +52,9 @@
     background-color: $btn-default-bg;
     font-size: $font-size-medium;
     font-weight: bold;
+
+    @media (max-width: $screen-xs) {
+      width: 100%;
+    }
   }
 }

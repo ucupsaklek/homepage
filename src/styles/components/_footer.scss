@@ -2,18 +2,48 @@
   background: #FFFFFF;
   height: 208px;
 
+  @media (max-width: $screen-xs) {
+    width: 288px;
+    margin: 0 auto;
+
+    .container {
+      padding: 0;
+    }
+  }
+
+
   .wrapper {
     padding-top: 54px;
     @include x-display-flex
     @include x-flex-wrap(wrap)
 
+    @media (max-width: $screen-xs) {
+      @include x-justify-content(center);
+    }
+
     .item {
       margin: 0 32px;
       width: 128px;
 
+      @media (max-width: $screen-xs) {
+        margin: 0 16px 24px 0;
+        width: 128px;
+      }
+
       &:first-child {
         margin-left: 0;
         width: 422px;
+
+        @media (max-width: $screen-xs) {
+          margin: 0 0 32px 0;
+          width: 288px;
+        }
+      }
+
+      @media (max-width: $screen-xs) {
+        &:nth-child(2n + 1) {
+          margin: 0 0 24px 0;
+        }
       }
 
       &:last-child {
@@ -49,6 +79,10 @@
     margin: 30px 0;
     @include x-display-flex;
     @include x-flex-direction(row);
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 16px;
+    }
 
     h5 {
       font-weight: bold;
@@ -120,5 +154,11 @@
         }
       }
     }
+  }
+
+  .company {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }

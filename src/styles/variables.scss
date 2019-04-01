@@ -48,4 +48,12 @@ $btn-reversed-border:    #0D5394 !default;
 $input-bg:               $blue-lighter !default;
 
 // Screen
-$screen-default:         1220px !default;
+$screen-default:             1220px !default;
+$screen-xs:                  480px !default;
+$screen-sm:                  768px !default;
+$screen-md:                  992px !default;
+$screen-lg:                  1200px !default;
+$screen-desktop:             $screen-lg !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1

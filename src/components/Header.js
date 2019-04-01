@@ -2,8 +2,10 @@ import React from 'react'
 import Link from 'next/link'
 import {
   Container,
+  Collapse,
   Navbar,
   NavbarBrand,
+  NavbarToggler,
   Nav,
   NavItem,
   Dropdown,
@@ -17,9 +19,14 @@ class Header extends React.Component {
     super(props)
 
     this.state = {
+      menuOpen: false,
       openConnect: false,
       openOption: false,
     }
+  }
+
+  toggleMenu = () => {
+    this.setState({ menuOpen: !this.state.menuOpen})
   }
 
   toggleConnect = () => {
@@ -50,57 +57,60 @@ class Header extends React.Component {
     return (
       <header className={"header " + (this.props.sticky ? 'sticky' : '')} style={this.props.style}>
         <Navbar
-          expand={true}
+          expand={'md'}
+          light
         >
           <Container>
-            <NavbarBrand href='/'>
-              <div className="logo">
-                Cryptoeconomics Lab
-              </div>
-            </NavbarBrand>
-            <Nav navbar>
-              <NavItem>
-                <Link href='/plasma-chamber'>
-                  <a>Plasma Chamber</a>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link href='#url'>
-                  <a>Company</a>
-                </Link>
-              </NavItem>
+              <NavbarBrand href='/'>
+                <div className="logo">
+                  Cryptoeconomics Lab
+                </div>
+              </NavbarBrand>
+              <NavbarToggler onClick={this.toggleMenu} />
+              <Collapse isOpen={this.state.menuOpen} navbar>
+              <Nav navbar>
+                <NavItem>
+                  <Link href='/plasma-chamber'>
+                    <a>Plasma Chamber</a>
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link href='#url'>
+                    <a>Company</a>
+                  </Link>
+                </NavItem>
 
-              <Dropdown nav inNavbar
-                isOpen={this.state.openConnect}
-                toggle={this.toggleConnect}
-              >
-                <DropdownToggle nav
-                  onMouseOver={this.onMouseOverConnect}
-
+                <Dropdown nav inNavbar
+                  isOpen={this.state.openConnect}
+                  toggle={this.toggleConnect}
                 >
-                  Connect
-                </DropdownToggle>
-                <DropdownMenu left={0} onMouseLeave={this.onMouseLeaveConnect}>
-                  <DropdownItem>
-                    Telegraph
-                  </DropdownItem>
-                  <DropdownItem>
-                    Github
-                  </DropdownItem>
-                  <DropdownItem>
-                    Medium
-                  </DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
+                  <DropdownToggle nav
+                    onMouseOver={this.onMouseOverConnect}
 
-              <NavItem>
-                <Link href='/contact'>
-                  <a>Contact</a>
-                </Link>
-              </NavItem>
-            </Nav>
+                  >
+                    Connect
+                  </DropdownToggle>
+                  <DropdownMenu left={0} onMouseLeave={this.onMouseLeaveConnect}>
+                    <DropdownItem>
+                      Telegraph
+                    </DropdownItem>
+                    <DropdownItem>
+                      Github
+                    </DropdownItem>
+                    <DropdownItem>
+                      Medium
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
 
-            <Dropdown nav className="options"
+                <NavItem>
+                  <Link href='/contact'>
+                    <a>Contact</a>
+                  </Link>
+                </NavItem>
+              </Nav>
+            </Collapse>
+            <Dropdown nav className="options d-sm-none d-none d-lg-block"
               onMouseOver={this.onMouseOverOption}
               isOpen={this.state.openOption}
               onMouseLeave={this.onMouseLeaveOption}

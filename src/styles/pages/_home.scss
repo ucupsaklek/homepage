@@ -1,20 +1,36 @@
 .general {
-  height: 740px;
-  margin-top: 190px;
+  @media (min-width: $screen-lg) {
+    height: 740px;
+    margin-top: 190px;
+  }
+
+  @media (max-width: $screen-xs) {
+    height: 660px;
+    margin-top: 43px;
+  }
 
   .intro {
     display: flex;
-    height: 44px;
-    width: 410px;
-    margin-bottom: 64px;
     background-color: $blue-lighter;
-    border-radius: 22px;
     color: $blue-base;
-    font-size: $font-size-large;
+    border-radius: 22px;
+
+    @media (min-width: $screen-lg) {
+      height: 44px;
+      width: 410px;
+      margin-bottom: 64px;
+      font-size: $font-size-large;
+    }
+
+    @media (max-width: $screen-xs) {
+      height: 34px;
+      width: 242px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+      font-size: $font-size-small;
+    }
 
     .title {
-      width: 75px;
-      height: 36px;
       padding: 4px 0;
       margin: 4px 8px;
       background-color: $blue-light;
@@ -23,15 +39,33 @@
       line-height: 1.44;
       text-transform: uppercase;
       text-align: center;
+      @media (min-width: $screen-lg) {
+        width: 75px;
+        height: 36px;
+      }
+
+      @media (max-width: $screen-xs) {
+        width: 61px;
+        height: 26px;
+        font-size: $font-size-small;
+      }
     }
 
     .desc {
-      height: 36px;
-      padding: 8px 0;
       text-align: center;
       color: $blue-base;
-      font-size: $font-size-large;
       text-transform: capitalize;
+      padding: 8px 0;
+      @media (min-width: $screen-lg) {
+        height: 36px;
+        padding: 8px 0;
+        font-size: $font-size-large;
+      }
+
+      @media (max-width: $screen-xs) {
+        height: 18px;
+        font-size: $font-size-small;
+      }
     }
 
     .title > span,
@@ -44,16 +78,49 @@
 
 // space between general and intro 70px
 .introduction {
-  height: 903px;
-  padding-top: 87px;
+  @media (min-width: $screen-lg) {
+    height: 903px;
+    padding-top: 87px;
+  }
+
+  @media (max-width: $screen-xs) {
+    height: 800px;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .row {
+    @media (max-width: $screen-xs) {
+      flex-direction: column-reverse
+    }
+
+  }
 
   .btn {
+    &-group {
+      @media (max-width: $screen-xs) {
+        flex-direction: column
+      }
+    }
+
     width: 175px;
-    margin-right: 24px;
     font-size: $font-size-medium;
+
+    @media (min-width: $screen-lg) {
+      margin-right: 24px;
+    }
+
+    @media (max-width: $screen-xs) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
 
     &:last-child {
       margin-right: 0;
+
+      @media (max-width: $screen-xs) {
+        margin-bottom:0;
+      }
     }
   }
 }
@@ -62,33 +129,84 @@
   .jumbotron {
     background: none;
     padding-left: 0;
-    padding-top: 20px;
+
+    @media (min-width: $screen-lg) {
+      padding-top: 20px;
+    }
+
+    @media (max-width: $screen-xs) {
+      text-align: center;
+      margin: 0;
+      padding-bottom: 0;
+    }
   }
 
   h1 {
     line-height: 1.35;
-    margin-bottom: 24px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 16px;
+    }
   }
 
   .lead {
-    font-size: $font-size-h3;
     line-height: 1.42;
-    margin-bottom: 64px;
+
+    @media (min-width: $screen-lg) {
+      font-size: $font-size-h3;
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: $screen-xs) {
+      margin: 0 auto;
+      font-size: $font-size-medium;
+      margin-bottom: 32px;
+      width: 288px;
+
+      &:last-child {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   .btn {
     height: 45px;
-    width: 207px;
     font-size: $font-size-medium;
+    @media (min-width: $screen-lg) {
+      width: 207px;
+    }
+
+    @media (max-width: $screen-xs) {
+      width: 184px;
+      padding: 0;
+    }
   }
 
   .banner {
-    margin-left: 5px;
+    @media (min-width: $screen-lg) {
+      margin-left: 5px;
+    }
+
+    @media (max-width: $screen-xs) {
+      margin: 0 auto;
+      text-align: center;
+    }
 
     &.intro-img {
       img {
-        width: 574px;
-        height: 554px;
+        @media (min-width: $screen-lg) {
+          width: 574px;
+          height: 554px;
+        }
+
+        @media (max-width: $screen-xs) {
+          width: 288px;
+          height: 288px;
+        }
       }
     }
   }
@@ -103,6 +221,11 @@
     margin-bottom: 24px;
     width: 100%;
 
+    @media (max-width: $screen-xs) {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
     h1 {
       margin-bottom: 8px;
       line-height: 1.35;
@@ -111,6 +234,12 @@
     p {
       width: 673px;
       font-size: $font-size-h3;
+
+      @media (max-width: $screen-xs) {
+        margin: 0 auto;
+        width: 288px;
+        font-size: $font-size-medium;
+      }
     }
   }
 
@@ -143,9 +272,19 @@
       &.slick-prev {
         right: 80px;
         left: auto;
+
+        @media (max-width: $screen-xs) {
+          right: 50%;
+          margin-right: 8px;
+        }
       }
       &.slick-next {
         right: 10px!important;
+
+        @media (max-width: $screen-xs) {
+          left:50%;
+          margin-left: 8px;
+        }
       }
 
       &.slick-prev:before,
@@ -173,6 +312,11 @@
   padding-top: 128px;
   text-align: center;
 
+  @media (max-width: $screen-xs) {
+    height: auto;
+  }
+
+
   h1 {
     margin-bottom: 24px;
   }
@@ -182,11 +326,20 @@
     @include x-flex-direction(row);
     @include x-align-items(center);
     @include x-justify-content(center);
+
+
+    @media (max-width: $screen-xs) {
+      @include x-flex-direction(column);
+    }
   }
 }
 
 .contact {
   @import './components/form/contact';
+
+  @media (max-width: $screen-xs) {
+    margin-top: 64px;
+  }
 
   &-wrapper {
     width: 448px;
@@ -194,15 +347,30 @@
     border-radius: 4px;
     box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
     padding: 24px;
+
+    @media (max-width: $screen-xs) {
+      width: 288px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 16px;
+    }
   }
 
   h1 {
     height: 54px;
     margin-bottom: 24px;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 13px;
+    }
   }
 
   p {
     font-size: $font-size-large;
     margin-bottom: 24px;
+
+    @media (max-width: $screen-xs) {
+      font-size: $font-size-base;
+    }
   }
 }

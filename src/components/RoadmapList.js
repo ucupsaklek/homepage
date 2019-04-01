@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { isBrowser } from "react-device-detect";
 import {
   Container,
   Card,
@@ -22,8 +23,9 @@ class RoadmapList extends Component {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 5,
-      slidesToScroll: 1
+      slidesToShow: isBrowser ? 5 : 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
     }
   }
 

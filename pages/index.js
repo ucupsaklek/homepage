@@ -9,7 +9,7 @@ export default (props) => (
     <div className="general">
       <Container>
         <Row>
-          <Col xs="6">
+          <Col xs={12} md={6}>
             <Jumbotron>
               <div className="intro">
                 <div className="title">
@@ -27,7 +27,7 @@ export default (props) => (
               </p>
             </Jumbotron>
           </Col>
-          <Col xs="6">
+          <Col xs={12} md={6}>
             <div className="banner intro-img">
               <img src="/static/images/banner-01.jpg" />
             </div>
@@ -39,12 +39,12 @@ export default (props) => (
     <div className="introduction">
       <Container>
         <Row>
-          <Col xs="6">
+          <Col xs={12} md={6}>
             <div className="banner intro-img">
               <img src="/static/images/banner-01.jpg" />
             </div>
           </Col>
-          <Col xs="6">
+          <Col xs={12} md={6}>
             <Jumbotron>
               <h1>Introducing Plasma Chamber</h1>
               <p className="lead">A framework to build usable Dapps on Plasma without sacrificing security .</p>

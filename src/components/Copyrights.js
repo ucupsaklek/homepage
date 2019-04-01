@@ -30,29 +30,33 @@ import {
 
     render () {
       return (
-        <div className="copyrights">
-          <h5>2019 Cryptoeconomic Labs</h5>
+        <React.Fragment>
+          <div className="copyrights">
+            <h5 className="d-none">2019 Cryptoeconomic Labs</h5>
 
-          <ul className="social">
-            <li className="icon-github icon-small"></li>
-            <li className="icon-medium icon-small"></li>
-            <li className="icon-telegram icon-small"></li>
-          </ul>
+            <ul className="social">
+              <li className="icon-github icon-small"></li>
+              <li className="icon-medium icon-small"></li>
+              <li className="icon-telegram icon-small"></li>
+            </ul>
 
-          <Dropdown nav className="options"
-            onMouseOver={this.onMouseOver}
-            isOpen={this.state.open}
-            toggle={this.toggle}
-          >
-            <DropdownToggle nav >
-              English
-            </DropdownToggle>
-            <DropdownMenu onMouseLeave={this.onMouseLeave}>
-              <DropdownItem>English</DropdownItem>
-              <DropdownItem>Japan</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </div>
+            <Dropdown nav className="options"
+              onMouseOver={this.onMouseOver}
+              isOpen={this.state.open}
+              toggle={this.toggle}
+            >
+              <DropdownToggle nav >
+                English
+              </DropdownToggle>
+              <DropdownMenu onMouseLeave={this.onMouseLeave}>
+                <DropdownItem>English</DropdownItem>
+                <DropdownItem>Japan</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
+
+          <h5 className="company d-lg-block">2019 Cryptoeconomic Labs</h5>
+        </React.Fragment>
       )
     }
   }

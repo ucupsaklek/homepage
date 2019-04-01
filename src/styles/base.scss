@@ -29,8 +29,14 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: $font-size-h1;
   color: $blue-base;
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-h1;
+  }
+
+  @media (max-width: $screen-xs) {
+    font-size: $font-size-h3;
+  }
 }
 
 h3 {
@@ -42,5 +48,7 @@ h5 {
 }
 
 .container {
-  max-width: $screen-default;
+  @media (min-width: $screen-lg) {
+    max-width: $screen-default;
+  }
 }
