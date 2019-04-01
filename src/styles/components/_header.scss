@@ -1,0 +1,93 @@
+.header {
+  height: 72px;
+  padding: 14px 0;
+
+  &.sticky {
+    box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.17);
+    background-color: $body-bg;
+    z-index: 1001;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .navbar {
+    padding: 0;
+    color: $link-color;
+
+    .navbar-brand {
+      width: 235px;
+    }
+
+    .navbar-nav {
+      height: 44px;
+      justify-content: flex-end;
+      width: 100%;
+
+      .nav-item {
+        padding-top: 10px;
+        margin: 0 16px;
+        text-align: center;
+
+        &:first-child {
+          margin-left: 0
+        }
+
+        a {
+          height: 24px;
+          padding: 0 8px;
+          color: $link-color;
+          font-family: $font-family-base;
+          font-size: $font-size-medium;
+          line-height: 24px;
+          letter-spacing: normal;
+          text-align: center;
+        }
+      }
+    }
+
+    .options {
+      display: inline-block;
+      width: 65px;
+      margin-left: 65px;
+
+      .dropdown-menu {
+        top: 24px!important;
+      }
+      .nav-link {
+        padding: 0;
+      }
+
+      a {
+        color: $link-color;
+        font-size: $font-size-medium;
+        font-family: $font-family-base;
+        height: 24px;
+      }
+    }
+  }
+
+  .dropdown-menu,
+  .options > .dropdown-menu {
+    z-index: 10001;
+    top: 60px!important;
+    width: 160px;
+    border-radius: 4px;
+    box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
+    border: solid 1px $blue-lighter;
+    background-color: $body-bg;
+    padding: 24px 16px;
+
+    .dropdown-item {
+      height: 24px;
+      margin-bottom: 24px;
+      font-size: $font-size-medium;
+      color: #333;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

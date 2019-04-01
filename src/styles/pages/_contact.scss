@@ -1,0 +1,45 @@
+.contact {
+  margin-top: 76px;
+
+  .join {
+    h1 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: $font-size-h3;
+      line-height: 1.42;
+      height: 68px;
+    }
+
+    .form-join {
+      padding: 24px;
+
+    }
+    .col-form-label {
+      font-weight: bold;
+      font-size: $font-size-medium;
+    }
+
+    .form-check {
+      .action {
+        padding: 0;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+  .connect {
+    h1, p {
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: $font-size-large;
+      color: $text-light;
+      line-height: 1.56;
+    }
+  }
+}

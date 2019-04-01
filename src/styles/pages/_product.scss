@@ -1,0 +1,130 @@
+.product {
+  .navbar {
+    height: 20px;
+    padding: 0;
+    margin-top: 24px;
+
+    &-brand {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: normal;
+      padding: 0;
+    }
+
+    .nav-item {
+      font-size: $font-size-medium;
+      margin: 0 16px;
+      padding: 0 12px;
+
+      &.active, &:hover {
+        font-weight: bold;
+      }
+
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        padding: 0 20px;
+      }
+
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+  .content {
+    padding: 0;
+
+    .features {
+      @import './components/media/features';
+      margin-top: 68px;
+      text-align: center;
+      margin-bottom: 192px;
+
+      h1 {
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: $font-size-h3;
+        width: 583px;
+        margin: 0 auto;
+        line-height: 1.42;
+        margin-bottom: 68px;
+      }
+    }
+
+    .overview {
+      margin-top: 72px;
+
+      .jumbotron {
+        background: none;
+        padding: 0;
+        margin-bottom: 188px;
+        text-align: center;
+
+        h1 {
+          margin-bottom: 24px;
+        }
+
+        p {
+          padding-bottom: 64px;
+          font-size: $font-size-h3;
+          width: 500px;
+          margin: 0 auto;
+        }
+
+        .btn {
+          height: 45px;
+          min-width: 175px;
+          margin-right: 24px;
+          padding: 0 10.5px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .benefit {
+        @include x-display-flex;
+        @include x-flex-direction(row);
+        @include x-justify-content(center);
+        height: 225px;
+
+        .media {
+          font-size: $font-size-large;
+          margin-right: 28px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &-left {
+            margin-right: 19px;
+
+            img {
+              width: 56px;
+              height: 56px;
+            }
+          }
+
+          &-body {
+            width: 285px;
+
+            h4 {
+              font-size: $font-size-h3;
+              height: 34px;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

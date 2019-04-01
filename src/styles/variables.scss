@@ -1,0 +1,51 @@
+// Colors
+$blue-base:              #0D5394 !default;
+$blue-darker:            lighten($blue-base, 13.5%) !default; // #222
+$blue-dark:              lighten($blue-base, 20%) !default;   // #333
+$blue:                   lighten($blue-base, 33.5%) !default; // #555
+$blue-light:             #CDDEEF !default; // #777
+$blue-lighter:           #F5F9FC !default; // #eee
+
+
+// Basics
+$body-bg:                #FFF !default;
+$text-color:             #25282F !default;
+$text-light:             #696C75 !default;
+$link-color:             #333333 !default;
+$link-hover-color:       darken($link-color, 15%) !default;
+$link-hover-decoration:  underline !default;
+
+
+// Fonts
+$font-family-lato:       "Lato", sans-serif !default;
+$font-family-base:       $font-family-lato !default;
+
+$font-size-base:         14px !default;
+$font-size-large:        ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-medium:       ceil(($font-size-base * 1.1)) !default; // ~16px
+$font-size-small:        ceil(($font-size-base * .85)) !default; // ~12px
+
+$font-size-h1:           floor(($font-size-base * 2.9)) !default; // ~40px
+$font-size-h2:           floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:           ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:           ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:           $font-size-base !default;
+
+
+// Buttons
+$btn-font-weight:        normal !default;
+
+$btn-default-color:      #FFFFFF !default;
+$btn-default-bg:         #0D5394 !default;
+$btn-default-border:     #0D5394 !default;
+
+$btn-reversed-color:     #0D5394 !default;
+$btn-reversed-bg:        #FFFFFF !default;
+$btn-reversed-border:    #0D5394 !default;
+
+
+// Forms
+$input-bg:               $blue-lighter !default;
+
+// Screen
+$screen-default:         1220px !default;

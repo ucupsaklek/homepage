@@ -1,0 +1,52 @@
+.form-group {
+  height: 48px;
+  border-radius: 4px;
+  background-color: $blue-lighter;
+  margin-bottom: 8px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: $font-size-medium;
+
+  .form-control {
+    height: 100%;
+    border: 0;
+    background-color: $blue-lighter;
+
+    &:focus {
+      box-shadow: none;
+      border-color: none;
+
+      &::-webkit-input-placeholder {
+        color:transparent;
+      }
+      &::-moz-placeholder {
+        color:transparent;
+      }
+    }
+
+    &:-moz-placeholder {
+      color:transparent;
+    }
+  }
+
+  &.message {
+    height: 104px;
+  }
+}
+
+.form-check {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+  button {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    color: $btn-default-color;
+    background-color: $btn-default-bg;
+    font-size: $font-size-medium;
+    font-weight: bold;
+  }
+}

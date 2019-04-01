@@ -1,0 +1,124 @@
+.footer {
+  background: #FFFFFF;
+  height: 208px;
+
+  .wrapper {
+    padding-top: 54px;
+    @include x-display-flex
+    @include x-flex-wrap(wrap)
+
+    .item {
+      margin: 0 32px;
+      width: 128px;
+
+      &:first-child {
+        margin-left: 0;
+        width: 422px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .address {
+        margin-top: 8px;
+      }
+
+      h5 {
+        font-weight: bold;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 24px;
+
+        li {
+          padding-bottom: 15px;
+
+          a {
+            height: 20px;
+            color: #696C75;
+          }
+        }
+      }
+    }
+  }
+
+  .copyrights {
+    margin: 30px 0;
+    @include x-display-flex;
+    @include x-flex-direction(row);
+
+    h5 {
+      font-weight: bold;
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .social {
+      align-self: center;
+      @include x-display-flex
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      flex: 1;
+
+      li {
+        width: 24px;
+        height: 24px;
+        margin-right: 32px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .dropdown {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &.options {
+        width: 65px;
+        margin-left: 65px;
+
+        .dropdown-menu {
+          z-index: 10001;
+          top: -12px!important;
+          width: 160px;
+          border-radius: 4px;
+          box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
+          border: solid 1px $blue-lighter;
+          background-color: $body-bg;
+          padding: 24px 16px;
+
+          .dropdown-item {
+            height: 24px;
+            margin-bottom: 24px;
+            font-size: $font-size-medium;
+            color: #333;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .nav-link {
+          padding: 0;
+        }
+
+        a {
+          color: $link-color;
+          font-size: $font-size-medium;
+          font-family: $font-family-base;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

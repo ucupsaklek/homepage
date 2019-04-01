@@ -1,0 +1,18 @@
+.icon {
+  &-github {
+    background-image: url('../../static/images/github.png');
+  }
+
+  &-medium {
+    background-image: url('../../static/images/medium.png');
+  }
+
+  &-telegram {
+    background-image: url('../../static/images/telegram.png');
+  }
+
+  &-small {
+    width: 24px;
+    height: 24px;
+  }
+}

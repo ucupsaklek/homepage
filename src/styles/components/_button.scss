@@ -1,0 +1,18 @@
+.btn {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+
+  &-default {
+    color: $btn-reversed-color;
+    background: $btn-reversed-bg;
+    border-color: $btn-reversed-bg;
+  }
+
+  &-primary {
+    color: $btn-default-color;
+    background: $btn-default-bg;
+    border-color: $btn-default-bg;
+  }
+}
