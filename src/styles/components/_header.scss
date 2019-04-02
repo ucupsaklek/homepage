@@ -1,15 +1,21 @@
 .header {
-  height: 72px;
   padding: 14px 0;
+  @media (min-width: $screen-lg) {
+    height: 72px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding-left: 16px;
+  }
 
   &.sticky {
     box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.17);
-    background-color: $body-bg;
     z-index: 1001;
+    background-color: $body-bg;
   }
 
   .container {
-    padding: 0;
+    // padding: 0;
   }
 
   .navbar {
@@ -18,20 +24,68 @@
 
     .navbar-brand {
       width: 235px;
+      height: 44px;
+
+      img {
+        width: 100%;
+      }
     }
 
+    &-toggler {
+      padding: 0 16px 0 0;
+
+      &-icon {
+        background-image: url('../../static/images/align-center-1.svg');
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    .opened {
+      .navbar-toggler {
+        &-icon {
+          // NOTE: change to close icon
+          background-image: url('../../static/images/close.png');
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
     .navbar-nav {
-      height: 44px;
-      justify-content: flex-end;
       width: 100%;
+      @media (min-width: $screen-lg) {
+        height: 44px;
+        justify-content: flex-end;
+      }
+
+      @media (max-width: $screen-sm) {
+        background-color: $body-bg;
+        margin-top: 24px;
+        box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.17);
+      }
 
       .nav-item {
         padding-top: 10px;
         margin: 0 16px;
         text-align: center;
 
+        @media (max-width: $screen-xs) {
+          margin: 0 0 24px 16px;
+          text-align: left;
+
+          &.dropdown {
+            a:after {
+              content: '\2c5';
+              float: right;
+              font-family: slick;
+              font-size: 20px;
+              line-height: 1;
+            }
+          }
+        }
+
         &:first-child {
-          margin-left: 0
+          margin-left: 16px;
         }
 
         a {
@@ -43,6 +97,9 @@
           line-height: 24px;
           letter-spacing: normal;
           text-align: center;
+          @media (max-width: $screen-xs) {
+            text-align: left;
+          }
         }
       }
     }

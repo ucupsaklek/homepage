@@ -57,16 +57,16 @@ class Header extends React.Component {
     return (
       <header className={"header " + (this.props.sticky ? 'sticky' : '')} style={this.props.style}>
         <Navbar
-          expand={'md'}
+          expand={'lg'}
           light
         >
           <Container>
               <NavbarBrand href='/'>
                 <div className="logo">
-                  Cryptoeconomics Lab
+                  <img src="/static/images/logo@3x.png" alt="cryptoeconomicslab"/>
                 </div>
               </NavbarBrand>
-              <NavbarToggler onClick={this.toggleMenu} />
+              <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''}/>
               <Collapse isOpen={this.state.menuOpen} navbar>
               <Nav navbar>
                 <NavItem>
@@ -86,7 +86,6 @@ class Header extends React.Component {
                 >
                   <DropdownToggle nav
                     onMouseOver={this.onMouseOverConnect}
-
                   >
                     Connect
                   </DropdownToggle>

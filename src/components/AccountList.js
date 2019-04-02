@@ -5,7 +5,7 @@ const AccountList = (props) => (
   <div className="account-wrapper">
     <Media>
       <Media left href="#">
-        <Media object src="/static/images/github.svg" alt="Github" />
+        <Media object src="/static/images/ic-github.png" alt="Github" />
       </Media>
       <Media body>
         <Media heading>
@@ -17,7 +17,7 @@ const AccountList = (props) => (
 
     <Media>
       <Media left href="#">
-        <Media object src="/static/images/medium.svg" alt="Medium" />
+        <Media object src="/static/images/ic-medium.png" alt="Medium" />
       </Media>
       <Media body>
         <Media heading>
@@ -29,7 +29,7 @@ const AccountList = (props) => (
 
     <Media>
       <Media left href="#">
-        <Media object src="/static/images/telegram.png" alt="Discord" />
+        <Media object src="/static/images/ic-medium.png" alt="Discord" />
       </Media>
       <Media body>
         <Media heading>

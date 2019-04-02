@@ -29,7 +29,7 @@ export default (props) => (
           </Col>
           <Col xs={12} md={6}>
             <div className="banner intro-img">
-              <img src="/static/images/banner-01.jpg" />
+              <img src="/static/images/illus-header.svg" />
             </div>
           </Col>
         </Row>
@@ -41,7 +41,7 @@ export default (props) => (
         <Row>
           <Col xs={12} md={6}>
             <div className="banner intro-img">
-              <img src="/static/images/banner-01.jpg" />
+              <img src="/static/images/illus-plasma.svg" />
             </div>
           </Col>
           <Col xs={12} md={6}>
@@ -79,7 +79,14 @@ export default (props) => (
 
     <div className="contact" id="#contact">
       <Container>
-        <ContactUsForm />
+        <Row>
+          <Col xs={12} md={5}>
+            <ContactUsForm />
+          </Col>
+          <Col xs={12} md={7} className="illus">
+            <img className="illus-message" src="/static/images/illus-message@3x.png" alt=""/>
+          </Col>
+        </Row>
       </Container>
     </div>
   </React.Fragment>

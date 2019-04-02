@@ -4,7 +4,7 @@
     margin-top: 190px;
   }
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-sm) {
     height: 660px;
     margin-top: 43px;
   }
@@ -14,13 +14,10 @@
     background-color: $blue-lighter;
     color: $blue-base;
     border-radius: 22px;
-
-    @media (min-width: $screen-lg) {
-      height: 44px;
-      width: 410px;
-      margin-bottom: 64px;
-      font-size: $font-size-large;
-    }
+    height: 44px;
+    width: 410px;
+    margin-bottom: 64px;
+    font-size: $font-size-large;
 
     @media (max-width: $screen-xs) {
       height: 34px;
@@ -28,6 +25,14 @@
       margin: 0 auto;
       margin-bottom: 24px;
       font-size: $font-size-small;
+    }
+
+    @media (max-width: $screen-sm) {
+      height: 36px;
+      width: 292px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+      font-size: $font-size-medium;
     }
 
     .title {
@@ -39,6 +44,7 @@
       line-height: 1.44;
       text-transform: uppercase;
       text-align: center;
+
       @media (min-width: $screen-lg) {
         width: 75px;
         height: 36px;
@@ -49,6 +55,12 @@
         height: 26px;
         font-size: $font-size-small;
       }
+
+      @media (max-width: $screen-sm) {
+        width: 61px;
+        height: 30px;
+        font-size: $font-size-medium;
+      }
     }
 
     .desc {
@@ -56,6 +68,7 @@
       color: $blue-base;
       text-transform: capitalize;
       padding: 8px 0;
+
       @media (min-width: $screen-lg) {
         height: 36px;
         padding: 8px 0;
@@ -65,6 +78,12 @@
       @media (max-width: $screen-xs) {
         height: 18px;
         font-size: $font-size-small;
+      }
+
+      @media (max-width: $screen-md) {
+        height: 24px;
+        font-size: $font-size-medium;
+        padding: 4px 0;
       }
     }
 
@@ -93,7 +112,6 @@
     @media (max-width: $screen-xs) {
       flex-direction: column-reverse
     }
-
   }
 
   .btn {
@@ -129,12 +147,9 @@
   .jumbotron {
     background: none;
     padding-left: 0;
+    padding-top: 20px;
 
-    @media (min-width: $screen-lg) {
-      padding-top: 20px;
-    }
-
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       text-align: center;
       margin: 0;
       padding-bottom: 0;
@@ -143,9 +158,10 @@
 
   h1 {
     line-height: 1.35;
+    margin-bottom: 24px;
 
-    @media (min-width: $screen-lg) {
-      margin-bottom: 24px;
+    @media (max-width: $screen-sm) {
+      margin-bottom: 18px;
     }
 
     @media (max-width: $screen-xs) {
@@ -161,10 +177,15 @@
       margin-bottom: 64px;
     }
 
-    @media (max-width: $screen-xs) {
+    @media (min-width: $screen-xs) {
+      font-size: $font-size-large;
+      width: 360px!important;
+    }
+
+    @media (max-width: $screen-sm) {
       margin: 0 auto;
       font-size: $font-size-medium;
-      margin-bottom: 32px;
+      padding-bottom: 32px;
       width: 288px;
 
       &:last-child {
@@ -184,6 +205,10 @@
       width: 184px;
       padding: 0;
     }
+
+    @media (max-width: $screen-sm) {
+      margin-right: 16px;
+    }
   }
 
   .banner {
@@ -191,16 +216,20 @@
       margin-left: 5px;
     }
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       margin: 0 auto;
       text-align: center;
+      padding: 16px 0 0 0;
     }
 
     &.intro-img {
       img {
-        @media (min-width: $screen-lg) {
-          width: 574px;
-          height: 554px;
+        width: 574px;
+        height: 554px;
+
+        @media (max-width: $screen-sm) {
+          width: 360px;
+          height: 360px;
         }
 
         @media (max-width: $screen-xs) {
@@ -221,7 +250,7 @@
     margin-bottom: 24px;
     width: 100%;
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       text-align: center;
       margin-bottom: 0;
     }
@@ -240,11 +269,21 @@
         width: 288px;
         font-size: $font-size-medium;
       }
+
+      @media (max-width: $screen-sm) {
+        margin: 0 auto;
+        width: 360px;
+        font-size: $font-size-large;
+      }
     }
   }
 
   .list-wrapper {
     padding: 24px 0 100px;
+
+    @media (max-width: $screen-sm) {
+      padding: 24px 16px 60px;
+    }
 
     .slick-slide {
       margin: 0 12px;
@@ -309,13 +348,19 @@
 .connect {
   @import './components/media/connect';
   height: 550px;
-  padding-top: 128px;
   text-align: center;
+
+  @media (max-width: $screen-sm) {
+    height: auto;
+  }
 
   @media (max-width: $screen-xs) {
     height: auto;
   }
 
+  @media (min-width: $screen-lg) {
+    padding-top: 16px;
+  }
 
   h1 {
     margin-bottom: 24px;
@@ -328,8 +373,13 @@
     @include x-justify-content(center);
 
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       @include x-flex-direction(column);
+
+      .media {
+        margin-bottom: 24px;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -354,6 +404,19 @@
       text-align: center;
       padding: 16px;
     }
+
+    @media (min-width: $screen-xs) {
+      width: 360px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 16px;
+    }
+  }
+
+  .row {
+    @media (max-width: $screen-xs) {
+      flex-direction: column-reverse
+    }
   }
 
   h1 {
@@ -371,6 +434,36 @@
 
     @media (max-width: $screen-xs) {
       font-size: $font-size-base;
+    }
+  }
+
+  .illus {
+    text-align: center;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 24px;
+    }
+
+    &-message {
+      height: 408px;
+      width: 493px;
+      margin: 32px 0 160px 0;
+
+      @media (max-width: $screen-xs) {
+        height: 288px;
+        width: 288px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 32px 16px;
+      }
+
+      @media (min-width: $screen-xs) {
+        height: 360px;
+        width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 32px 16px;
+      }
     }
   }
 }

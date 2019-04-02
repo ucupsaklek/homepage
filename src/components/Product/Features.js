@@ -9,7 +9,7 @@ export default (props) => (
 
     <Media>
       <Media top>
-        <Media object src="/static/images/medium@2x.png" alt="Generic placeholder image" />
+        <Media object src="/static/images/ic-finality.png" alt="Fast Finality" />
       </Media>
       <Media body>
         <Media heading>
@@ -26,7 +26,7 @@ export default (props) => (
 
     <Media>
       <Media top>
-        <Media object src="/static/images/medium@2x.png" alt="Generic placeholder image" />
+        <Media object src="/static/images/ic-defrag.png" alt="Defragmentation" />
       </Media>
       <Media body>
         <Media heading>
@@ -43,7 +43,7 @@ export default (props) => (
 
     <Media>
       <Media top>
-        <Media object src="/static/images/medium@2x.png" alt="Generic placeholder image" />
+        <Media object src="/static/images/ic-checkpoint.png" alt="Checkpoint" />
       </Media>
       <Media body>
         <Media heading>
@@ -60,7 +60,7 @@ export default (props) => (
 
     <Media>
       <Media top>
-        <Media object src="/static/images/medium@2x.png" alt="Generic placeholder image" />
+        <Media object src="/static/images/ic-custom.png" alt="Custom Transaction" />
       </Media>
       <Media body>
         <Media heading>

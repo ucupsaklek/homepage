@@ -32,7 +32,7 @@ import {
       return (
         <React.Fragment>
           <div className="copyrights">
-            <h5 className="d-none">2019 Cryptoeconomic Labs</h5>
+            <h5 className="d-none d-md-block">2019 Cryptoeconomic Labs</h5>
 
             <ul className="social">
               <li className="icon-github icon-small"></li>
@@ -55,7 +55,7 @@ import {
             </Dropdown>
           </div>
 
-          <h5 className="company d-lg-block">2019 Cryptoeconomic Labs</h5>
+          <h5 className="company d-lg-none d-xs-block">2019 Cryptoeconomic Labs</h5>
         </React.Fragment>
       )
     }

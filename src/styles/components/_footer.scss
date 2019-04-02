@@ -2,15 +2,13 @@
   background: #FFFFFF;
   height: 208px;
 
-  @media (max-width: $screen-xs) {
-    width: 288px;
-    margin: 0 auto;
+  @media (max-width: $screen-sm) {
+    height: auto;
 
     .container {
       padding: 0;
     }
   }
-
 
   .wrapper {
     padding-top: 54px;
@@ -19,28 +17,35 @@
 
     @media (max-width: $screen-xs) {
       @include x-justify-content(center);
+      width: 288px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $screen-xs) {
+      @include x-justify-content(center);
+      width: 434px;
+      margin: 0 auto;
     }
 
     .item {
       margin: 0 32px;
       width: 128px;
 
-      @media (max-width: $screen-xs) {
+      @media (max-width: $screen-sm) {
         margin: 0 16px 24px 0;
-        width: 128px;
+        width: calc(50% - 8px);
       }
 
       &:first-child {
         margin-left: 0;
         width: 422px;
 
-        @media (max-width: $screen-xs) {
+        @media (max-width: $screen-sm) {
           margin: 0 0 32px 0;
-          width: 288px;
         }
       }
 
-      @media (max-width: $screen-xs) {
+      @media (max-width: $screen-sm) {
         &:nth-child(2n + 1) {
           margin: 0 0 24px 0;
         }
@@ -77,11 +82,22 @@
 
   .copyrights {
     margin: 30px 0;
+    background: #FFFFFF;
     @include x-display-flex;
     @include x-flex-direction(row);
 
     @media (max-width: $screen-xs) {
-      margin-bottom: 16px;
+      @include x-justify-content(center);
+      width: 288px;
+      margin: 0 auto;
+      padding-bottom: 16px;
+    }
+
+    @media (min-width: $screen-xs) {
+      @include x-justify-content(center);
+      width: 434px;
+      margin: 0 auto;
+      padding-bottom: 16px;
     }
 
     h5 {

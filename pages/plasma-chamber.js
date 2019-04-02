@@ -24,7 +24,7 @@ export default (props) => (
             </div>
           </NavbarBrand>
           <Nav navbar>
-            <NavItem>
+            <NavItem active>
               <Link to='/'>Overview</Link>
             </NavItem>
             <NavItem>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Jumbotron, Button, ButtonGroup, Media } from 'reactstrap'
+import { Link } from "react-router-dom"
 
 export default (props) => (
   <div className="overview">
@@ -10,7 +11,9 @@ export default (props) => (
       <div className="action">
         <ButtonGroup>
           <Button color="primary">TRY DEMO</Button>
-          <Button color="default">EXPLORE FEATURE</Button>
+          <Button color="default">
+            <Link to='/features'>EXPLORE FEATURE</Link>
+          </Button>
         </ButtonGroup>
       </div>
     </Jumbotron>
@@ -18,7 +21,7 @@ export default (props) => (
     <div className="benefit">
       <Media>
         <Media left>
-          <Media object src="/static/images/medium@2x.png" alt="Generic placeholder image" />
+          <Media object src="/static/images/ic-scalable.png" alt="Generic placeholder image" />
         </Media>
         <Media body>
           <Media heading>
@@ -30,7 +33,7 @@ export default (props) => (
 
       <Media>
         <Media left>
-          <Media object src="/static/images/medium@2x.png" alt="Generic placeholder image" />
+          <Media object src="/static/images/ic-usable.png" alt="Generic placeholder image" />
         </Media>
         <Media body>
           <Media heading>
@@ -42,7 +45,7 @@ export default (props) => (
 
       <Media>
         <Media left>
-          <Media object src="/static/images/medium@2x.png" alt="Generic placeholder image" />
+          <Media object src="/static/images/ic-secure.png" alt="Generic placeholder image" />
         </Media>
         <Media body>
           <Media heading>

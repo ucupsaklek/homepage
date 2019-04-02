@@ -1,24 +1,67 @@
 .contact {
+  &.contact-bg {
+    &:after {
+      background-image: linear-gradient(to bottom, #cddeef, #dcecf8 54%, #ffffff);
+      content: "";
+      display: block;
+      position: fixed; /* could also be absolute */
+      top: 0;
+      left: 0;
+      height: 955px;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
   margin-top: 76px;
 
   .join {
+    @media (max-width: $screen-sm) {
+      text-align: center;
+    }
+
     h1 {
       margin-bottom: 24px;
+      @media (max-width: $screen-xs) {
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: $screen-sm) {
+        margin-bottom: 32px;
+      }
     }
 
     p {
       font-size: $font-size-h3;
       line-height: 1.42;
       height: 68px;
+
+      @media (max-width: $screen-xs) {
+        font-size: $font-size-medium;
+        height: auto;
+        width: 288px;
+        padding-bottom: 24px;
+        margin: 0 auto;
+      }
+
+      @media (min-width: $screen-xs) {
+        font-size: $font-size-large;
+        height: auto;
+        width: 360px;
+        padding-bottom: 32px;
+        margin: 0 auto;
+      }
     }
 
     .form-join {
       padding: 24px;
+      background-color: $body-bg;
 
     }
     .col-form-label {
       font-weight: bold;
       font-size: $font-size-medium;
+      background: $body-bg;
     }
 
     .form-check {
@@ -30,8 +73,24 @@
         width: 100%;
       }
     }
+
+    .illus-message {
+      height: 438px;
+      width: 493px;
+      margin-left: 16px;
+      padding-top: 34px;
+    }
   }
+
   .connect {
+    @media (max-width: $screen-xs) {
+      margin-top: 16px;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-top: 32px;
+    }
+
     h1, p {
       margin-bottom: 24px;
     }
