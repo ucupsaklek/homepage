@@ -55,7 +55,7 @@ class Header extends React.Component {
 
   render () {
     return (
-      <header className={"header " + (this.props.sticky ? 'sticky' : '')} style={this.props.style}>
+      <header className={"header " + (this.props.sticky || this.state.menuOpen ? 'sticky' : '')} style={this.props.style}>
         <Navbar
           expand={'lg'}
           light

@@ -4,10 +4,6 @@
 
   @media (max-width: $screen-sm) {
     height: auto;
-
-    .container {
-      padding: 0;
-    }
   }
 
   .wrapper {
@@ -17,14 +13,14 @@
 
     @media (max-width: $screen-xs) {
       @include x-justify-content(center);
-      width: 288px;
       margin: 0 auto;
+      width: 100%;
     }
 
-    @media (min-width: $screen-xs) {
+    @media (min-width: $screen-xs) and (max-width: $screen-sm) {
       @include x-justify-content(center);
-      width: 434px;
       margin: 0 auto;
+      width: 100%;
     }
 
     .item {
@@ -38,10 +34,11 @@
 
       &:first-child {
         margin-left: 0;
-        width: 422px;
+        width: 508px;
 
         @media (max-width: $screen-sm) {
           margin: 0 0 32px 0;
+          width: 100%;
         }
       }
 
@@ -86,18 +83,11 @@
     @include x-display-flex;
     @include x-flex-direction(row);
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       @include x-justify-content(center);
-      width: 288px;
       margin: 0 auto;
-      padding-bottom: 16px;
-    }
-
-    @media (min-width: $screen-xs) {
-      @include x-justify-content(center);
-      width: 434px;
-      margin: 0 auto;
-      padding-bottom: 16px;
+      padding-bottom: 24px;
+      width: 100%;
     }
 
     h5 {

@@ -7,14 +7,8 @@
   background-color: #fafcff;
   margin: 0 32px;
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-sm) {
     margin: 0;
-    width: 288px;
-  }
-
-  @media (min-width: $screen-xs) {
-    margin: 0;
-    width: 360px;
   }
 
   &:first-child {

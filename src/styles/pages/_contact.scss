@@ -16,6 +16,8 @@
   margin-top: 76px;
 
   .join {
+    margin-bottom: 60px;
+
     @media (max-width: $screen-sm) {
       text-align: center;
     }
@@ -44,7 +46,7 @@
         margin: 0 auto;
       }
 
-      @media (min-width: $screen-xs) {
+      @media (max-width: $screen-sm) {
         font-size: $font-size-large;
         height: auto;
         width: 360px;

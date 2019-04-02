@@ -1,12 +1,6 @@
 .header {
   padding: 14px 0;
-  @media (min-width: $screen-lg) {
-    height: 72px;
-  }
-
-  @media (max-width: $screen-sm) {
-    padding-left: 16px;
-  }
+  min-height: 72px;
 
   &.sticky {
     box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.17);
@@ -14,13 +8,13 @@
     background-color: $body-bg;
   }
 
-  .container {
-    // padding: 0;
-  }
-
   .navbar {
     padding: 0;
     color: $link-color;
+
+    .container {
+      padding: 0 16px;
+    }
 
     .navbar-brand {
       width: 235px;
@@ -32,7 +26,7 @@
     }
 
     &-toggler {
-      padding: 0 16px 0 0;
+      padding: 0;
 
       &-icon {
         background-image: url('../../static/images/align-center-1.svg');
@@ -46,8 +40,9 @@
         &-icon {
           // NOTE: change to close icon
           background-image: url('../../static/images/close.png');
-          height: 24px;
-          width: 24px;
+          height: 18px;
+          width: 18px;
+          padding: 3px;
         }
       }
     }
@@ -59,9 +54,8 @@
       }
 
       @media (max-width: $screen-sm) {
-        background-color: $body-bg;
+        background-color: transparent;
         margin-top: 24px;
-        box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.17);
       }
 
       .nav-item {
@@ -70,22 +64,51 @@
         text-align: center;
 
         @media (max-width: $screen-xs) {
-          margin: 0 0 24px 16px;
+          margin: 0 0 24px 0;
           text-align: left;
 
           &.dropdown {
             a:after {
-              content: '\2c5';
-              float: right;
-              font-family: slick;
-              font-size: 20px;
-              line-height: 1;
+              content: "";
+              background-image: url('../../static/images/arrow-2.png');
+              background-repeat: no-repeat;
+              transform: rotate(180deg);
+              top: 8px;
+              right: 0;
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              display: inline-block;
+            }
+          }
+        }
+
+        @media (max-width: $screen-sm) {
+          margin: 0 0 32px 0;
+          text-align: left;
+
+          &.dropdown {
+            a:after {
+              content: "";
+              background-image: url('../../static/images/arrow-2@2x.png');
+              background-repeat: no-repeat;
+              transform: rotate(180deg);
+              top: 8px;
+              right: 0;
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              display: inline-block;
             }
           }
         }
 
         &:first-child {
           margin-left: 16px;
+
+          @media (max-width: $screen-sm) {
+            margin-left: 0;
+          }
         }
 
         a {
@@ -98,6 +121,11 @@
           letter-spacing: normal;
           text-align: center;
           @media (max-width: $screen-xs) {
+            text-align: left;
+          }
+
+          @media (min-width: $screen-xs) and (max-width: $screen-sm) {
+            font-size: $font-size-large;
             text-align: left;
           }
         }
@@ -125,6 +153,37 @@
     }
   }
 
+  .dropdown-menu {
+    @media (max-width: $screen-xs) {
+      &.show {
+        background-color: #f4f4f5;
+        width: auto;
+        box-shadow: none;
+        border: 0;
+        padding: 16px 0;
+        border-left: 8px solid #0d5394;
+        margin-left: -16px;
+        margin-right: -16px;
+        margin-top: 16px;
+        border-radius:0;
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      &.show {
+        background-color: #f4f4f5;
+        width: auto;
+        box-shadow: none;
+        border: 0;
+        padding: 16px 0;
+        border-left: 12px solid #0d5394;
+        margin-left: -16px;
+        margin-right: -16px;
+        margin-top: 16px;
+        border-radius:0;
+      }
+    }
+  }
   .dropdown-menu,
   .options > .dropdown-menu {
     z-index: 10001;
