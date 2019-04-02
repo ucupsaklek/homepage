@@ -80,10 +80,10 @@ export default (props) => (
     <div className="contact" id="#contact">
       <Container>
         <Row>
-          <Col xs={12} md={5}>
+          <Col xs={12} md={12} lg={5}>
             <ContactUsForm />
           </Col>
-          <Col xs={12} md={7} className="illus">
+          <Col xs={12} md={12} lg={7} className="illus">
             <img className="illus-message" src="/static/images/illus-message@3x.png" alt=""/>
           </Col>
         </Row>

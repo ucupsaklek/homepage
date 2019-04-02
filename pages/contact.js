@@ -8,7 +8,7 @@ export default (props) => (
     <div className="join">
       <Container>
         <Row>
-          <Col xs={12} md={7} lg={7}>
+          <Col xs={12} md={12} lg={7}>
             <h1>Join with Us</h1>
             <p>Get in touch and let us know how we can help. Fill out the form and we’ll be in touch as soon as possible.</p>
 
@@ -38,7 +38,7 @@ export default (props) => (
               </FormGroup>
             </Form>
           </Col>
-          <Col xs={12} md={5} lg={5} className="d-none d-sm-block">
+          <Col xs={12} md={12} lg={5} className="d-none d-sm-block">
             <img className="illus-message" src="/static/images/illus-message@3x.png" alt=""/>
           </Col>
         </Row>
