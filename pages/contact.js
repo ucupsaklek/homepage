@@ -3,8 +3,8 @@ import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } 
 import AccountList from '../src/components/AccountList'
 
 export default (props) => (
-  <div className="contact contact-bg">
-
+  <div className="contacts">
+    <div className="contacts-bg"></div>
     <div className="join">
       <Container>
         <Row>
@@ -39,7 +39,8 @@ export default (props) => (
             </Form>
           </Col>
           <Col xs={12} md={12} lg={5} className="d-none d-sm-block">
-            <img className="illus-message" src="/static/images/illus-message@3x.png" alt=""/>
+            <div className="banner illus-message contact">
+            </div>
           </Col>
         </Row>
       </Container>

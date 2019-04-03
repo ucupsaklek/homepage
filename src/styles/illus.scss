@@ -51,5 +51,15 @@
       margin-left: 140px;
       z-index: -1;
     }
+
+    &.contact {
+      &:after {
+        margin-top: 0;
+        margin-left: 0;
+        height: 382px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
   }
 }

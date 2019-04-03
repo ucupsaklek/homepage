@@ -3,12 +3,14 @@
   margin: 0 auto;
   position: relative;
 
-  &:after {
+  &-bg:after {
     background-image: linear-gradient(to bottom, #cddeef, #dcecf8 54%, #ffffff);
+    background-size: cover;
+    background-position: center center;
     content: "";
     display: block;
-    position: fixed; /* could also be absolute */
-    top: 0;
+    position: absolute; /* could also be absolute */
+    top: -72px;
     left: 0;
     height: 100%;
     width: 100%;

@@ -13,6 +13,7 @@ import Document from 'components/Product/Document'
 
 export default (props) => (
   <div className="product">
+    <div className="product-bg"></div>
     <MemoryRouter>
       <Navbar
         expand={true}

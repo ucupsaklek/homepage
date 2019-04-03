@@ -22,7 +22,7 @@
     &:after {
       background-image: url('/static/images/desktop/bg-header.png');
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-position: center center;
       content: "";
       display: block;
@@ -512,6 +512,7 @@
     border-radius: 4px;
     box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
     padding: 24px;
+    background-color: $body-bg;
 
     @media (max-width: $screen-xs) {
       margin: 0 auto;

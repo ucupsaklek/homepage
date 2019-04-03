@@ -2,22 +2,25 @@
   max-width: $screen-desktop-max;
   margin: 0 auto;
   position: relative;
+  padding-top: 90px;
 
-  &.contact-bg {
+  &-bg {
     &:after {
       background-image: linear-gradient(to bottom, #cddeef, #dcecf8 54%, #ffffff);
+      background-size: cover;
+      background-position: center center;
       content: "";
       display: block;
-      position: fixed; /* could also be absolute */
-      top: 0;
+      position: absolute; /* could also be absolute */
+      top: -72px;
       left: 0;
-      height: 955px;
+      height: 100%;
       width: 100%;
       z-index: -1;
     }
   }
 
-  margin-top: 76px;
+  @import './components/form/contact';
 
   .join {
     margin-bottom: 60px;
@@ -41,6 +44,7 @@
       font-size: $font-size-h3;
       line-height: 1.42;
       height: 68px;
+      margin-bottom: 24px;
 
       @media (max-width: $screen-xs) {
         font-size: $font-size-medium;
@@ -62,7 +66,7 @@
     .form-join {
       padding: 24px;
       background-color: $body-bg;
-
+      height: 325px;
     }
     .col-form-label {
       font-weight: bold;
@@ -81,10 +85,10 @@
     }
 
     .illus-message {
-      height: 438px;
-      width: 493px;
+      height: 382px;
+      width: 460px;
       margin-left: 16px;
-      padding-top: 34px;
+      margin-top: 78px;
     }
   }
 
