@@ -41,19 +41,38 @@
       }
     }
 
+    @media (max-width: $screen-sm - 1) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        content: "";
+        display: block;
+        position: absolute;
+        top: -96px;
+        left: 0;
+        height: 764px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
     @media (max-width: $screen-xs) {
-      background-image: url('/static/images/mobile/bg-header.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: bottom;
-      content: "";
-      display: block;
-      position: absolute;
-      top: -96px;
-      left: 0;
-      height: 714px;
-      width: 100%;
-      z-index: -1;
+      &:after {
+        background-image: url('/static/images/mobile/bg-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        content: "";
+        display: block;
+        position: absolute;
+        top: -96px;
+        left: 0;
+        height: 714px;
+        width: 100%;
+        z-index: -1;
+      }
     }
   }
 
@@ -172,7 +191,7 @@
     padding-top: 87px;
   }
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-sm) {
     height: 846px;
     padding-top: 0;
     text-align: center;
@@ -196,6 +215,22 @@
       }
     }
 
+    @media (max-width: $screen-sm) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-plasma.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: right;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 300px;
+        height: 539px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
     @media (max-width: $screen-xs) {
       &:after {
         background-image: url('/static/images/mobile/bg-plasma.png');
@@ -204,7 +239,7 @@
         background-position: right;
         content: "";
         display: block;
-        position: absolute; /* could also be absolute */
+        position: absolute;
         top: 300px;
         height: 539px;
         width: 100%;
@@ -214,7 +249,7 @@
   }
 
   .row {
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       flex-direction: column-reverse
     }
 
@@ -226,10 +261,10 @@
       @media (max-width: $screen-sm) {
         text-align: center;
         margin: 0;
-        padding-bottom: 0;
+        padding: 80px 0 0 0;
       }
 
-      @media (max-width: $screen-xs) {
+      @media (max-width: $screen-sm) {
         text-align: center;
         margin: 0;
         padding: 80px 0 0 0;
@@ -239,7 +274,7 @@
 
   .btn {
     &-group {
-      @media (max-width: $screen-xs) {
+      @media (max-width: $screen-sm) {
         flex-direction: column
       }
     }
@@ -251,7 +286,7 @@
       margin-right: 24px;
     }
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       margin-right: 0;
       margin-bottom: 16px;
     }
@@ -353,6 +388,10 @@
   margin: 0 auto;
   position: relative;
 
+  @media (max-width: $screen-sm) {
+    margin-top: 52px;
+  }
+
   @media (max-width: $screen-xs) {
     padding-top: 78px;
   }
@@ -364,6 +403,23 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 737px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-sm - 1) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-road-map.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 100% 100%;
         content: "";
         display: block;
         position: absolute;
@@ -545,7 +601,7 @@
   margin: 0 auto;
   position: relative;
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-sm) {
     margin-bottom: 64px;
     height: auto;
   }
@@ -562,6 +618,22 @@
         top: 0;
         left: 0;
         height:654px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-message.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 818px;
         width: 100%;
         z-index: -1;
       }
@@ -584,7 +656,7 @@
     }
   }
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-sm) {
     margin-top: 29px;
   }
 
@@ -612,7 +684,7 @@
   }
 
   .row {
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       flex-direction: column-reverse
     }
   }
@@ -621,7 +693,7 @@
     height: 54px;
     margin-bottom: 24px;
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       margin-bottom: 13px;
     }
   }
@@ -638,7 +710,7 @@
   .illus {
     text-align: center;
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       margin-bottom: 24px;
     }
 

@@ -9,6 +9,11 @@
 
   @media (max-width: $screen-sm) {
     margin: 0;
+    width: 328px;
+  }
+
+  @media (max-width: $screen-xs) {
+    margin: 0;
     width: auto;
   }
 

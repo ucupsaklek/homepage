@@ -20,7 +20,7 @@
       }
     }
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       width: 288px;
       height: 288px;
 
@@ -63,7 +63,7 @@
       }
     }
 
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       width: 270px;
       height: 232px;
 
@@ -112,6 +112,37 @@
         }
       }
     }
+
+    @media (max-width: $screen-sm) {
+      padding-bottom: 24px;
+
+      &:after {
+        background-image: url('/static/images/mobile/illus-message@3x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 0;
+        width: 231px;
+        height: 190px;
+        margin-top: 98px;
+        margin-left: 62px;
+        z-index: -1;
+      }
+
+      &.contact {
+        &:after {
+          margin-top: 0;
+          margin-left: 0;
+          height: 190px;
+          width: 231px;
+          z-index: -1;
+        }
+      }
+    }
+
 
     @media (max-width: $screen-xs) {
       padding-bottom: 24px;
