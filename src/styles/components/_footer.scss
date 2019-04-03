@@ -1,6 +1,9 @@
 .footer {
   background: #FFFFFF;
   height: 208px;
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
+  position: relative;
 
   @media (max-width: $screen-sm) {
     height: auto;

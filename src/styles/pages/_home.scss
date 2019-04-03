@@ -1,5 +1,8 @@
 .general {
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
   position: relative;
+
   @media (min-width: $screen-lg) {
     height: 952px;
     padding-top: 65px;
@@ -136,8 +139,9 @@
   }
 }
 
-// space between general and intro 70px
 .introduction {
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
   position: relative;
 
   @media (min-width: $screen-lg) {
@@ -161,7 +165,7 @@
       display: block;
       position: absolute; /* could also be absolute */
       top: 0;
-      right: calc(50% + 24px);
+      left: 0;
       height: 842px;
       width: 724px;
       z-index: -1;
@@ -303,9 +307,10 @@
 }
 
 .roadmap {
-  @import './components/card/roadmap';
   padding-top: 52px;
   height: 737px;
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
   position: relative;
 
   &-bg {
@@ -313,7 +318,7 @@
       background-image: url('/static/images/desktop/bg-roadmap.png');
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: center center;
       content: "";
       display: block;
       position: absolute; /* could also be absolute */
@@ -428,13 +433,17 @@
       // [dir="rtl"] .slick-next:before { content: "‹"; }
     }
   }
+
+  @import './components/card/roadmap';
 }
 
 .connect {
-  @import './components/media/connect';
   height: 557px;
   text-align: center;
   padding-top: 128px;
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
+  position: relative;
 
   @media (max-width: $screen-sm) {
     height: auto;
@@ -464,12 +473,17 @@
       }
     }
   }
+
+  @import './components/media/connect';
 }
 
 .contact {
   @import './components/form/contact';
-  margin-top: 0;
+
   height: 654px;
+  position: relative;
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
   position: relative;
 
   .message-bg {
@@ -482,8 +496,8 @@
       position: absolute; /* could also be absolute */
       top: 0;
       left: 0;
-      height: 654px;
-      width: 100vw;
+      height:654px;
+      width: 100%;
       z-index: -1;
     }
   }

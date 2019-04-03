@@ -1,4 +1,8 @@
 .product {
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
+  position: relative;
+
   &:after {
     background-image: linear-gradient(to bottom, #cddeef, #dcecf8 54%, #ffffff);
     content: "";
@@ -23,6 +27,10 @@
     height: 20px;
     margin: 0;
     padding: 24px 0;
+
+    &>.container {
+      padding: 16px;
+    }
 
     &-brand {
       font-weight: bold;

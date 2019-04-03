@@ -54,6 +54,6 @@ $screen-sm:                  768px !default;
 $screen-md:                  992px !default;
 $screen-lg:                  1200px !default;
 $screen-desktop:             $screen-lg !default;
-
+$screen-desktop-max:         1440px!default;
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1

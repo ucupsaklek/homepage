@@ -1,4 +1,8 @@
 .contacts {
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
+  position: relative;
+
   &.contact-bg {
     &:after {
       background-image: linear-gradient(to bottom, #cddeef, #dcecf8 54%, #ffffff);

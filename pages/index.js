@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Jumbotron, Button, ButtonGroup, Media } from 'reactstrap'
+import Link from 'next/link'
 import RoadmapList from '../src/components/RoadmapList'
 import AccountList from '../src/components/AccountList'
 import ContactUsForm from '../src/components/ContactUsForm'
@@ -50,7 +51,11 @@ export default (props) => (
               <p className="lead">A framework to build usable Dapps on Plasma without sacrificing security .</p>
               <div className="lead">
                 <ButtonGroup>
-                  <Button color="default">Learn More</Button>
+                  <Button color="default">
+                    <Link href="/plasma-chamber">
+                      <a>Learn More</a>
+                    </Link>
+                  </Button>
                   <Button color="primary">Get Started</Button>
                 </ButtonGroup>
               </div>
