@@ -1,6 +1,7 @@
 .header {
   padding: 14px 0;
   min-height: 72px;
+  z-index: 10;
 
   &.sticky {
     box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.17);

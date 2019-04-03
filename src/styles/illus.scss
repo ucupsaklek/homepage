@@ -1,0 +1,55 @@
+.illus {
+  &-header {
+    &:after {
+      background-image: url('/static/images/illus-header@3x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: 0;
+      left: 0;
+      width: 703px;
+      height: 684px;
+      z-index: -1;
+    }
+  }
+
+  &-plasma {
+    &:after {
+      background-image: url('/static/images/illus-plasma@3x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: 86px;
+      left: 0;
+      width: 488px;
+      height: 488px;
+      padding: 70px 16px 16px 16px;
+      z-index: -1;
+    }
+  }
+
+  &-message {
+    &:after {
+      background-image: url('/static/images/illus-message@3x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: 0;
+      left: 0;
+      width: 493px;
+      height: 408px;
+      margin-top: 130px;
+      margin-left: 140px;
+      z-index: -1;
+    }
+  }
+}

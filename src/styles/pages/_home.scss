@@ -1,7 +1,8 @@
 .general {
+  position: relative;
   @media (min-width: $screen-lg) {
-    height: 740px;
-    margin-top: 190px;
+    height: 952px;
+    padding-top: 65px;
   }
 
   @media (max-width: $screen-sm) {
@@ -12,6 +13,35 @@
   @media (min-width: $screen-sm) and (max-width: $screen-md) {
     height: 560px;
     margin-top: 43px;
+  }
+
+  .head-bg {
+    &:after {
+      background-image: url('/static/images/desktop/bg-header.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: -106px;
+      left: 0;
+      height:1048px;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  .jumbotron {
+    background: none;
+    padding-left: 0;
+    padding: 99px 12px;
+
+    @media (max-width: $screen-sm) {
+      text-align: center;
+      margin: 0;
+      padding-bottom: 0;
+    }
   }
 
   .intro {
@@ -108,6 +138,8 @@
 
 // space between general and intro 70px
 .introduction {
+  position: relative;
+
   @media (min-width: $screen-lg) {
     height: 903px;
     padding-top: 87px;
@@ -119,9 +151,38 @@
     text-align: center;
   }
 
+  .plasma-bg {
+    &:after {
+      background-image: url('/static/images/desktop/bg-plasma.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: 0;
+      right: calc(50% + 24px);
+      height: 842px;
+      width: 724px;
+      z-index: -1;
+    }
+  }
+
   .row {
     @media (max-width: $screen-xs) {
       flex-direction: column-reverse
+    }
+
+    .jumbotron {
+      background: none;
+      padding-left: 0;
+      padding: 223px 12px;
+
+      @media (max-width: $screen-sm) {
+        text-align: center;
+        margin: 0;
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -155,18 +216,6 @@
 }
 
 .general, .introduction {
-  .jumbotron {
-    background: none;
-    padding-left: 0;
-    padding: 20px 12px;
-
-    @media (max-width: $screen-sm) {
-      text-align: center;
-      margin: 0;
-      padding-bottom: 0;
-    }
-  }
-
   h1 {
     line-height: 1.35;
     margin-bottom: 24px;
@@ -240,29 +289,45 @@
       padding: 16px 0 0 0;
     }
 
-    &.intro-img {
-      img {
-        width: 574px;
-        height: 554px;
+    &.illus-header {
+      width: 703px;
+      height: 684px;
+    }
 
-        @media (max-width: $screen-sm) {
-          width: 315px;
-          height: 315px;
-        }
-
-        @media (max-width: $screen-xs) {
-          width: 288px;
-          height: 288px;
-        }
-      }
+    &.illus-plasma {
+      padding-top: 86px;
+      width: 512px;
+      height: 598px;
     }
   }
 }
 
 .roadmap {
   @import './components/card/roadmap';
-  margin-top: 52px;
+  padding-top: 52px;
   height: 737px;
+  position: relative;
+
+  &-bg {
+    &:after {
+      background-image: url('/static/images/desktop/bg-roadmap.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: 0;
+      left: 0;
+      height: 737px;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  .container {
+    background-color: $blue-lighter;
+  }
 
   .title {
     margin-bottom: 24px;
@@ -298,9 +363,11 @@
 
   .list-wrapper {
     padding: 24px 0 100px;
+    margin-right: -98px;
 
     @media (max-width: $screen-sm) {
       padding: 24px 16px 60px;
+      margin-right: 0;
     }
 
     .slick-slide {
@@ -327,7 +394,7 @@
       top: 430px;
 
       &.slick-prev {
-        right: 80px;
+        right: 178px;
         left: auto;
 
         @media (max-width: $screen-xs) {
@@ -336,7 +403,7 @@
         }
       }
       &.slick-next {
-        right: 10px!important;
+        right: 108px!important;
 
         @media (max-width: $screen-xs) {
           left:50%;
@@ -365,8 +432,9 @@
 
 .connect {
   @import './components/media/connect';
-  height: 550px;
+  height: 557px;
   text-align: center;
+  padding-top: 128px;
 
   @media (max-width: $screen-sm) {
     height: auto;
@@ -374,10 +442,6 @@
 
   @media (max-width: $screen-xs) {
     height: auto;
-  }
-
-  @media (min-width: $screen-lg) {
-    padding-top: 16px;
   }
 
   h1 {
@@ -404,6 +468,25 @@
 
 .contact {
   @import './components/form/contact';
+  margin-top: 0;
+  height: 654px;
+  position: relative;
+
+  .message-bg {
+    &:after {
+      background-image: url('/static/images/desktop/bg-message.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: 0;
+      left: 0;
+      height: 654px;
+      width: 100vw;
+      z-index: -1;
+    }
+  }
 
   @media (max-width: $screen-xs) {
     margin-top: 64px;
@@ -411,7 +494,7 @@
 
   &-wrapper {
     width: 448px;
-    margin: 8px 0 103px;
+    margin: 80px 0 0 0;
     border-radius: 4px;
     box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
     padding: 24px;

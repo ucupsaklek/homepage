@@ -7,9 +7,10 @@ import ContactUsForm from '../src/components/ContactUsForm'
 export default (props) => (
   <React.Fragment>
     <div className="general">
+      <div className="head-bg"></div>
       <Container>
         <Row>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={5}>
             <Jumbotron>
               <div className="intro">
                 <div className="title">
@@ -27,9 +28,8 @@ export default (props) => (
               </p>
             </Jumbotron>
           </Col>
-          <Col xs={12} md={6}>
-            <div className="banner intro-img">
-              <img src="/static/images/illus-header.svg" />
+          <Col xs={12} md={7}>
+            <div className="banner illus-header">
             </div>
           </Col>
         </Row>
@@ -37,11 +37,11 @@ export default (props) => (
     </div>
 
     <div className="introduction">
+      <div className="plasma-bg"></div>
       <Container>
         <Row>
           <Col xs={12} md={6}>
-            <div className="banner intro-img">
-              <img src="/static/images/illus-plasma.svg" />
+            <div className="banner illus-plasma">
             </div>
           </Col>
           <Col xs={12} md={6}>
@@ -61,6 +61,7 @@ export default (props) => (
     </div>
 
     <div className="roadmap" id="#company">
+      <div className="roadmap-bg"></div>
       <Container>
         <div className="title">
           <h1>Roadmap</h1>
@@ -78,13 +79,15 @@ export default (props) => (
     </div>
 
     <div className="contact" id="#contact">
+      <div className="message-bg"></div>
       <Container>
         <Row>
           <Col xs={12} md={12} lg={5}>
             <ContactUsForm />
           </Col>
-          <Col xs={12} md={12} lg={7} className="illus">
-            <img className="illus-message" src="/static/images/illus-message@3x.png" alt=""/>
+          <Col xs={12} md={12} lg={7}>
+            <div className="banner illus-message">
+            </div>
           </Col>
         </Row>
       </Container>
