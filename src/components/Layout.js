@@ -16,6 +16,7 @@ export default class Layout extends PureComponent {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
           <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' />
+          <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
         </Head>
 
         <StickyContainer>

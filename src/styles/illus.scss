@@ -1,63 +1,134 @@
 .illus {
   &-header {
-    &:after {
-      background-image: url('/static/images/illus-header@3x.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      content: "";
-      display: block;
-      position: absolute; /* could also be absolute */
-      top: 0;
-      left: 0;
-      width: 703px;
-      height: 684px;
-      z-index: -1;
+    width: 703px;
+    height: 684px;
+
+    @media (min-width: $screen-md + 1) {
+      &:after {
+        background-image: url('/static/images/illus-header@3x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 0;
+        left: 0;
+        width: 703px;
+        height: 684px;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      width: 288px;
+      height: 288px;
+
+      &:after {
+        background-image: url('/static/images/mobile/illus-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 0;
+        width: 288px;
+        height: 288px;
+        z-index: -1;
+      }
     }
   }
 
   &-plasma {
+    padding-top: 86px;
+    width: 512px;
+    height: 598px;
+
     &:after {
-      background-image: url('/static/images/illus-plasma@3x.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      content: "";
-      display: block;
-      position: absolute; /* could also be absolute */
-      top: 86px;
-      left: 0;
-      width: 488px;
-      height: 488px;
-      padding: 70px 16px 16px 16px;
-      z-index: -1;
+      @media (min-width: $screen-md + 1) {
+        background-image: url('/static/images/illus-plasma@3x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 86px;
+        left: 0;
+        width: 488px;
+        height: 488px;
+        padding: 70px 16px 16px 16px;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      width: 270px;
+      height: 232px;
+
+      &:after {
+        background-image: url('/static/images/mobile/illus-plasma.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 42px;
+        width: 270px;
+        height: 232px;
+        z-index: -1;
+      }
     }
   }
 
   &-message {
-    &:after {
-      background-image: url('/static/images/illus-message@3x.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      content: "";
-      display: block;
-      position: absolute; /* could also be absolute */
-      top: 0;
-      left: 0;
-      width: 493px;
-      height: 408px;
-      margin-top: 130px;
-      margin-left: 140px;
-      z-index: -1;
+    @media (min-width: $screen-md + 1) {
+      &:after {
+        background-image: url('/static/images/illus-message@3x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 0;
+        left: 0;
+        width: 493px;
+        height: 408px;
+        margin-top: 130px;
+        margin-left: 140px;
+        z-index: -1;
+      }
+
+      &.contact {
+        &:after {
+          margin-top: 0;
+          margin-left: 0;
+          height: 382px;
+          width: 100%;
+          z-index: -1;
+        }
+      }
     }
 
-    &.contact {
+    @media (max-width: $screen-xs) {
+      padding-bottom: 24px;
+
       &:after {
-        margin-top: 0;
-        margin-left: 0;
-        height: 382px;
-        width: 100%;
+        background-image: url('/static/images/mobile/illus-message@3x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 0;
+        width: 231px;
+        height: 190px;
+        margin-top: 57px;
+        margin-left: 32px;
         z-index: -1;
       }
     }

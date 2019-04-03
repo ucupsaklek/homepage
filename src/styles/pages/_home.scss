@@ -8,28 +8,50 @@
     padding-top: 65px;
   }
 
-  @media (max-width: $screen-sm) {
-    height: 660px;
-    margin-top: 43px;
-  }
-
   @media (min-width: $screen-sm) and (max-width: $screen-md) {
     height: 560px;
-    margin-top: 43px;
+    padding-top: 29px;
+  }
+
+  @media (max-width: $screen-sm) {
+    height: 660px;
+    padding-top: 43px;
+  }
+
+  @media (max-width: $screen-xs) {
+    height: 660px;
+    padding-top: 29px;
   }
 
   .head-bg {
-    &:after {
-      background-image: url('/static/images/desktop/bg-header.png');
+    @media (min-width: $screen-md + 1) {
+      &:after {
+        background-image: url('/static/images/desktop/bg-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: -106px;
+        left: 0;
+        height:1048px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      background-image: url('/static/images/mobile/bg-header.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       content: "";
       display: block;
-      position: absolute; /* could also be absolute */
-      top: -106px;
+      position: absolute;
+      top: -96px;
       left: 0;
-      height:1048px;
+      height: 690px;
       width: 100%;
       z-index: -1;
     }
@@ -43,7 +65,7 @@
     @media (max-width: $screen-sm) {
       text-align: center;
       margin: 0;
-      padding-bottom: 0;
+      padding: 0;
     }
   }
 
@@ -57,20 +79,20 @@
     margin-bottom: 64px;
     font-size: $font-size-large;
 
-    @media (max-width: $screen-xs) {
-      height: 34px;
-      width: 242px;
-      margin: 0 auto;
-      margin-bottom: 24px;
-      font-size: $font-size-small;
-    }
-
     @media (max-width: $screen-sm) {
       height: 36px;
       width: 292px;
       margin: 0 auto;
       margin-bottom: 24px;
       font-size: $font-size-medium;
+    }
+
+    @media (max-width: $screen-xs) {
+      height: 34px;
+      width: 242px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+      font-size: $font-size-small;
     }
 
     .title {
@@ -88,16 +110,16 @@
         height: 36px;
       }
 
-      @media (max-width: $screen-xs) {
-        width: 61px;
-        height: 26px;
-        font-size: $font-size-small;
-      }
-
       @media (max-width: $screen-sm) {
         width: 61px;
         height: 30px;
         font-size: $font-size-medium;
+      }
+
+      @media (max-width: $screen-xs) {
+        width: 61px;
+        height: 26px;
+        font-size: $font-size-small;
       }
     }
 
@@ -113,15 +135,16 @@
         font-size: $font-size-large;
       }
 
-      @media (max-width: $screen-xs) {
-        height: 18px;
-        font-size: $font-size-small;
-      }
-
       @media (max-width: $screen-md) {
         height: 24px;
         font-size: $font-size-medium;
         padding: 4px 0;
+      }
+
+      @media (max-width: $screen-xs) {
+        height: 18px;
+        font-size: $font-size-small;
+        padding: 8px 0;
       }
     }
 
@@ -150,25 +173,43 @@
   }
 
   @media (max-width: $screen-xs) {
-    height: 800px;
+    height: 846px;
     padding-top: 0;
     text-align: center;
   }
 
   .plasma-bg {
-    &:after {
-      background-image: url('/static/images/desktop/bg-plasma.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: right;
-      content: "";
-      display: block;
-      position: absolute; /* could also be absolute */
-      top: 0;
-      left: 0;
-      height: 842px;
-      width: 724px;
-      z-index: -1;
+    @media (min-width: $screen-md + 1) {
+      &:after {
+        background-image: url('/static/images/desktop/bg-plasma.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 0;
+        left: 0;
+        height: 842px;
+        width: 724px;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-plasma.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        content: "";
+        display: block;
+        position: absolute; /* could also be absolute */
+        top: 300px;
+        height: 539px;
+        width: 100%;
+        z-index: -1;
+      }
     }
   }
 
@@ -186,6 +227,12 @@
         text-align: center;
         margin: 0;
         padding-bottom: 0;
+      }
+
+      @media (max-width: $screen-xs) {
+        text-align: center;
+        margin: 0;
+        padding: 80px 0 0 0;
       }
     }
   }
@@ -221,7 +268,7 @@
 
 .general, .introduction {
   h1 {
-    line-height: 1.35;
+    line-height: 1.45;
     margin-bottom: 24px;
 
     @media (max-width: $screen-sm) {
@@ -234,7 +281,7 @@
   }
 
   .lead {
-    line-height: 1.42;
+    line-height: 1.64;
 
     @media (min-width: $screen-lg) {
       font-size: $font-size-h3;
@@ -259,7 +306,7 @@
       width: 288px;
 
       &:last-child {
-        margin-bottom: 16px;
+        padding-bottom: 25px;
       }
     }
   }
@@ -293,15 +340,8 @@
       padding: 16px 0 0 0;
     }
 
-    &.illus-header {
-      width: 703px;
-      height: 684px;
-    }
-
-    &.illus-plasma {
-      padding-top: 86px;
-      width: 512px;
-      height: 598px;
+    @media (max-width: $screen-xs) {
+      margin: 0 auto;
     }
   }
 }
@@ -313,25 +353,44 @@
   margin: 0 auto;
   position: relative;
 
-  &-bg {
-    &:after {
-      background-image: url('/static/images/desktop/bg-roadmap.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      content: "";
-      display: block;
-      position: absolute; /* could also be absolute */
-      top: 0;
-      left: 0;
-      height: 737px;
-      width: 100%;
-      z-index: -1;
-    }
+  @media (max-width: $screen-xs) {
+    padding-top: 78px;
   }
 
-  .container {
-    background-color: $blue-lighter;
+  &-bg {
+    @media (min-width: $screen-md + 1) {
+      &:after {
+        background-image: url('/static/images/desktop/bg-roadmap.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 737px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-road-map.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 737px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
   }
 
   .title {
@@ -486,24 +545,47 @@
   margin: 0 auto;
   position: relative;
 
+  @media (max-width: $screen-xs) {
+    margin-bottom: 64px;
+    height: auto;
+  }
+
   .message-bg {
-    &:after {
-      background-image: url('/static/images/desktop/bg-message.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      content: "";
-      display: block;
-      position: absolute; /* could also be absolute */
-      top: 0;
-      left: 0;
-      height:654px;
-      width: 100%;
-      z-index: -1;
+    @media (min-width: $screen-md + 1) {
+      &:after {
+        background-image: url('/static/images/desktop/bg-message.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height:654px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-message.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 818px;
+        width: 100%;
+        z-index: -1;
+      }
     }
   }
 
   @media (max-width: $screen-xs) {
-    margin-top: 64px;
+    margin-top: 29px;
   }
 
   &-wrapper {
@@ -570,7 +652,6 @@
         width: 288px;
         margin: 0 auto;
         text-align: center;
-        padding: 32px 16px;
       }
 
       @media (min-width: $screen-xs) and (max-width: $screen-sm) {
