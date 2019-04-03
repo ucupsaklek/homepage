@@ -131,6 +131,16 @@
         margin-left: 32px;
         z-index: -1;
       }
+
+      &.contact {
+        &:after {
+          margin-top: 0;
+          margin-left: 0;
+          height: 190px;
+          width: 231px;
+          z-index: -1;
+        }
+      }
     }
   }
 }
