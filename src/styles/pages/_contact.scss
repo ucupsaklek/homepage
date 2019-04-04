@@ -1,11 +1,11 @@
-$contacts-bg-height-mobile: 1070px;
+$background-height-mobile: 1070px;
+$header-distance-desktop: 76px;
+$background-height: 990px;
 $header-distance-mobile: 88px;
-$header-distance-desktop: 90px;
 
 .contacts {
   max-width: $screen-desktop-max;
   margin: 0 auto;
-  position: relative;
   padding-top: $header-distance-desktop;
 
   @media (max-width: $screen-sm - 1) {
@@ -14,16 +14,16 @@ $header-distance-desktop: 90px;
 
   .head-bg {
     &:after {
-      background-image: url('/static/images/desktop/bg-header.png');
+      background-image: url('/static/images/desktop/bg-header-contact.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       content: "";
       display: block;
       position: absolute; /* could also be absolute */
-      top: -106px;
+      top: 0;
       left: 0;
-      height: 968px;
+      height: $background-height;
       width: 100%;
       z-index: -1;
     }
@@ -38,7 +38,7 @@ $header-distance-desktop: 90px;
       position: absolute;
       top: -$header-distance-mobile;
       left: 0;
-      height: $contacts-bg-height-mobile + ($header-distance-mobile/2);
+      height: $background-height-mobile + ($header-distance-mobile/2);
       width: 100%;
       z-index: -1;
     }
@@ -54,8 +54,8 @@ $header-distance-desktop: 90px;
     &-message {
       height: $illus-height;
       width: $illus-width;
-      margin-top: $offset-y + $contact-form-margin-top;
-      margin-left: 120px;
+      margin-top: $contact-form-margin-top;
+      margin-left: 46px; // Assumption
       position: relative;
 
       &:after {
@@ -232,6 +232,10 @@ $header-distance-desktop: 90px;
 
     @media (max-width: $screen-xs) {
       margin-top: 16px;
+    }
+
+    h1 {
+      line-height: 1.36;
     }
 
     h1, p {

@@ -75,7 +75,7 @@ class Header extends React.Component {
                   </Link>
                 </NavItem>
                 <NavItem>
-                  <Link href='#url'>
+                  <Link href='/company'>
                     <a>Company</a>
                   </Link>
                 </NavItem>
@@ -86,10 +86,13 @@ class Header extends React.Component {
                 >
                   <DropdownToggle nav
                     onMouseOver={this.onMouseOverConnect}
+                    onMouseLeave={this.onMouseLeaveConnect}
                   >
                     Connect
                   </DropdownToggle>
-                  <DropdownMenu left={0} onMouseLeave={this.onMouseLeaveConnect}>
+                  <DropdownMenu left={0}
+                      onMouseOver={this.onMouseOverConnect}
+                      onMouseLeave={this.onMouseLeaveConnect}>
                     <DropdownItem>
                       Telegraph
                     </DropdownItem>

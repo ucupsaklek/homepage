@@ -84,9 +84,10 @@
       }
 
       .nav-item {
-        padding-top: 10px;
+        height: 44px;
         margin: 0 16px;
         text-align: center;
+        position: relative;
 
         @media (max-width: $screen-xs) {
           margin: 0 0 24px 0;
@@ -137,14 +138,16 @@
         }
 
         a {
-          height: 24px;
-          padding: 0 8px;
+          height: 44px;
+          padding: 10px 8px;
           color: $link-color;
           font-family: $font-family-base;
           font-size: $font-size-medium;
           line-height: 24px;
           letter-spacing: normal;
           text-align: center;
+          display: block;
+
           @media (max-width: $screen-xs) {
             text-align: left;
           }
@@ -162,9 +165,6 @@
       width: 65px;
       margin-left: 65px;
 
-      .dropdown-menu {
-        top: 24px!important;
-      }
       .nav-link {
         padding: 0;
       }
@@ -177,6 +177,7 @@
       }
     }
   }
+
   .dropdown-menu {
     @media (max-width: $screen-xs) {
       &.show {
@@ -208,10 +209,11 @@
       }
     }
   }
+
   .dropdown-menu,
   .options > .dropdown-menu {
-    z-index: 10001;
-    top: 60px!important;
+    z-index: 10;
+    margin: 0;
     width: 160px;
     border-radius: 4px;
     box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
@@ -220,8 +222,8 @@
     padding: 24px 16px;
 
     .dropdown-item {
-      height: 24px;
-      margin-bottom: 24px;
+      height: 48px;
+      padding-bottom: 24px;
       font-size: $font-size-medium;
       color: #333;
 

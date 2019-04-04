@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Footer = (props) => (
   <div className='wrapper'>
@@ -19,7 +20,9 @@ const Footer = (props) => (
 
       <ul className='products'>
         <li>
-          <a href='#'>Plasma Chamber</a>
+          <Link href='/plasma-chamber'>
+            <a>Plasma Chamber</a>
+          </Link>
         </li>
       </ul>
     </div>
