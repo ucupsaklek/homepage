@@ -91,7 +91,7 @@ export default (props) => (
             <ContactUsForm />
           </Col>
           <Col xs={12} md={12} lg={7}>
-            <div className="banner illus-message">
+            <div className="banner illus illus-message d-md-none">
             </div>
           </Col>
         </Row>

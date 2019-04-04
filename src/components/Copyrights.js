@@ -45,7 +45,7 @@ import {
               isOpen={this.state.open}
               toggle={this.toggle}
             >
-              <DropdownToggle nav >
+              <DropdownToggle nav className="lang-select">
                 English
               </DropdownToggle>
               <DropdownMenu onMouseLeave={this.onMouseLeave}>

@@ -30,46 +30,50 @@ class Product extends React.Component {
   }
 
   render () {
-    this.isActive('/')
     return (
-      <div className="product">
-        <div className="product-bg"></div>
-        <MemoryRouter>
-          <Navbar
-            expand={true}
-          >
-            <Container>
-              <NavbarBrand to='/'>
-                <div className="title">
-                  Plasma Chamber
-                </div>
-              </NavbarBrand>
-              <Nav navbar>
-                <NavItem active>
-                  <Link to='/'>Overview</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to='/features'>Features</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to='/usecase'>Use Case</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to='/docs'>Docs</Link>
-                </NavItem>
-              </Nav>
+      <React.Fragment>
+        <Container>
+          <div className="divider"></div>
+        </Container>
+        <div className="product">
+          <div className="product-bg"></div>
+          <MemoryRouter>
+            <Navbar
+              expand={true}
+            >
+              <Container>
+                <NavbarBrand to='/'>
+                  <div className="title">
+                    Plasma Chamber
+                  </div>
+                </NavbarBrand>
+                <Nav navbar>
+                  <NavItem active>
+                    <Link to='/'>Overview</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to='/features'>Features</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to='/usecase'>Use Case</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to='/docs'>Docs</Link>
+                  </NavItem>
+                </Nav>
+              </Container>
+            </Navbar>
+            <Container className="content">
+              <Switch>
+                <Route exact path="/" component={Overview} />
+                <Route path="/features" component={Features} />
+                <Route path="/usecase" component={UseCase} />
+                <Route path="/docs" component={Document} />
+              </Switch>
             </Container>
-          </Navbar>
-          <Container className="content">
-            <Switch>
-              <Route exact path="/" component={Overview} />
-              <Route path="/features" component={Features} />
-              <Route path="/usecase" component={UseCase} />
-              <Route path="/docs" component={Document} />
-            </Switch>
-          </Container>
-        </MemoryRouter>
-      </div>
+          </MemoryRouter>
+        </div>
+      </React.Fragment>
     )
   }
 }

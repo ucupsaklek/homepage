@@ -1,13 +1,27 @@
 .header {
   padding: 14px 0 0 0;
-  margin-bottom: 14px;
-  min-height: 72px;
+  min-height: 58px;
   z-index: 10;
 
   &.sticky {
     box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.17);
     z-index: 1001;
     background-color: $body-bg;
+  }
+
+  .lang-select:before {
+    background-image: url(/static/images/desktop/ic-chat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: -18px;
+    height: 14px;
+    width: 14px;
+    z-index: 1;
   }
 
   .navbar {
@@ -163,7 +177,6 @@
       }
     }
   }
-
   .dropdown-menu {
     @media (max-width: $screen-xs) {
       &.show {

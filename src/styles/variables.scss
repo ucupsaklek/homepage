@@ -24,7 +24,7 @@ $font-size-base:         14px !default;
 $font-size-large:        ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-medium:       ceil(($font-size-base * 1.1)) !default; // ~16px
 $font-size-small:        ceil(($font-size-base * .85)) !default; // ~12px
-
+$font-size-extra-small:  ceil(($font-size-base * .71)) !default; // ~10px
 $font-size-h1:           floor(($font-size-base * 2.9)) !default; // ~40px
 $font-size-h2:           floor(($font-size-base * 2.15)) !default; // ~30px
 $font-size-h3:           ceil(($font-size-base * 1.7)) !default; // ~24px

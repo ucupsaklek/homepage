@@ -1,32 +1,34 @@
+$contacts-bg-height-mobile: 1070px;
+$header-distance-mobile: 88px;
+$header-distance-desktop: 90px;
+
 .contacts {
   max-width: $screen-desktop-max;
   margin: 0 auto;
   position: relative;
-  padding-top: 90px;
+  padding-top: $header-distance-desktop;
 
-  @media (max-width: $screen-sm) {
-    padding-top: 34px;
+  @media (max-width: $screen-sm - 1) {
+    padding-top: 16px;
   }
 
   .head-bg {
-    @media (min-width: $screen-md + 1) {
-      &:after {
-        background-image: url('/static/images/desktop/bg-header.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        content: "";
-        display: block;
-        position: absolute; /* could also be absolute */
-        top: -106px;
-        left: 0;
-        height:968px;
-        width: 100%;
-        z-index: -1;
-      }
+    &:after {
+      background-image: url('/static/images/desktop/bg-header.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      content: "";
+      display: block;
+      position: absolute; /* could also be absolute */
+      top: -106px;
+      left: 0;
+      height: 968px;
+      width: 100%;
+      z-index: -1;
     }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-sm - 1) {
       background-image: url('/static/images/mobile/bg-header.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -34,26 +36,91 @@
       content: "";
       display: block;
       position: absolute;
-      top: -96px;
+      top: -$header-distance-mobile;
       left: 0;
-      height: 1082px;
+      height: $contacts-bg-height-mobile + ($header-distance-mobile/2);
       width: 100%;
       z-index: -1;
     }
+  }
 
-    @media (max-width: $screen-xs) {
-      background-image: url('/static/images/mobile/bg-header.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: bottom;
-      content: "";
-      display: block;
-      position: absolute;
-      top: -96px;
-      left: 0;
-      height: 1042px;
-      width: 100%;
-      z-index: -1;
+  .illus {
+    text-align: center;
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 24px;
+    }
+
+    &-message {
+      height: $illus-height;
+      width: $illus-width;
+      margin-top: $offset-y + $contact-form-margin-top;
+      margin-left: 120px;
+      position: relative;
+
+      &:after {
+        background-image: url('/static/images/illus-message@3x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $illus-width;
+        height: $illus-height;
+        z-index: -1;
+      }
+
+      @media (max-width: $screen-md - 1) {
+        padding-bottom: 24px;
+        height: ceil($illus-height/2);
+        width: ceil($illus-width/2);
+        margin: 0 auto;
+        text-align: center;
+        padding: 32px 16px;
+
+        &:after {
+          background-image: url('/static/images/illus-message@3x.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          width: 231px;
+          height: 190px;
+          z-index: -1;
+        }
+      }
+
+      // CHECK NEXT
+      @media (max-width: $screen-sm - 1) {
+        padding: 48px 28px 49px 29px;
+        height: 288px;
+        width: 288px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        text-align: center;
+
+        &:after {
+          background-image: url('/static/images/mobile/illus-message@3x.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          width: 231px;
+          height: 190px;
+          margin-top: 57px;
+          margin-left: 32px;
+          z-index: -1;
+        }
+      }
     }
   }
 
@@ -66,18 +133,16 @@
   .join {
     margin-bottom: 60px;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-sm - 1) {
       text-align: center;
     }
 
     h1 {
       margin-bottom: 24px;
-      @media (max-width: $screen-xs) {
-        margin-bottom: 16px;
-      }
 
-      @media (max-width: $screen-sm) {
-        margin-bottom: 32px;
+      @media (max-width: $screen-sm - 1) {
+        margin-bottom: 16px;
+        line-height: 1.42;
       }
     }
 
@@ -87,19 +152,11 @@
       height: 68px;
       margin-bottom: 24px;
 
-      @media (max-width: $screen-sm) {
-        font-size: $font-size-large;
-        height: auto;
-        width: 360px;
-        padding-bottom: 32px;
-        margin: 0 auto;
-      }
-
-      @media (max-width: $screen-xs) {
+      @media (max-width: $screen-sm - 1) {
         font-size: $font-size-medium;
         height: auto;
         width: 288px;
-        padding-bottom: 24px;
+        padding-bottom: 16px;
         margin: 0 auto;
       }
     }
@@ -109,8 +166,11 @@
       background-color: $body-bg;
       box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
       height: 325px;
-      @media (max-width: $screen-sm) {
-        height: auto;
+
+      @media (max-width: $screen-sm - 1) {
+        height: 455px;
+        width: 288px;
+        margin: 0 auto;
 
         & >.row {
           flex-direction: row;
@@ -140,7 +200,7 @@
       font-size: $font-size-medium;
       background: $body-bg;
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-sm - 1) {
         height: 24px;
         padding: 0;
         text-align: left;
@@ -155,27 +215,6 @@
 
       button {
         width: 100%;
-      }
-    }
-
-    .illus-message {
-      height: 382px;
-      width: 460px;
-      margin-left: 16px;
-      margin-top: 78px;
-
-      @media (max-width: $screen-sm) {
-        height: 206px;
-        width: 231px;
-        margin: 0 auto;
-        padding-bottom: 16px;
-      }
-
-      @media (max-width: $screen-xs) {
-        height: 206px;
-        width: 231px;
-        margin: 0 auto;
-        padding-bottom: 16px;
       }
     }
   }
@@ -194,7 +233,6 @@
     @media (max-width: $screen-xs) {
       margin-top: 16px;
     }
-
 
     h1, p {
       margin-bottom: 24px;

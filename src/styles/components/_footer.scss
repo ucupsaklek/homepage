@@ -9,6 +9,21 @@
     height: auto;
   }
 
+  .lang-select:before {
+    background-image: url(/static/images/desktop/ic-chat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: inherit;
+    right: 56px;
+    height: 14px;
+    width: 14px;
+  }
+
   .wrapper {
     padding-top: 54px;
     @include x-display-flex

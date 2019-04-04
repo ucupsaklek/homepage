@@ -115,7 +115,7 @@ class Header extends React.Component {
               onMouseLeave={this.onMouseLeaveOption}
               toggle={this.toggleOption}
             >
-              <DropdownToggle nav >
+              <DropdownToggle nav className="lang-select">
                 English
               </DropdownToggle>
               <DropdownMenu onMouseLeave={this.onMouseLeaveOption}>

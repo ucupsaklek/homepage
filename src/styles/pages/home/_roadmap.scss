@@ -1,0 +1,194 @@
+$roadmap-height: 737px;
+$roadmap-padding-top: 52px;
+$roadmap-padding-top-mobile: 78px;
+$roadmap-margin-bottom: 64px;
+$roadmap-mobile-margin-bottom: 64px;
+
+.roadmap {
+  margin-top: $roadmap-padding-top;
+  height: $roadmap-height;
+  max-width: $screen-desktop-max;
+  margin-bottom: $roadmap-margin-bottom;
+  position: relative;
+
+  @media (max-width: $screen-md - 1) {
+    height: $roadmap-height - $roadmap-padding-top;
+  }
+
+  @media (max-width: $screen-sm - 1) {
+    padding-top: $roadmap-padding-top-mobile;
+    $roadmap-margin-bottom: $roadmap-mobile-margin-bottom;
+  }
+
+  &-bg {
+    &:after {
+      background-image: url('/static/images/desktop/bg-roadmap.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $roadmap-height;
+      width: 100%;
+      z-index: -1;
+    }
+
+    @media (max-width: $screen-md - 1) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-road-map.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $roadmap-height - $roadmap-padding-top;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: $screen-sm - 1) {
+      &:after {
+        background-image: url('/static/images/mobile/bg-road-map.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 100% 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 737px;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 48px;
+    width: 100%;
+    text-align: left;
+
+    @media (max-width: $screen-sm - 1) {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      line-height: 1.35;
+
+      @media (max-width: $screen-md - 1) {
+        font-size: $font-size-h2;
+      }
+
+      @media (max-width: $screen-sm - 1) {
+        line-height: 1.42;
+        margin-bottom: 16px;
+      }
+    }
+
+    p {
+      width: 673px;
+      font-size: $font-size-h3;
+      text-align: left;
+
+      @media (max-width: $screen-md - 1) {
+        width: 354px;
+        font-size: $font-size-medium;
+      }
+
+      @media (max-width: $screen-sm - 1) {
+        margin: 0 auto;
+        width: 288px;
+        font-size: $font-size-medium;
+        line-height: 1.63;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+    }
+  }
+
+  .list-wrapper {
+    padding: 0;
+    margin-right: -98px;
+
+    @media (max-width: $screen-sm) {
+      padding: 0;
+      margin-right: 0;
+    }
+
+    .slick-slide {
+      margin: 0 12px;
+      width: 210px!important;
+      padding-bottom: 24px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .slick-arrow {
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+      box-shadow: 0 22px 24px 0 rgba(0, 0, 0, 0.14);
+      background-color: $body-bg;
+      top: 430px;
+
+      &.slick-prev {
+        right: 178px;
+        left: auto;
+
+        @media (max-width: $screen-xs) {
+          right: 50%;
+          margin-right: 8px;
+        }
+      }
+
+      &.slick-next {
+        right: 108px!important;
+
+        @media (max-width: $screen-xs) {
+          left:50%;
+          margin-left: 8px;
+        }
+      }
+
+      &.slick-prev:before,
+      &.slick-next:before {
+        content: "";
+        background-image: url('/static/images/theicons-co_2@2x.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 16px;
+        width: 16px;
+        top: 16px;
+        left: 16px;
+        display: block;
+        position: absolute;
+      }
+
+      &.slick-prev:before {
+        transform: rotate(-90deg);
+      }
+      &.slick-next:before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  @import './components/card/roadmap';
+}
