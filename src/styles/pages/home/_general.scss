@@ -36,8 +36,8 @@ $lg-divider: $screen-desktop-max/$screen-lg;
     &:after {
       background-image: url('/static/images/desktop/bg-header.png');
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
+      background-size: 100% 100%;
+      background-position: bottom;
       content: "";
       display: block;
       position: absolute;

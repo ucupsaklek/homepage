@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux'
-
-import repos from './repos'
+import email from './email'
 
 export default combineReducers({
-  repos
+  email
 })
