@@ -4,6 +4,11 @@ import AccountList from '../src/components/AccountList'
 
 export default (props) => (
   <React.Fragment>
+    <Head>
+      <title>Plasma Chamber | Contact</title>
+      <meta property='og:title' content={'Plasma Chamber | Contact'} />
+    </Head>
+
     <Container>
       <div className="divider"></div>
     </Container>

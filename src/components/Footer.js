@@ -46,15 +46,21 @@ const Footer = (props) => (
 
       <ul className='socials'>
         <li>
-          <a href='#'>Github</a>
+          <Link href='https://github.com/cryptoeconomicslab/plasma-chamber'>
+            <a>Github</a>
+          </Link>
         </li>
 
         <li>
-          <a href='#'>Medium</a>
+          <Link href='https://medium.com/cryptoeconomics-lab'>
+            <a>Medium</a>
+          </Link>
         </li>
 
         <li>
-          <a href='#'>Telegram</a>
+          <Link href='https://t.me/plasmaqanda'>
+            <a>Telegram</a>
+          </Link>
         </li>
       </ul>
     </div>

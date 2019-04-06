@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Jumbotron, Button, ButtonGroup, Media } from 'reactstrap'
 import Link from 'next/link'
+import Head from 'next/head'
 import RoadmapList from '../src/components/RoadmapList'
 import AccountList from '../src/components/AccountList'
 import ContactUsForm from '../src/components/ContactUsForm'
 
 export default (props) => (
   <React.Fragment>
+    <Head>
+      <title>Plasma Chamber</title>
+      <meta property='og:title' content={'Plasma Chamber'} />
+    </Head>
+
     <div className="general">
       <div className="head-bg"></div>
       <Container>

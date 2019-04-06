@@ -32,6 +32,11 @@ class Product extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <Head>
+          <title>Plasma Chamber | Product</title>
+          <meta property='og:title' content={'Plasma Chamber | Product'} />
+        </Head>
+
         <Container>
           <div className="divider"></div>
         </Container>

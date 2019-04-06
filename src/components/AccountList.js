@@ -4,7 +4,7 @@ import { Media } from 'reactstrap'
 const AccountList = (props) => (
   <div className="account-wrapper">
     <Media>
-      <Media left href="#">
+      <Media left href="https://github.com/cryptoeconomicslab/plasma-chamber">
         <Media object src="/static/images/desktop/github_2.png" alt="Github" />
       </Media>
       <Media body>
@@ -16,7 +16,7 @@ const AccountList = (props) => (
     </Media>
 
     <Media>
-      <Media left href="#">
+      <Media left href="https://medium.com/cryptoeconomics-lab">
         <Media object src="/static/images/desktop/medium_2.png" alt="Medium" />
       </Media>
       <Media body>

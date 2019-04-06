@@ -94,7 +94,7 @@ $height: $introduction-height;
     position: relative;
 
     &:after {
-      background-image: url('/static/images/illus-plasma@2x.png');
+      background-image: url('/static/images/desktop/illus-plasma@2x.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: bottom;
@@ -115,7 +115,7 @@ $height: $introduction-height;
       padding: $illus-padding-top $illus-padding-right $illus-padding-bottom $illus-padding-left;
 
       &:after {
-        background-image: url('/static/images/illus-plasma@2x.png');
+        background-image: url('/static/images/desktop/illus-plasma@2x.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
