@@ -10,6 +10,7 @@ $roadmap-mobile-margin-bottom: 64px;
   max-width: $screen-desktop-max;
   margin-bottom: $roadmap-margin-bottom;
   position: relative;
+  margin: 0 auto;
 
   @media (max-width: $screen-md - 1) {
     height: $roadmap-height - $roadmap-padding-top;
