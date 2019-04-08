@@ -4,7 +4,6 @@ $general-y-pos: 58px;
 $general-button-height: 45px;
 
 $height:  $general-height - ($general-y-pos + $general-padding-top);
-$lg-divider: $screen-desktop-max/$screen-lg;
 
 .general {
   max-width: $screen-desktop-max;
@@ -15,14 +14,18 @@ $lg-divider: $screen-desktop-max/$screen-lg;
   position: relative;
 
   @media (max-width: $screen-lg - 1) {
-    height: ceil($height/$lg-divider) - ceil($general-padding-top/$lg-divider);
-    padding-top: ceil($general-padding-top/$lg-divider);
+    $divider: $screen-desktop-max/$screen-lg;
+
+    height: ceil($height/$divider) - ceil($general-padding-top/$divider);
+    padding-top: ceil($general-padding-top/$divider);
     margin-bottom: 16px;
   }
 
   @media (max-width: $screen-md - 1) {
-    height: ceil($height/2) - ceil($general-padding-top/2);
-    padding-top: ceil($general-padding-top/2);
+    $divider: $screen-desktop-max/$screen-md;
+
+    height: ceil($height/$divider) - (ceil($general-padding-top/$divider) + $general-y-pos);
+    padding-top: ceil($general-padding-top/$divider);
     margin-bottom: 16px;
   }
 
@@ -37,48 +40,36 @@ $lg-divider: $screen-desktop-max/$screen-lg;
     &:after {
       background-image: url('/static/images/desktop/bg-header.png');
       background-repeat: no-repeat;
-      background-position: bottom;
+      background-position: top;
+      background-size: contain;
       content: "";
       display: block;
       position: absolute;
       top: -$general-y-pos;
-      left: 0;
-      height: calc(100% + 58px);
+      right: 0;
+      height: $general-height + $general-y-pos + 8px;
       width: 100%;
       z-index: -1;
     }
 
     @media (max-width: $screen-lg - 1) {
+      $divider: $screen-desktop-max/$screen-lg;
+
       &:after {
-        background-image: url('/static/images/desktop/bg-header.png');
-        background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 100%;
-        content: "";
-        display: block;
-        position: absolute;
-        top: -$general-y-pos;
-        left: 0;
-        height: ceil($height/$lg-divider) + ceil($general-padding-top/$lg-divider);
-        width: 100%;
-        z-index: -1;
+        height: ceil($height/$divider) + ceil($general-padding-top/$divider);
       }
     }
 
     @media (max-width: $screen-md - 1) {
+      $divider: $screen-desktop-max/$screen-md;
+
       &:after {
-        background-image: url('/static/images/desktop/bg-header.png');
-        background-repeat: no-repeat;
         background-size: cover;
-        background-position: 50% 100%;
-        content: "";
-        display: block;
-        position: absolute;
+        background-position: contain;
         top: 0;
-        left: 0;
-        height: ceil($height/2);
-        width: 100%;
-        z-index: -1;
+        height: 100%;
       }
     }
 
@@ -167,7 +158,9 @@ $lg-divider: $screen-desktop-max/$screen-lg;
     font-size: $font-size-large;
 
     @media (max-width: $screen-lg - 1) {
-      height: ceil(44px/$lg-divider);
+      $divider: $screen-desktop-max/$screen-lg;
+
+      height: ceil(44px/$divider);
       width: 324px;
       margin-bottom: 48px;
       font-size: $font-size-medium;

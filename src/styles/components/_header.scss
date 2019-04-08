@@ -17,7 +17,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 4px;
+    top: 14px;
     left: -18px;
     height: 14px;
     width: 14px;
@@ -164,6 +164,8 @@
       display: inline-block;
       width: 65px;
       margin-left: 65px;
+      height: 44px;
+      padding: 10px 0;
 
       .nav-link {
         padding: 0;
@@ -217,7 +219,8 @@
     width: 160px;
     border-radius: 4px;
     box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
-    border: solid 1px $blue-lighter;
+    // border: solid 1px $blue-lighter;
+    border: 0;
     background-color: $body-bg;
     padding: 24px 16px;
 
@@ -229,6 +232,11 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      a {
+        height: 24px!important;
+        padding: 0!important;
       }
     }
   }

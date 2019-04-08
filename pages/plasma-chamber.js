@@ -44,7 +44,7 @@ class Product extends React.Component {
         </Container>
 
         <div className="product">
-          <div className="product-bg product-bg-image"></div>
+          <div className="product-bg"></div>
           <Container>
             <MemoryRouter>
               <Navbar

@@ -18,34 +18,36 @@
   }
 
   &-bg-image {
-    &:before {
-      background-image: url('/static/images/desktop/cel-kiri.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: left;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 214px;
-      left: 0;
-      height: 302px;
-      width: 317px;
-      z-index: -1;
-    }
+    @media (min-width: $screen-md) {
+      &:before {
+        background-image: url('/static/images/desktop/cel-kiri.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 214px;
+        left: 0;
+        height: 302px;
+        width: 317px;
+        z-index: -1;
+      }
 
-    &:after {
-      background-image: url('/static/images/desktop/cel-kanan.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: right;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 214px;
-      right: 0;
-      height: 302px;
-      width: 254px;
-      z-index: -1;
+      &:after {
+        background-image: url('/static/images/desktop/cel-kanan.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 214px;
+        right: 0;
+        height: 302px;
+        width: 254px;
+        z-index: -1;
+      }
     }
   }
 
@@ -124,6 +126,13 @@
         margin: 0 auto;
         line-height: 1.42;
         margin-bottom: 68px;
+      }
+
+      .more {
+        &:after {
+          content: '\25ba';
+          padding-left: 0.5em;
+        }
       }
     }
 

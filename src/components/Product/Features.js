@@ -19,7 +19,7 @@ export default (props) => (
       </Media>
       <Media bottom>
           <Link href='/'>
-            <a href="">See more details for Fast Finality</a>
+            <a href="" className="more">See more details for Fast Finality</a>
           </Link>
       </Media>
     </Media>
@@ -36,7 +36,7 @@ export default (props) => (
       </Media>
       <Media bottom>
           <Link href='/'>
-            <a href="">See more details for Checkpoint</a>
+            <a href="" className="more">See more details for Checkpoint</a>
           </Link>
       </Media>
     </Media>
@@ -53,7 +53,7 @@ export default (props) => (
       </Media>
       <Media bottom>
           <Link href='/'>
-            <a href="">See more details for Checkpoint</a>
+            <a href="" className="more">See more details for Checkpoint</a>
           </Link>
       </Media>
     </Media>
@@ -71,7 +71,7 @@ export default (props) => (
       </Media>
       <Media bottom>
           <Link href='/'>
-            <a href="">See more details for Fast Finality</a>
+            <a href="" className="more">See more details for Fast Finality</a>
           </Link>
       </Media>
     </Media>
