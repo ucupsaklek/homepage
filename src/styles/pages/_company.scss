@@ -1,0 +1,167 @@
+.company {
+  height: auto;
+  margin-top: 125px;
+  position: relative;
+  width: $screen-desktop-max;
+  margin: 0 auto;
+
+  &-bg {
+    &:before {
+      background-image: url('/static/images/desktop/bg-header.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: left;
+      content: "";
+      display: block;
+      position: absolute;
+      top: -196px;
+      left: 0;
+      height: 997px;
+      width: $screen-desktop-max;
+      z-index: -1;
+    }
+  }
+
+  .jumbotron {
+    margin: 0 auto;
+    width: 885px;
+    background: none;
+    padding: 0;
+
+    &.title {
+      margin-bottom: 296px;
+
+      .lead {
+        font-size: $font-size-h3;
+      }
+    }
+
+    &.heading {
+      width: 652px;
+      text-align: center;
+      margin-bottom: 99px;
+
+      .lead {
+        font-size: $font-size-h4;
+      }
+    }
+
+    h1 {
+      line-height: 1.35;
+      margin-bottom: 24px;
+    }
+  }
+
+  .about {
+    @include x-display-flex;
+    @include x-flex-direction(row);
+    @include x-align-items(center);
+
+    &-us {
+      height: 512px;
+      margin-bottom: 128px;
+
+      .body {
+        width: 673px;
+        height: 190px;
+        font-size: $font-size-large;
+
+        h1 {
+          margin-bottom: 24px;
+        }
+      }
+
+      .image > img {
+        width: 512px;
+        height: 512px;
+      }
+    }
+  }
+
+  .guarantee {
+    margin-bottom: 128px;
+
+    &-items {
+      margin-top: 13px;
+
+      .media {
+        margin-bottom: 24px;
+
+        &-left {
+          height: 64px;
+          width: 64px;
+          padding-right: 8px;
+
+          img {
+            width: 100%
+          }
+        }
+
+        &-body {
+          padding-left: 8px;
+          width: 496px;
+          font-size: $font-size-large;
+          line-height: 1.44;
+
+          h4 {
+            font-size: $font-size-h3;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.42;
+          }
+        }
+      }
+    }
+
+    &-image {
+      width: 592px;
+      height: 512px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .teams {
+    @include x-display-flex;
+    @include x-flex-direction(row);
+
+    margin-bottom: 100px;
+
+    .card {
+      width: 256px;
+      margin-right: 53px;
+      border: 0;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &-img-top {
+        width: 256px;
+        height: 256px;
+      }
+
+      &-body {
+        padding: 16px 0;
+        text-align: center;
+        font-size: $font-size-large;
+        color: $text-light;
+      }
+
+      &-title {
+        font-size: $font-size-h3;
+        font-weight: bold;
+        line-height: 1.42;
+      }
+
+      &-subtitle {
+        font-weight: bold;
+        line-height: 1.44;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

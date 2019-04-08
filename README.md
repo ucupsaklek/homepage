@@ -1,8 +1,8 @@
-# Next.js redux starter
-An opinionated Next.js starter kit with Express, Redux, SASS, and Jest.
+# cryptoeconomiclabs.com
+text
 
 ## About
-Next.js is an awesome and minimalistic framework to make a modern universal react app. However, there're times that we need a bit more features to build a complex SPA. That's why this project is born.
+text
 
 ## Features
 - Dynamic routing with [express](https://github.com/expressjs/express) and [next-routes](https://github.com/fridays/next-routes).

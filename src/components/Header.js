@@ -94,13 +94,19 @@ class Header extends React.Component {
                       onMouseOver={this.onMouseOverConnect}
                       onMouseLeave={this.onMouseLeaveConnect}>
                     <DropdownItem>
-                      Telegraph
+                      <Link href='https://t.me/plasmaqanda'>
+                        <a>Telegram</a>
+                      </Link>
                     </DropdownItem>
                     <DropdownItem>
-                      Github
+                      <Link href='https://github.com/cryptoeconomicslab/plasma-chamber'>
+                        <a>Github</a>
+                      </Link>
                     </DropdownItem>
                     <DropdownItem>
-                      Medium
+                      <Link href='https://medium.com/cryptoeconomics-lab'>
+                        <a>Medium</a>
+                      </Link>
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
