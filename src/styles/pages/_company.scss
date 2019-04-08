@@ -1,6 +1,10 @@
+$company-height: 997px;
+$company-y-pos: 58px;
+$company-padding-top: 125px;
+
 .company {
   height: auto;
-  margin-top: 125px;
+  padding-top: 125px;
   position: relative;
   width: $screen-desktop-max;
   margin: 0 auto;
@@ -9,14 +13,14 @@
     &:before {
       background-image: url('/static/images/desktop/bg-header.png');
       background-repeat: no-repeat;
-      background-size: 100% 100%;
       background-position: left;
+      background-size: contain;
       content: "";
       display: block;
       position: absolute;
-      top: -196px;
+      top: -($company-y-pos + $company-padding-top);
       left: 0;
-      height: 997px;
+      height: $company-height + $company-y-pos + 8px;
       width: $screen-desktop-max;
       z-index: -1;
     }
