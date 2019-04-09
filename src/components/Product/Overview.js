@@ -23,7 +23,7 @@ export default (props) => (
       <div className="benefit">
         <Media>
           <Media left>
-            <Media object src="/static/images/ic-scalable.png" alt="Generic placeholder image" />
+            <Media object src="/static/images/desktop/ic-scalable.png" alt="Scalable" />
           </Media>
           <Media body>
             <Media heading>
@@ -35,7 +35,7 @@ export default (props) => (
 
         <Media>
           <Media left>
-            <Media object src="/static/images/ic-usable.png" alt="Generic placeholder image" />
+            <Media object src="/static/images/desktop/ic-usable.png" alt="Usable" />
           </Media>
           <Media body>
             <Media heading>
@@ -47,7 +47,7 @@ export default (props) => (
 
         <Media>
           <Media left>
-            <Media object src="/static/images/ic-secure.png" alt="Generic placeholder image" />
+            <Media object src="/static/images/desktop/ic-secure.png" alt="Secure & Decentralized" />
           </Media>
           <Media body>
             <Media heading>

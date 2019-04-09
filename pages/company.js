@@ -25,7 +25,7 @@ class Company extends React.Component {
           <div className="company-bg"></div>
           <Container>
             <Jumbotron className="title">
-              <h1>Implement the decentralized society with social acceptability and social scalability</h1>
+              <h1>Implement the decentralized society with socialacceptability and social scalability</h1>
               <p className="lead">It's easy to launch unscalable, anti-social software without liability. But our mission is to build scalable, social-good software with cryptoeconomic techniques.</p>
             </Jumbotron>
 
