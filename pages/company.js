@@ -43,54 +43,56 @@ class Company extends React.Component {
               </div>
             </div>
 
-            <Jumbotron className="heading heading-guarantee">
-              <h1>Usable and Secure, Both Guaranteed </h1>
-              <p className="lead">Build your scalable, secure DApps with Plasma Chamber: a DApps development framework with Plasma enbedded in.</p>
-            </Jumbotron>
+            <div className="description">
+              <Jumbotron className="heading heading-guarantee">
+                <h1>Usable and Secure, Both Guaranteed </h1>
+                <p className="lead">Build your scalable, secure DApps with Plasma Chamber: a DApps development framework with Plasma enbedded in.</p>
+              </Jumbotron>
 
-            <Row className="guarantee">
-              <Col xs={12} md={6} className="guarantee-items">
-                <Media>
-                  <Media left>
-                    <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
-                  </Media>
-                  <Media body>
-                    <Media heading>
-                      Point of Sale Software/Money Transfer Application
+              <Row className="guarantee">
+                <Col xs={12} md={6} className="guarantee-items">
+                  <Media>
+                    <Media left>
+                      <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
                     </Media>
-                    Whether you're looking to bill customers on a recurring basis or simply accept payments, do it all with a fully secured platform that can support fast and in-person payments with Plasma.
-                  </Media>
-                </Media>
-
-                <Media>
-                  <Media left>
-                    <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
-                  </Media>
-                  <Media body>
-                    <Media heading>
-                      E-Commerce/Online C2C Merketplace
+                    <Media body>
+                      <Media heading>
+                        Point of Sale Software/Money Transfer Application
+                      </Media>
+                      Whether you're looking to bill customers on a recurring basis or simply accept payments, do it all with a fully secured platform that can support fast and in-person payments with Plasma.
                     </Media>
-                    Building your own decentralized merketplace as an escrow without a lisence is now available on Plasma Chamber.
                   </Media>
-                </Media>
 
-
-                <Media>
-                  <Media left>
-                    <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
-                  </Media>
-                  <Media body>
-                    <Media heading>
-                      Off-chain Order Book DEX
+                  <Media>
+                    <Media left>
+                      <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
                     </Media>
-                    Build DEX, connect it to order books, and 100+ different tokens are swappable on Plasma Chamber
+                    <Media body>
+                      <Media heading>
+                        E-Commerce/Online C2C Merketplace
+                      </Media>
+                      Building your own decentralized merketplace as an escrow without a lisence is now available on Plasma Chamber.
+                    </Media>
                   </Media>
-                </Media>
-              </Col>
-              <Col xs={12} md={6} className="guarantee-image">
-                <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
-              </Col>
-            </Row>
+
+
+                  <Media>
+                    <Media left>
+                      <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
+                    </Media>
+                    <Media body>
+                      <Media heading>
+                        Off-chain Order Book DEX
+                      </Media>
+                      Build DEX, connect it to order books, and 100+ different tokens are swappable on Plasma Chamber
+                    </Media>
+                  </Media>
+                </Col>
+                <Col xs={12} md={6} className="guarantee-image">
+                  <Media object src="/static/images/banner.jpg" alt="Generic placeholder image" />
+                </Col>
+              </Row>
+            </div>
 
             <Jumbotron className="heading heading-team">
               <h1>Meet Our Team</h1>

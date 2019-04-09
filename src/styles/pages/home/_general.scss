@@ -27,6 +27,7 @@ $height:  $general-height - ($general-y-pos + $general-padding-top);
     height: ceil($height/$divider) - (ceil($general-padding-top/$divider) + $general-y-pos);
     padding-top: ceil($general-padding-top/$divider);
     margin-bottom: 16px;
+    position: relative;
   }
 
   // small and extra small screen have save property
@@ -68,7 +69,7 @@ $height:  $general-height - ($general-y-pos + $general-padding-top);
       &:after {
         background-size: cover;
         background-position: contain;
-        top: 0;
+        top: -$general-y-pos;
         height: 100%;
       }
     }
@@ -82,7 +83,7 @@ $height:  $general-height - ($general-y-pos + $general-padding-top);
         content: "";
         display: block;
         position: absolute;
-        top: 0;
+        top:-$general-y-pos;
         left: 0;
         height: 665px;
         width: 100%;

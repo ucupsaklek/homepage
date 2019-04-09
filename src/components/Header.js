@@ -19,9 +19,9 @@ class Header extends React.Component {
     super(props)
 
     this.state = {
-      menuOpen: false,
-      openConnect: false,
-      openOption: false,
+      menuOpen: props.menuOpen,
+      connectOpen: false,
+      optionOpen: false,
     }
   }
 
@@ -30,27 +30,11 @@ class Header extends React.Component {
   }
 
   toggleConnect = () => {
-    this.setState({ openConnect: !this.state.openConnect})
+    this.setState({ connectOpen: !this.state.connectOpen})
   }
 
-  onMouseOverConnect = () => {
-    this.setState({ openConnect: true})
-  }
-
-  onMouseLeaveConnect = () => {
-    this.setState({ openConnect: false})
-  }
-
-  toggleOption = () => {
-    this.setState({ openOption: !this.state.openOption})
-  }
-
-  onMouseOverOption = () => {
-    this.setState({ openOption: true})
-  }
-
-  onMouseLeaveOption = () => {
-    this.setState({ openOption: false})
+  toggleOption= () => {
+    this.setState({ optionOpen: !this.state.optionOpen})
   }
 
   render () {
@@ -69,41 +53,36 @@ class Header extends React.Component {
               <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''}/>
               <Collapse isOpen={this.state.menuOpen} navbar>
               <Nav navbar>
-                <NavItem>
+                <NavItem onClick={this.toggleMenu}>
                   <Link href='/plasma-chamber'>
                     <a>Plasma Chamber</a>
                   </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem onClick={this.toggleMenu}>
                   <Link href='/company'>
                     <a>Company</a>
                   </Link>
                 </NavItem>
 
                 <Dropdown nav inNavbar
-                  isOpen={this.state.openConnect}
+                  isOpen={this.state.connectOpen}
                   toggle={this.toggleConnect}
                 >
-                  <DropdownToggle nav
-                    onMouseOver={this.onMouseOverConnect}
-                    onMouseLeave={this.onMouseLeaveConnect}
-                  >
+                  <DropdownToggle nav caret>
                     Connect
                   </DropdownToggle>
-                  <DropdownMenu left={0}
-                      onMouseOver={this.onMouseOverConnect}
-                      onMouseLeave={this.onMouseLeaveConnect}>
-                    <DropdownItem>
+                  <DropdownMenu left={0}>
+                    <DropdownItem onClick={this.toggleMenu}>
                       <Link href='https://t.me/plasmaqanda'>
                         <a>Telegram</a>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem>
+                    <DropdownItem onClick={this.toggleMenu}>
                       <Link href='https://github.com/cryptoeconomicslab/plasma-chamber'>
                         <a>Github</a>
                       </Link>
                     </DropdownItem>
-                    <DropdownItem>
+                    <DropdownItem onClick={this.toggleMenu}>
                       <Link href='https://medium.com/cryptoeconomics-lab'>
                         <a>Medium</a>
                       </Link>
@@ -119,15 +98,13 @@ class Header extends React.Component {
               </Nav>
             </Collapse>
             <Dropdown nav className="options d-sm-none d-none d-lg-block"
-              onMouseOver={this.onMouseOverOption}
-              isOpen={this.state.openOption}
-              onMouseLeave={this.onMouseLeaveOption}
+              isOpen={this.state.optionOpen}
               toggle={this.toggleOption}
             >
-              <DropdownToggle nav className="lang-select">
+              <DropdownToggle nav caret className="lang-select">
                 English
               </DropdownToggle>
-              <DropdownMenu onMouseLeave={this.onMouseLeaveOption}>
+              <DropdownMenu>
                 <DropdownItem>English</DropdownItem>
                 <DropdownItem>Japan</DropdownItem>
               </DropdownMenu>
@@ -144,6 +121,7 @@ class Header extends React.Component {
  */
 Header.defaultProps = {
   sticky: false,
+  menuOpen: false,
 }
 
 

@@ -57,7 +57,13 @@
 
   @media (max-width: $screen-sm) {
     padding: 0 18px;
+
+
+    .container {
+      padding: 0;
+    }
   }
+
 
   .navbar {
     height: 20px;
@@ -66,6 +72,11 @@
 
     &>.container {
       padding: 16px;
+
+      @media (max-width: $screen-sm) {
+        padding: 0;
+        @include x-flex-direction(row);
+      }
     }
 
     &-brand {
@@ -75,17 +86,21 @@
       padding: 0;
     }
 
+    @media (max-width: $screen-sm) {
+      &-nav {
+        margin-top: 8px;
+        @include x-flex-direction(row);
+        overflow: scroll;
+      }
+    }
     .nav-item {
       font-size: $font-size-medium;
       margin: 0 16px;
       padding: 0 12px;
       height: 20px;
-      @media (max-width: $screen-sm) {
-        display: none;
-      }
+      white-space: nowrap;
 
       &.active, &:hover {
-        display: block;
         font-weight: bold;
       }
 
@@ -258,6 +273,12 @@
         max-width: 938px;
         margin: 0 auto;
         text-align: center;
+
+        @media (max-width: $screen-sm) {
+          margin-top: 16px;
+        }
+
+
         h1 {
           height: 108px;
           line-height: 1.35;
@@ -268,15 +289,38 @@
           height: 102px;
           font-size: $font-size-h3;
           line-height: 1.42;
+
+          @media (max-width: $screen-sm) {
+            font-size: $font-size-large;
+            margin-bottom: 24px;
+          }
         }
       }
 
       .media {
         margin-bottom: 128px;
 
+        @media (max-width: $screen-sm) {
+          width: 288px;
+          margin: 0 auto;
+        }
+
+        @media (max-width: $screen-sm) {
+          @include x-flex-direction(column);
+
+          &:nth-child(2n + 1) {
+            @include x-flex-direction(column-reverse);
+          }
+        }
+
         img {
           width: 512px;
-          height: 512px
+          height: 512px;
+
+          @media (max-width: $screen-sm) {
+            width: 288px;
+            height: 288px;
+          }
         }
 
         &-left {
@@ -287,7 +331,21 @@
           margin-left: 64px;
         }
 
+        &-left,
+        &-right {
+          @media (max-width: $screen-sm) {
+            width: 288px;
+            height: 288px;
+            margin: 0 auto;
+            align-self: flex-start;
+          }
+        }
+
         &-body {
+          @media (max-width: $screen-sm) {
+            margin-top: 24px;
+          }
+
           h4 {
             font-size: $font-size-h3;
             font-weight: bold;

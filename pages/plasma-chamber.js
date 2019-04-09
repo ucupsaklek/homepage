@@ -19,7 +19,7 @@ class Product extends React.Component {
 
     this.state = {
       open: false,
-      active: '/'
+      active: 'overview'
     }
   }
 
@@ -48,7 +48,7 @@ class Product extends React.Component {
           <Container>
             <MemoryRouter>
               <Navbar
-                expand={true}
+                expand={'lg'}
               >
                 <Container>
                   <NavbarBrand to='/'>
@@ -57,7 +57,7 @@ class Product extends React.Component {
                     </div>
                   </NavbarBrand>
                   <Nav navbar>
-                    <NavItem active>
+                    <NavItem active={this.state.active == 'overview'}>
                       <Link to='/'>Overview</Link>
                     </NavItem>
                     <NavItem>
