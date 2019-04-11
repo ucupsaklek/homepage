@@ -3,8 +3,8 @@ import { Media } from 'reactstrap'
 
 const AccountList = (props) => (
   <div className="account-wrapper">
-    <Media>
-      <Media left href="https://github.com/cryptoeconomicslab/plasma-chamber">
+    <Media href="https://github.com/cryptoeconomicslab/plasma-chamber">
+      <Media left>
         <Media object src="/static/images/desktop/github_2.png" alt="Github" />
       </Media>
       <Media body>
@@ -15,8 +15,8 @@ const AccountList = (props) => (
       </Media>
     </Media>
 
-    <Media>
-      <Media left href="https://medium.com/cryptoeconomics-lab">
+    <Media href="https://medium.com/cryptoeconomics-lab">
+      <Media left>
         <Media object src="/static/images/desktop/medium_2.png" alt="Medium" />
       </Media>
       <Media body>
@@ -27,13 +27,13 @@ const AccountList = (props) => (
       </Media>
     </Media>
 
-    <Media>
-      <Media left href="#">
-        <Media object src="/static/images/desktop/ic-discord_2.png" alt="Discord" />
+    <Media href="https://t.me/plasmaqanda">
+      <Media left>
+        <Media object src="/static/images/desktop/telegram@3x.png" alt="Telegram" />
       </Media>
       <Media body>
         <Media heading>
-          Discord
+          Telegram
         </Media>
         Get close with us, make some discussion in the community.
       </Media>

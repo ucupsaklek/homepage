@@ -60,3 +60,11 @@ h5 {
   height: 13px;
   border-bottom: 1px solid #f5f9fc;
 }
+
+.color-white {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}

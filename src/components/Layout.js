@@ -34,7 +34,6 @@ export default class Layout extends PureComponent {
           </section>
         </StickyContainer>
 
-
         <footer className='footer'>
           <Container>
             <Footer />

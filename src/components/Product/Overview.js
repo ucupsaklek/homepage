@@ -12,7 +12,9 @@ export default (props) => (
 
         <div className="action">
           <ButtonGroup>
-            <Button color="primary">TRY DEMO</Button>
+            <Button color="primary">
+              <Link to="https://plasma-chamber-demo1-m.cryptoeconomicslab.com/">TRY DEMO</Link>
+            </Button>
             <Button color="default">
               <Link to='/features'>EXPLORE FEATURE</Link>
             </Button>

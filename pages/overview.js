@@ -28,7 +28,7 @@ class Product extends React.Component {
   }
 
   componentDidUpdate = () => {
-    console.log(this);
+    // console.log(this);
   }
 
   render () {
@@ -51,33 +51,33 @@ class Product extends React.Component {
                 expand={'lg'}
               >
                 <Container>
-                  <NavbarBrand to='/'>
+                  <NavbarBrand to='/product'>
                     <div className="title">
                       Plasma Chamber
                     </div>
                   </NavbarBrand>
                   <Nav navbar>
-                    <NavItem active={this.state.active == 'overview'}>
-                      <Link to='/'>Overview</Link>
+                    {/* <NavItem active={this.state.active == 'overview'}> */}
+                    <NavItem>
+                      <Link to='/overview'>Overview</Link>
                     </NavItem>
                     <NavItem>
                       <Link to='/features'>Features</Link>
                     </NavItem>
-                    <NavItem>
+                    {/* <NavItem>
                       <Link to='/usecase'>Use Case</Link>
-                    </NavItem>
+                    </NavItem> */}
                     <NavItem>
-                      <Link to='/docs'>Docs</Link>
+                      <a href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki'>Docs</a>
                     </NavItem>
                   </Nav>
                 </Container>
               </Navbar>
               <Container className="content">
                 <Switch>
-                  <Route exact path="/" component={Overview} />
+                  <Route exact path="/overview" component={Overview} />
                   <Route path="/features" component={Features} />
                   <Route path="/usecase" component={UseCase} />
-                  <Route path="/docs" component={Document} />
                 </Switch>
               </Container>
             </MemoryRouter>

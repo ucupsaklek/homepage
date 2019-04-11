@@ -8,20 +8,30 @@ const Footer = (props) => (
 
       <div className='address'>
         <p>
-          Fukuoka Growth Next <br/>
-          Daimyo, 2-6-11, Chuo Ward <br/>
-          Fukuoka City, Fukuoka City, Japan
+          Town West Building 6F, <br/>
+          1-14-15, Nishishinjuku, <br/>
+          Shinjuku Ku, Tokyo, <br/>
+          Japan, 160-0023
         </p>
       </div>
     </div>
 
     <div className='item'>
       <h5>Product</h5>
-
       <ul className='products'>
         <li>
-          <Link href='/plasma-chamber'>
+          <Link href='/product'>
             <a>Plasma Chamber</a>
+          </Link>
+        </li>
+        {/* <li>
+          <Link href='/overview'>
+            <a>Overview</a>
+          </Link>
+        </li> */}
+        <li>
+          <Link href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki'>
+            <a>Documents</a>
           </Link>
         </li>
       </ul>
@@ -32,11 +42,15 @@ const Footer = (props) => (
 
       <ul className='links'>
         <li>
-          <a href='#'>Vision</a>
+          <a href='/'>Mission</a>
         </li>
 
         <li>
-          <a href='#'>Team</a>
+          <a href='/#vision'>Vision</a>
+        </li>
+
+        <li>
+          <a href='/#team'>Team</a>
         </li>
       </ul>
     </div>
@@ -67,6 +81,12 @@ const Footer = (props) => (
 
     <div className='item'>
       <h5>Contact</h5>
+
+      <ul className='links'>
+        <li>
+          <a href='/contact'>Contact</a>
+        </li>
+      </ul>
     </div>
   </div>
 )

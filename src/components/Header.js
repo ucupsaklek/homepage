@@ -20,6 +20,7 @@ class Header extends React.Component {
 
     this.state = {
       menuOpen: props.menuOpen,
+      productOpen: false,
       connectOpen: false,
       optionOpen: false,
     }
@@ -27,6 +28,10 @@ class Header extends React.Component {
 
   toggleMenu = () => {
     this.setState({ menuOpen: !this.state.menuOpen})
+  }
+
+  toggleProduct = () => {
+    this.setState({ productOpen: !this.state.productOpen})
   }
 
   toggleConnect = () => {
@@ -54,15 +59,42 @@ class Header extends React.Component {
               <Collapse isOpen={this.state.menuOpen} navbar>
               <Nav navbar>
                 <NavItem onClick={this.toggleMenu}>
-                  <Link href='/plasma-chamber'>
-                    <a>Plasma Chamber</a>
-                  </Link>
-                </NavItem>
-                <NavItem onClick={this.toggleMenu}>
-                  <Link href='/company'>
+                  <Link href='/'>
                     <a>Company</a>
                   </Link>
                 </NavItem>
+
+                <NavItem onClick={this.toggleMenu}>
+                  <Link href='/product'>
+                    <a>Plasma Chamber</a>
+                  </Link>
+                </NavItem>
+
+                {/* <Dropdown nav inNavbar
+                  isOpen={this.state.productOpen}
+                  toggle={this.toggleProduct}
+                >
+                  <DropdownToggle nav caret>
+                    Product
+                  </DropdownToggle>
+                  <DropdownMenu left={0}>
+                    <DropdownItem onClick={this.toggleMenu}>
+                      <Link href='/product'>
+                        <a>Plasma Chamber</a>
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem onClick={this.toggleMenu}>
+                      <Link href='/overview'>
+                        <a>Overview</a>
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem onClick={this.toggleMenu}>
+                      <Link href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki' target='_blank'>
+                        <a>Documents</a>
+                      </Link>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown> */}
 
                 <Dropdown nav inNavbar
                   isOpen={this.state.connectOpen}
@@ -73,11 +105,6 @@ class Header extends React.Component {
                   </DropdownToggle>
                   <DropdownMenu left={0}>
                     <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='https://t.me/plasmaqanda'>
-                        <a>Telegram</a>
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem onClick={this.toggleMenu}>
                       <Link href='https://github.com/cryptoeconomicslab/plasma-chamber'>
                         <a>Github</a>
                       </Link>
@@ -85,6 +112,11 @@ class Header extends React.Component {
                     <DropdownItem onClick={this.toggleMenu}>
                       <Link href='https://medium.com/cryptoeconomics-lab'>
                         <a>Medium</a>
+                      </Link>
+                    </DropdownItem>
+                    <DropdownItem onClick={this.toggleMenu}>
+                      <Link href='https://t.me/plasmaqanda'>
+                        <a>Telegram</a>
                       </Link>
                     </DropdownItem>
                   </DropdownMenu>
@@ -97,7 +129,7 @@ class Header extends React.Component {
                 </NavItem>
               </Nav>
             </Collapse>
-            <Dropdown nav className="options d-sm-none d-none d-lg-block"
+            {/* <Dropdown nav className="options d-sm-none d-none d-lg-block"
               isOpen={this.state.optionOpen}
               toggle={this.toggleOption}
             >
@@ -108,7 +140,7 @@ class Header extends React.Component {
                 <DropdownItem>English</DropdownItem>
                 <DropdownItem>Japan</DropdownItem>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
           </Container>
         </Navbar>
       </header>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {
   Button,
   ButtonGroup,
@@ -32,15 +33,21 @@ import {
       return (
         <React.Fragment>
           <div className="copyrights">
-            <h5 className="d-none d-md-block">2019 Cryptoeconomic Labs</h5>
+            <h5 className="d-none d-md-block">&copy; 2018-2019 Cryptoeconomics Lab, Inc. All rights reserved.</h5>
 
             <ul className="social">
-              <li className="icon-github icon-small"></li>
-              <li className="icon-medium icon-small"></li>
-              <li className="icon-telegram icon-small"></li>
+              <li className="icon-github icon-small">
+                <Link href='https://github.com/cryptoeconomicslab/plasma-chamber'>&nbsp;</Link>
+              </li>
+              <li className="icon-medium icon-small">
+                <Link href='https://medium.com/cryptoeconomics-lab'>&nbsp;</Link>
+              </li>
+              <li className="icon-telegram icon-small">
+                <Link href='https://t.me/plasmaqanda'>&nbsp;</Link>
+              </li>
             </ul>
 
-            <Dropdown nav className="options"
+            {/* <Dropdown nav className="options"
               onMouseOver={this.onMouseOver}
               isOpen={this.state.open}
               toggle={this.toggle}
@@ -52,10 +59,9 @@ import {
                 <DropdownItem>English</DropdownItem>
                 <DropdownItem>Japan</DropdownItem>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
           </div>
-
-          <h5 className="company d-lg-none d-xs-block">2019 Cryptoeconomic Labs</h5>
+          <h5 className="company d-lg-none d-xs-block">&copy; 2018-2019 Cryptoeconomics Lab, Inc. All rights reserved.</h5>
         </React.Fragment>
       )
     }
