@@ -132,7 +132,7 @@ export default (props) => (
           <CardImg top width='100%' src='/static/images/desktop/img-shogo@2x.png' alt='Card image cap' />
           <CardBody>
             <CardTitle>Shogo Ochiai</CardTitle>
-            <CardSubtitle>CT0</CardSubtitle>
+            <CardSubtitle>CTO</CardSubtitle>
             <CardText>Shogo was the former CTO of an Indonesian fashion e-commerce app, and is a co-researcher at the University of Tokyo.</CardText>
           </CardBody>
         </Card>
