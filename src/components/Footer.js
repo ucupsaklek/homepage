@@ -41,12 +41,12 @@ const Footer = (props) => (
       <h5>Product</h5>
       <ul className='products'>
         <li>
-          <a href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki' target='_blank'>
+          <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
             Lean More
           </a>
         </li>
         <li>
-          <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
+          <a href='https://github.com/cryptoeconomicslab/plasma-chamber/blob/master/README.md#getting-started' target='_blank'>
             Get Started
           </a>
         </li>

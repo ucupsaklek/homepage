@@ -30,12 +30,12 @@ export default (props) => (
               <p className='lead'>
                 <ButtonGroup>
                   <Button color='default'>
-                    <a href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki' target='_blank'>
+                    <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
                       Learn More
                     </a>
                   </Button>
                   <Button color='primary'>
-                    <a href='https://github.com/cryptoeconomicslab/plasma-chamber' className='color-white' target='_blank'>
+                    <a href='https://github.com/cryptoeconomicslab/plasma-chamber/blob/master/README.md#getting-started' className='color-white' target='_blank'>
                       Get Started
                     </a>
                   </Button>
