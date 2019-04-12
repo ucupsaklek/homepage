@@ -1,16 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import { sendEmail } from 'actions/email'
 
 class ContactUsForm extends React.Component {
-  constructor() {
-    super();
+  constructor () {
+    super()
 
     this.state = {
       name: '',
       email: '',
-      message: '',
+      message: ''
     }
   }
 
@@ -18,11 +18,11 @@ class ContactUsForm extends React.Component {
     this.setState({ name: e.target.value })
   }
 
-  handleEmailChange  = (e) => {
+  handleEmailChange = (e) => {
     this.setState({ email: e.target.value })
   }
 
-  handleMessageChange  = (e) => {
+  handleMessageChange = (e) => {
     this.setState({ message: e.target.value })
   }
 
@@ -36,26 +36,26 @@ class ContactUsForm extends React.Component {
     }
   }
 
-  render() {
+  render () {
     return (
-      <div className="contact-wrapper">
+      <div className='contact-wrapper'>
         <h1>Send Us A Message</h1>
         <p>Feel free to contact us for any suggestion or partnership offer!</p>
 
         <Form onSubmit={this.handleSubmit}>
           <FormGroup row>
             <Col sm={12}>
-              <Input type="text" name="contact_name" value={this.state.name} onChange={this.handleNameChange} id="contact_name" placeholder="Name" required />
+              <Input type='text' name='contact_name' value={this.state.name} onChange={this.handleNameChange} id='contact_name' placeholder='Name' required />
             </Col>
           </FormGroup>
           <FormGroup row>
             <Col sm={12}>
-              <Input type="email" name="contact_email" value={this.state.email} onChange={this.handleEmailChange} id="contact_email" placeholder="Email" required/>
+              <Input type='email' name='contact_email' value={this.state.email} onChange={this.handleEmailChange} id='contact_email' placeholder='Email' required />
             </Col>
           </FormGroup>
-          <FormGroup row className="message">
+          <FormGroup row className='message'>
             <Col sm={12}>
-               <Input type="textarea" name="contact_message" value={this.state.message} onChange={this.handleMessageChange} placeholder="Message" required/>
+              <Input type='textarea' name='contact_message' value={this.state.message} onChange={this.handleMessageChange} placeholder='Message' required />
             </Col>
           </FormGroup>
           <FormGroup check row>

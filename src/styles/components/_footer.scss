@@ -191,5 +191,9 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+
+    @media (max-width: $screen-sm) {
+      padding-top: 0;
+    }
   }
 }

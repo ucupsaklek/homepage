@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
-import { MemoryRouter, Route, Switch, Link } from "react-router-dom"
+import { MemoryRouter, Route, Switch, Link } from 'react-router-dom'
 import {
   Container,
   Navbar,
@@ -40,11 +40,11 @@ class Product extends React.Component {
         </Head>
 
         <Container>
-          <div className="divider"></div>
+          <div className='divider' />
         </Container>
 
-        <div className="product">
-          <div className="product-bg"></div>
+        <div className='product'>
+          <div className='product-bg' />
           <Container>
             <MemoryRouter>
               <Navbar
@@ -52,7 +52,7 @@ class Product extends React.Component {
               >
                 <Container>
                   <NavbarBrand to='/product'>
-                    <div className="title">
+                    <div className='title'>
                       Plasma Chamber
                     </div>
                   </NavbarBrand>
@@ -73,11 +73,11 @@ class Product extends React.Component {
                   </Nav>
                 </Container>
               </Navbar>
-              <Container className="content">
+              <Container className='content'>
                 <Switch>
-                  <Route exact path="/overview" component={Overview} />
-                  <Route path="/features" component={Features} />
-                  <Route path="/usecase" component={UseCase} />
+                  <Route exact path='/overview' component={Overview} />
+                  <Route path='/features' component={Features} />
+                  <Route path='/usecase' component={UseCase} />
                 </Switch>
               </Container>
             </MemoryRouter>

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 export const SEND_EMAIL_START = Symbol('SEND_EMAIL_START')
 export const SEND_EMAIL_SUCCESS = Symbol('SEND_EMAIL_SUCCESS')
@@ -14,8 +14,8 @@ export function sendEmail (attributes) {
         dispatch(sendEmailSuccess(response))
       })
       .catch(function (error) {
-        console.log(error);
-      });
+        console.log(error)
+      })
   }
 }
 

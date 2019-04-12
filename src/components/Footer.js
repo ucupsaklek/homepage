@@ -8,49 +8,47 @@ const Footer = (props) => (
 
       <div className='address'>
         <p>
-          Town West Building 6F, <br/>
-          1-14-15, Nishishinjuku, <br/>
-          Shinjuku Ku, Tokyo, <br/>
+          Town West Building 6F, <br />
+          1-14-15, Nishishinjuku, <br />
+          Shinjuku Ku, Tokyo, <br />
           Japan, 160-0023
         </p>
       </div>
     </div>
 
     <div className='item'>
-      <h5>Product</h5>
+      <h5>Page</h5>
       <ul className='products'>
         <li>
-          <Link href='/product'>
-            <a>Plasma Chamber</a>
+          <Link href='/#top'>
+            Top
           </Link>
         </li>
-        {/* <li>
-          <Link href='/overview'>
-            <a>Overview</a>
-          </Link>
-        </li> */}
         <li>
-          <Link href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki'>
-            <a>Documents</a>
+          <Link href='/#usecase'>
+            Use case
+          </Link>
+        </li>
+        <li>
+          <Link href='/#roadmap'>
+            Roadmap
           </Link>
         </li>
       </ul>
     </div>
 
     <div className='item'>
-      <h5>Company</h5>
-
-      <ul className='links'>
+      <h5>Product</h5>
+      <ul className='products'>
         <li>
-          <a href='/'>Mission</a>
+          <a href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki' target='_blank'>
+            Lean More
+          </a>
         </li>
-
         <li>
-          <a href='/#vision'>Vision</a>
-        </li>
-
-        <li>
-          <a href='/#team'>Team</a>
+          <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
+            Get Started
+          </a>
         </li>
       </ul>
     </div>
@@ -60,21 +58,21 @@ const Footer = (props) => (
 
       <ul className='socials'>
         <li>
-          <Link href='https://github.com/cryptoeconomicslab/plasma-chamber'>
-            <a>Github</a>
-          </Link>
+          <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
+            Github
+          </a>
         </li>
 
         <li>
-          <Link href='https://medium.com/cryptoeconomics-lab'>
-            <a>Medium</a>
-          </Link>
+          <a href='https://medium.com/cryptoeconomics-lab' target='_blank'>
+            Medium
+          </a>
         </li>
 
         <li>
-          <Link href='https://t.me/plasmaqanda'>
-            <a>Telegram</a>
-          </Link>
+          <a href='https://t.me/plasmaqanda' target='_blank'>
+            Telegram
+          </a>
         </li>
       </ul>
     </div>
@@ -84,7 +82,7 @@ const Footer = (props) => (
 
       <ul className='links'>
         <li>
-          <a href='/contact'>Contact</a>
+          <a href='/#contact'>Contact</a>
         </li>
       </ul>
     </div>

@@ -22,81 +22,73 @@ class Header extends React.Component {
       menuOpen: props.menuOpen,
       productOpen: false,
       connectOpen: false,
-      optionOpen: false,
+      optionOpen: false
     }
   }
 
   toggleMenu = () => {
-    this.setState({ menuOpen: !this.state.menuOpen})
+    this.setState({ menuOpen: !this.state.menuOpen })
   }
 
   toggleProduct = () => {
-    this.setState({ productOpen: !this.state.productOpen})
+    this.setState({ productOpen: !this.state.productOpen })
   }
 
   toggleConnect = () => {
-    this.setState({ connectOpen: !this.state.connectOpen})
+    this.setState({ connectOpen: !this.state.connectOpen })
   }
 
   toggleOption= () => {
-    this.setState({ optionOpen: !this.state.optionOpen})
+    this.setState({ optionOpen: !this.state.optionOpen })
   }
 
   render () {
     return (
-      <header className={"header " + (this.props.sticky || this.state.menuOpen ? 'sticky' : '')} style={this.props.style}>
+      <header className={'header ' + (this.props.sticky || this.state.menuOpen ? 'sticky' : '')} style={this.props.style}>
         <Navbar
           expand={'lg'}
           light
         >
           <Container>
-              <NavbarBrand href='/'>
-                <div className="logo">
-                  <img src="/static/images/logo@3x.png" alt="cryptoeconomicslab"/>
-                </div>
-              </NavbarBrand>
-              <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''}/>
-              <Collapse isOpen={this.state.menuOpen} navbar>
+            <NavbarBrand href='/'>
+              <div className='logo'>
+                <img src='/static/images/logo@3x.png' alt='cryptoeconomicslab' />
+              </div>
+            </NavbarBrand>
+            <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''} />
+            <Collapse isOpen={this.state.menuOpen} navbar>
               <Nav navbar>
-                <NavItem onClick={this.toggleMenu}>
-                  <Link href='/'>
-                    <a>Company</a>
+                <NavItem>
+                  <Link href='/#top'>
+                    <a>TOP</a>
                   </Link>
                 </NavItem>
 
-                <NavItem onClick={this.toggleMenu}>
-                  <Link href='/product'>
-                    <a>Plasma Chamber</a>
+                <NavItem>
+                  <Link href='/#usecase'>
+                    <a>Use case</a>
+                  </Link>
+                </NavItem>
+
+                <NavItem>
+                  <Link href='/#roadmap'>
+                    <a>Roadmap</a>
+                  </Link>
+                </NavItem>
+
+                <NavItem>
+                  <Link href='/#connect'>
+                    <a>Connect</a>
+                  </Link>
+                </NavItem>
+
+                <NavItem>
+                  <Link href='/#team'>
+                    <a>Team</a>
                   </Link>
                 </NavItem>
 
                 {/* <Dropdown nav inNavbar
-                  isOpen={this.state.productOpen}
-                  toggle={this.toggleProduct}
-                >
-                  <DropdownToggle nav caret>
-                    Product
-                  </DropdownToggle>
-                  <DropdownMenu left={0}>
-                    <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='/product'>
-                        <a>Plasma Chamber</a>
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='/overview'>
-                        <a>Overview</a>
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki' target='_blank'>
-                        <a>Documents</a>
-                      </Link>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown> */}
-
-                <Dropdown nav inNavbar
                   isOpen={this.state.connectOpen}
                   toggle={this.toggleConnect}
                 >
@@ -120,10 +112,10 @@ class Header extends React.Component {
                       </Link>
                     </DropdownItem>
                   </DropdownMenu>
-                </Dropdown>
+                </Dropdown> */}
 
                 <NavItem>
-                  <Link href='/contact'>
+                  <Link href='/#contact'>
                     <a>Contact</a>
                   </Link>
                 </NavItem>
@@ -153,8 +145,7 @@ class Header extends React.Component {
  */
 Header.defaultProps = {
   sticky: false,
-  menuOpen: false,
+  menuOpen: false
 }
-
 
 export default Header

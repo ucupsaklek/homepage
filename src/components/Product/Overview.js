@@ -1,31 +1,31 @@
 import React, { Component } from 'react'
 import { Jumbotron, Button, ButtonGroup, Media } from 'reactstrap'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 export default (props) => (
   <React.Fragment>
-    <div className="product-bg product-bg-image"></div>
-    <div className="overview">
+    <div className='product-bg product-bg-image' />
+    <div className='overview'>
       <Jumbotron>
         <h1>Plasma Chamber</h1>
-        <p className="lead">A framework to build usable Dapps on Plasma without sacrificing security</p>
+        <p className='lead'>A framework to build usable Dapps on Plasma without sacrificing security</p>
 
-        <div className="action">
+        <div className='action'>
           <ButtonGroup>
-            <Button color="primary">
-              <Link to="https://plasma-chamber-demo1-m.cryptoeconomicslab.com/">TRY DEMO</Link>
+            <Button color='primary'>
+              <Link to='https://plasma-chamber-demo1-m.cryptoeconomicslab.com/'>TRY DEMO</Link>
             </Button>
-            <Button color="default">
+            <Button color='default'>
               <Link to='/features'>EXPLORE FEATURE</Link>
             </Button>
           </ButtonGroup>
         </div>
       </Jumbotron>
 
-      <div className="benefit">
+      <div className='benefit'>
         <Media>
           <Media left>
-            <Media object src="/static/images/desktop/ic-scalable.png" alt="Scalable" />
+            <Media object src='/static/images/desktop/ic-scalable.png' alt='Scalable' />
           </Media>
           <Media body>
             <Media heading>
@@ -37,7 +37,7 @@ export default (props) => (
 
         <Media>
           <Media left>
-            <Media object src="/static/images/desktop/ic-usable.png" alt="Usable" />
+            <Media object src='/static/images/desktop/ic-usable.png' alt='Usable' />
           </Media>
           <Media body>
             <Media heading>
@@ -49,7 +49,7 @@ export default (props) => (
 
         <Media>
           <Media left>
-            <Media object src="/static/images/desktop/ic-secure.png" alt="Secure & Decentralized" />
+            <Media object src='/static/images/desktop/ic-secure.png' alt='Secure & Decentralized' />
           </Media>
           <Media body>
             <Media heading>

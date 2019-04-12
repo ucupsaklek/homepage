@@ -13,59 +13,57 @@ export default (props) => (
       <meta property='og:title' content={'Plasma Chamber'} />
     </Head>
 
-    <div className="general">
-      <div className="head-bg"></div>
+    <div className='general'>
+      <div className='head-bg' />
       <Container>
         <Row>
           <Col xs={12} md={5}>
             <Jumbotron>
-              <div className="intro">
-                <div className="title">
+              <div className='intro'>
+                <div className='title'>
                   <span>New</span>
                 </div>
-                <div className="desc">
+                <div className='desc'>
                   <span>Introducing <b>Plasma Chamber</b></span>
                 </div>
               </div>
 
               <h1>General Purpose Plasma</h1>
-              <p className="lead">Plasma Cash based #plapps framework with many fancy gadgets.</p>
-              <p className="lead">
-               <a href="https://t.me/plasmaqanda">
-                 <Button color="primary">Let's Talk With Us</Button>
-               </a>
+              <p className='lead'>Plasma Cash based #plapps framework with many fancy gadgets.</p>
+              <p className='lead'>
+                <a href='https://t.me/plasmaqanda'>
+                  <Button color='primary'>Let's Talk With Us</Button>
+                </a>
               </p>
             </Jumbotron>
           </Col>
           <Col xs={12} md={7}>
-            <div className="banner illus-header">
-            </div>
+            <div className='banner illus-header' />
           </Col>
         </Row>
       </Container>
     </div>
 
-    <div className="introduction">
-      <div className="plasma-bg"></div>
+    <div className='introduction'>
+      <div className='plasma-bg' />
       <Container>
         <Row>
           <Col xs={12} md={6}>
-            <div className="banner illus-plasma">
-            </div>
+            <div className='banner illus-plasma' />
           </Col>
           <Col xs={12} md={6}>
             <Jumbotron>
               <h1>Introducing Plasma Chamber</h1>
-              <p className="lead">A framework to build usable Dapps on Plasma without sacrificing security.</p>
-              <div className="lead">
+              <p className='lead'>A framework to build usable Dapps on Plasma without sacrificing security.</p>
+              <div className='lead'>
                 <ButtonGroup>
-                  <Button color="default">
-                    <a href="https://github.com/cryptoeconomicslab/plasma-chamber/wiki">
+                  <Button color='default'>
+                    <a href='https://github.com/cryptoeconomicslab/plasma-chamber/wiki'>
                       Learn More
                     </a>
                   </Button>
-                  <Button color="primary">
-                    <a href="https://github.com/cryptoeconomicslab/plasma-chamber" className="color-white">
+                  <Button color='primary'>
+                    <a href='https://github.com/cryptoeconomicslab/plasma-chamber' className='color-white'>
                       Get Started
                     </a>
                   </Button>
@@ -77,10 +75,10 @@ export default (props) => (
       </Container>
     </div>
 
-    <div className="roadmap" id="#company">
-      <div className="roadmap-bg"></div>
+    <div className='roadmap' id='#company'>
+      <div className='roadmap-bg' />
       <Container>
-        <div className="title">
+        <div className='title'>
           <h1>Roadmap</h1>
           <p>Implementation to the real world mass adoption of public Blockchain </p>
         </div>
@@ -88,23 +86,22 @@ export default (props) => (
       </Container>
     </div>
 
-    <div className="connect" id="#connect">
+    <div className='connect' id='#connect'>
       <Container>
         <h1>We’d love hear from you</h1>
         <AccountList />
       </Container>
     </div>
 
-    <div className="contact" id="#contact">
-      <div className="message-bg"></div>
+    <div className='contact' id='#contact'>
+      <div className='message-bg' />
       <Container>
         <Row>
           <Col xs={12} md={12} lg={5}>
             <ContactUsForm />
           </Col>
           <Col xs={12} md={12} lg={7}>
-            <div className="banner illus illus-message">
-            </div>
+            <div className='banner illus illus-message' />
           </Col>
         </Row>
       </Container>

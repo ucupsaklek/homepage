@@ -3,13 +3,13 @@ import { Media } from 'reactstrap'
 import Link from 'next/link'
 
 export default (props) => (
-  <div className="features">
+  <div className='features'>
     <h1>Key Features of Plasma Chamber</h1>
     <p>Incorporated intro Plasma Cashflow design as our basis, we have some unique features on our implementation</p>
 
     <Media>
       <Media top>
-        <Media object src="/static/images/ic-finality.png" alt="Fast Finality" />
+        <Media object src='/static/images/ic-finality.png' alt='Fast Finality' />
       </Media>
       <Media body>
         <Media heading>
@@ -26,7 +26,7 @@ export default (props) => (
 
     <Media>
       <Media top>
-        <Media object src="/static/images/ic-defrag.png" alt="Defragmentation" />
+        <Media object src='/static/images/ic-defrag.png' alt='Defragmentation' />
       </Media>
       <Media body>
         <Media heading>
@@ -43,7 +43,7 @@ export default (props) => (
 
     <Media>
       <Media top>
-        <Media object src="/static/images/ic-checkpoint.png" alt="Checkpoint" />
+        <Media object src='/static/images/ic-checkpoint.png' alt='Checkpoint' />
       </Media>
       <Media body>
         <Media heading>
@@ -60,7 +60,7 @@ export default (props) => (
 
     <Media>
       <Media top>
-        <Media object src="/static/images/ic-custom.png" alt="Custom Transaction" />
+        <Media object src='/static/images/ic-custom.png' alt='Custom Transaction' />
       </Media>
       <Media body>
         <Media heading>

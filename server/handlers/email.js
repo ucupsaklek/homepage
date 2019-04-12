@@ -1,5 +1,5 @@
-const MailConfig = require('../email/config');
-const handlebars = require('nodemailer-express-handlebars');
+const MailConfig = require('../email/config')
+const handlebars = require('nodemailer-express-handlebars')
 
 module.exports.send = (req, res, next) => {
   const transport = MailConfig.SMTPTransport
@@ -10,11 +10,11 @@ module.exports.send = (req, res, next) => {
       extName: '.hbs',
       partialsDir: 'server/email',
       layoutsDir: 'server/email',
-      defaultLayout: 'contact.hbs',
+      defaultLayout: 'contact.hbs'
     },
     viewPath: 'server/email',
     extName: '.hbs'
-  }));
+  }))
 
   const options = {
     from: `\"${payload.name}\" <${payload.name}>`,
@@ -26,15 +26,15 @@ module.exports.send = (req, res, next) => {
       email: payload.name.email,
       address: payload.name.message
     }
-  };
+  }
 
   transport.sendMail(options, (error, info) => {
-    if(error) {
+    if (error) {
       console.log(error)
       res.json(error)
     }
-    console.log("email is send")
+    console.log('email is send')
     console.log(info)
     res.json(info)
-  });
+  })
 }

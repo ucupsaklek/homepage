@@ -14,18 +14,18 @@ export default class Layout extends PureComponent {
     return (
       <div>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
           <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' />
-          <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+          <link rel='icon' type='image/x-icon' href='/static/favicon.ico' />
         </Head>
 
         <StickyContainer>
           <Sticky topOffset={72}>
             {({
               style,
-              isSticky,
+              isSticky
             }) => (
-              <Header sticky={isSticky} style={style}/>
+              <Header sticky={isSticky} style={style} />
             )}
           </Sticky>
 
@@ -37,7 +37,7 @@ export default class Layout extends PureComponent {
         <footer className='footer'>
           <Container>
             <Footer />
-            <hr/>
+            <hr />
             <Copyrights />
           </Container>
         </footer>

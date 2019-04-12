@@ -2,10 +2,10 @@ import React from 'react'
 import { Media } from 'reactstrap'
 
 const AccountList = (props) => (
-  <div className="account-wrapper">
-    <Media href="https://github.com/cryptoeconomicslab/plasma-chamber">
+  <div className='account-wrapper'>
+    <Media href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
       <Media left>
-        <Media object src="/static/images/desktop/github_2.png" alt="Github" />
+        <Media object src='/static/images/desktop/github_2.png' alt='Github' />
       </Media>
       <Media body>
         <Media heading>
@@ -15,9 +15,9 @@ const AccountList = (props) => (
       </Media>
     </Media>
 
-    <Media href="https://medium.com/cryptoeconomics-lab">
+    <Media href='https://medium.com/cryptoeconomics-lab' target='_blank'>
       <Media left>
-        <Media object src="/static/images/desktop/medium_2.png" alt="Medium" />
+        <Media object src='/static/images/desktop/medium_2.png' alt='Medium' />
       </Media>
       <Media body>
         <Media heading>
@@ -27,9 +27,9 @@ const AccountList = (props) => (
       </Media>
     </Media>
 
-    <Media href="https://t.me/plasmaqanda">
+    <Media href='https://t.me/plasmaqanda' target='_blank'>
       <Media left>
-        <Media object src="/static/images/desktop/telegram@3x.png" alt="Telegram" />
+        <Media object src='/static/images/desktop/telegram@3x.png' alt='Telegram' />
       </Media>
       <Media body>
         <Media heading>
@@ -41,5 +41,4 @@ const AccountList = (props) => (
   </div>
 )
 
-
-export default AccountList;
+export default AccountList
