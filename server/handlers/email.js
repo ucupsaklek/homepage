@@ -20,7 +20,8 @@ module.exports.send = (req, res, next) => {
   const options = {
     from: MailConfig.recipient,
     to: payload.email,
-    subject: 'Website Contact',
+    cc: MailConfig.recipient,
+    subject: '[CEL] Thank you for your inquiry',
     template: 'contact',
     context: {
       name: payload.name,

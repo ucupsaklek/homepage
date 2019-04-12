@@ -59,12 +59,11 @@ export default (props) => (
       <Row className='guarantee'>
         <Col xs={12} md={4} className='guarantee-items'>
           <Media>
-            <Media left>
+            <Media body>
               <Media object src='/static/images/desktop/ic-pos@2x.png' alt='Generic placeholder image' />
-            </Media>
-            <Media body>
               <Media heading>
-                Point of Sale Software/Money Transfer Application
+                Payment / Money<br/>
+                Transfer Application
               </Media>
             </Media>
           </Media>
@@ -72,12 +71,11 @@ export default (props) => (
 
         <Col xs={12} md={4} className='guarantee-items'>
           <Media>
-            <Media left>
+            <Media body>
               <Media object src='/static/images/desktop/ic-marketplace@2x.png' alt='Generic placeholder image' />
-            </Media>
-            <Media body>
               <Media heading>
-                E-Commerce/Online C2C Merketplace
+                E-Commerce / Online<br/>
+                C2C Merketplace
               </Media>
             </Media>
           </Media>
@@ -85,10 +83,8 @@ export default (props) => (
 
         <Col xs={12} md={4} className='guarantee-items'>
           <Media>
-            <Media left>
-              <Media object src='/static/images/desktop/ic-orderbook@2x.png' alt='Generic placeholder image' />
-            </Media>
             <Media body>
+              <Media object src='/static/images/desktop/ic-orderbook@2x.png' alt='Generic placeholder image' />
               <Media heading>
                 Off-chain Order Book DEX
               </Media>

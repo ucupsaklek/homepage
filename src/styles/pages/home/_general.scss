@@ -516,6 +516,7 @@ $height: $general-height - ($general-y-pos + $general-padding-top);
 
     .media {
       margin-bottom: 24px;
+      text-align: center;
       @media (max-width: $screen-sm - 1) {
         @include x-flex-direction(column);
         @include x-align-items(center);
@@ -526,7 +527,7 @@ $height: $general-height - ($general-y-pos + $general-padding-top);
       &-left {
         height: 64px;
         width: 64px;
-        padding-right: 8px;
+        // padding-right: 8px;
 
         @media (max-width: $screen-sm - 1) {
           height: 144px;
@@ -539,7 +540,7 @@ $height: $general-height - ($general-y-pos + $general-padding-top);
       }
 
       &-body {
-        padding-left: 8px;
+        // padding-left: 8px;
         width: 496px;
         font-size: $font-size-large;
         line-height: 1.44;

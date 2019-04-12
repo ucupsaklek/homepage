@@ -26,13 +26,20 @@ class ContactUsForm extends React.Component {
     this.setState({ message: e.target.value })
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault()
 
     const valid = event.target.checkValidity()
 
     if (valid) {
-      this.props.sendEmail(this.state)
+      this.props.sendEmail(this.state).then((res) => {
+        this.setState({ name: '' })
+        this.setState({ email: '' })
+        this.setState({ message: '' })
+        console.log('res:', res)
+      }).catch(function (err) {
+        console.log(err)
+      })
     }
   }
 

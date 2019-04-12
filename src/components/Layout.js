@@ -5,11 +5,19 @@ import Head from 'next/head'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Copyrights from 'components/Copyrights'
+import ReactGA from 'react-ga'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'styles/main.scss'
 
 export default class Layout extends PureComponent {
+  componentDidMount () {
+    if (process.env.NODE_ENV === 'production') {
+      ReactGA.initialize('UA-138240546-1')
+      ReactGA.pageview(document.location.pathname)
+    }
+  }
+
   render () {
     return (
       <div>
