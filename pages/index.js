@@ -128,7 +128,7 @@ export default (props) => (
           <CardBody>
             <CardTitle>Taku Kataoka</CardTitle>
             <CardSubtitle>CEO</CardSubtitle>
-            <CardText>Prior to CEL, Taku Kataoka founded a real estate tech startup, later merged by Livesense.</CardText>
+            <CardText>Prior to CEL, Taku founded a real estate tech startup in 2013, after that he founded several startups in southeastern Asia.</CardText>
           </CardBody>
         </Card>
 
