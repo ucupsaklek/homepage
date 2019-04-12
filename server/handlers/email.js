@@ -26,7 +26,7 @@ module.exports.send = (req, res, next) => {
     context: {
       name: payload.name,
       email: payload.email,
-      address: payload.message
+      message: payload.message
     }
   }
 

@@ -10,7 +10,8 @@ class ContactUsForm extends React.Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      isSending: false
     }
   }
 
@@ -28,6 +29,7 @@ class ContactUsForm extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault()
+    this.setState({ isSending: true })
 
     const valid = event.target.checkValidity()
 
@@ -36,6 +38,7 @@ class ContactUsForm extends React.Component {
         this.setState({ name: '' })
         this.setState({ email: '' })
         this.setState({ message: '' })
+        this.setState({ isSending: false })
         console.log('res:', res)
       }).catch(function (err) {
         console.log(err)
@@ -66,7 +69,7 @@ class ContactUsForm extends React.Component {
             </Col>
           </FormGroup>
           <FormGroup check row>
-            <Button>Send</Button>
+            <Button disabled={this.state.isSending}>Send</Button>
           </FormGroup>
         </Form>
       </div>
