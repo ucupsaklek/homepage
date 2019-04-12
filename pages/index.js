@@ -21,7 +21,7 @@ export default (props) => (
             <Jumbotron>
               <div className='intro'>
                 <div className='desc'>
-                  <span><b>Plasma Chamber</b></span>
+                  <span>Introducing <b>Plasma Chamber</b></span>
                 </div>
               </div>
 

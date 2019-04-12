@@ -43,7 +43,7 @@ class Copyrights extends React.Component {
                 <Link href='https://medium.com/cryptoeconomics-lab'>&nbsp;</Link>
               </li>
               <li className='icon-telegram icon-small'>
-                <Link href='https://t.me/plasmaqanda'>&nbsp;</Link>
+                <Link href='https://t.me/plasmachamber'>&nbsp;</Link>
               </li>
             </ul>
 

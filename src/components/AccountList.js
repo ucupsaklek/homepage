@@ -27,7 +27,7 @@ const AccountList = (props) => (
       </Media>
     </Media>
 
-    <Media href='https://t.me/plasmaqanda' target='_blank'>
+    <Media href='https://t.me/plasmachamber' target='_blank'>
       <Media left>
         <Media object src='/static/images/desktop/telegram@3x.png' alt='Telegram' />
       </Media>

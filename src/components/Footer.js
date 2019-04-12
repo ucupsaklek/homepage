@@ -70,7 +70,7 @@ const Footer = (props) => (
         </li>
 
         <li>
-          <a href='https://t.me/plasmaqanda' target='_blank'>
+          <a href='https://t.me/plasmachamber' target='_blank'>
             Telegram
           </a>
         </li>

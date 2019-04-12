@@ -107,7 +107,7 @@ class Header extends React.Component {
                       </Link>
                     </DropdownItem>
                     <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='https://t.me/plasmaqanda'>
+                      <Link href='https://t.me/plasmachamber'>
                         <a>Telegram</a>
                       </Link>
                     </DropdownItem>

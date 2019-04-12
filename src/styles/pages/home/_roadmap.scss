@@ -1,6 +1,6 @@
-$roadmap-height: 737px;
+$roadmap-height: 584px;
 $roadmap-padding-top: 52px;
-$roadmap-padding-top-mobile: 78px;
+$roadmap-padding-top-mobile: 64px;
 $roadmap-margin-bottom: 64px;
 $roadmap-mobile-margin-bottom: 64px;
 
@@ -66,7 +66,7 @@ $roadmap-mobile-margin-bottom: 64px;
         position: absolute;
         top: 0;
         left: 0;
-        height: 737px;
+        height: $roadmap-height + 32;
         width: 100%;
         z-index: -1;
       }
@@ -128,8 +128,8 @@ $roadmap-mobile-margin-bottom: 64px;
     }
 
     .slick-slide {
-      margin: 0 12px;
-      width: 210px!important;
+      padding-right: 6px;
+      padding-left: 6px;
       padding-bottom: 24px;
 
       &:first-child {
@@ -147,7 +147,7 @@ $roadmap-mobile-margin-bottom: 64px;
       border-radius: 4px;
       box-shadow: 0 22px 24px 0 rgba(0, 0, 0, 0.14);
       background-color: $body-bg;
-      top: 430px;
+      top: 344px;
 
       &.slick-prev {
         right: 178px;

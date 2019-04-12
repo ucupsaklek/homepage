@@ -507,6 +507,8 @@ $height: $general-height - ($general-y-pos + $general-padding-top);
 
   @media (max-width: $screen-sm - 1) {
     margin-bottom: 64px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   &-items {
