@@ -26,7 +26,7 @@ export default (props) => (
               </div>
 
               <h1>General Purpose Plasma</h1>
-              <p className='lead'>Plasma Cashflow based #plapps framework with many fancy gadgets.</p>
+              <p className='lead'>Plasma Chamber is a DApps development framework that guarantees security, scalability, and usability utilizing Plasma technology.</p>
               <p className='lead'>
                 <ButtonGroup>
                   <Button color='default'>
