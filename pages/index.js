@@ -21,12 +21,12 @@ export default (props) => (
             <Jumbotron>
               <div className='intro'>
                 <div className='desc'>
-                  <span>Introducing <b>Plasma Chamber</b></span>
+                  <span><b>Plasma Chamber</b></span>
                 </div>
               </div>
 
               <h1>General Purpose Plasma</h1>
-              <p className='lead'>Plasma Cash based #plapps framework with many fancy gadgets.</p>
+              <p className='lead'>Plasma Cashflow based #plapps framework with many fancy gadgets.</p>
               <p className='lead'>
                 <ButtonGroup>
                   <Button color='default'>
@@ -66,7 +66,6 @@ export default (props) => (
               <Media heading>
                 Point of Sale Software/Money Transfer Application
               </Media>
-              Whether you're looking to bill customers on a recurring basis or simply accept payments, do it all with a fully secured platform that can support fast and in-person payments with Plasma.
             </Media>
           </Media>
         </Col>
@@ -80,7 +79,6 @@ export default (props) => (
               <Media heading>
                 E-Commerce/Online C2C Merketplace
               </Media>
-              Building your own decentralized merketplace as an escrow without a lisence is now available on Plasma Chamber.
             </Media>
           </Media>
         </Col>
@@ -94,7 +92,6 @@ export default (props) => (
               <Media heading>
                 Off-chain Order Book DEX
               </Media>
-              Build DEX, connect it to order books, and 100+ different tokens are swappable on Plasma Chamber
             </Media>
           </Media>
         </Col>
@@ -122,7 +119,7 @@ export default (props) => (
     <Container id="team">
       <Jumbotron className='heading heading-team'>
         <h1>Meet Our Team</h1>
-        <p className='lead'>Cryptoeconomics Lab is a team of distributed entrepreneurs, engineers, and blockchain experts. Our mission is to enable the sharing economy on the decentralized web.</p>
+        <p className='lead'>Cryptoeconomics Lab is a team of distributed entrepreneurs, engineers, and blockchain experts.</p>
       </Jumbotron>
 
       <div className='teams'>
@@ -131,7 +128,7 @@ export default (props) => (
           <CardBody>
             <CardTitle>Taku Kataoka</CardTitle>
             <CardSubtitle>CEO</CardSubtitle>
-            <CardText>Prior to CEL, Taku Kataoka founded a real estate tech startup, later merged by Livesense. He still runs a Japanese restaurant in Jakarta.</CardText>
+            <CardText>Prior to CEL, Taku Kataoka founded a real estate tech startup, later merged by Livesense.</CardText>
           </CardBody>
         </Card>
 
@@ -139,8 +136,8 @@ export default (props) => (
           <CardImg top width='100%' src='/static/images/desktop/img-shogo@2x.png' alt='Card image cap' />
           <CardBody>
             <CardTitle>Shogo Ochiai</CardTitle>
-            <CardSubtitle>CTP</CardSubtitle>
-            <CardText>Shogo was the former CTO of an Indonesian fashion e-commerce app, and is a researcher of Economics at the University of Tokyo.</CardText>
+            <CardSubtitle>CT0</CardSubtitle>
+            <CardText>Shogo was the former CTO of an Indonesian fashion e-commerce app, and is a co-researcher at the University of Tokyo.</CardText>
           </CardBody>
         </Card>
 
@@ -149,7 +146,7 @@ export default (props) => (
           <CardBody>
             <CardTitle>Syuhei Hiya</CardTitle>
             <CardSubtitle>Developer & Researcher</CardSubtitle>
-            <CardText>Syuhei has been the CEO of Firebase competitor PaaS, and a tech guru at the same time. He was also a MITOU Super Creator in 2010, for creating the visual programming language FLOWer.</CardText>
+            <CardText>Syuhei has been the CEO of Firebase competitor PaaS. He was also a MITOU Super Creator in 2010.</CardText>
           </CardBody>
         </Card>
 
@@ -158,7 +155,7 @@ export default (props) => (
           <CardBody>
             <CardTitle>Yuriko Nishijima</CardTitle>
             <CardSubtitle>Developer & Researcher</CardSubtitle>
-            <CardText>Yuriko researches Plasma and focuses on the production of the blockchain technology, while contributing with explanatory articles on CEL’s Medium publication.</CardText>
+            <CardText>Yuriko researches Plasma and focuses on the production of the blockchain technology.</CardText>
           </CardBody>
         </Card>
       </div>
