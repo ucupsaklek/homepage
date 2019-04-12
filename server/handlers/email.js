@@ -1,5 +1,6 @@
 const MailConfig = require('../email/config')
 const handlebars = require('nodemailer-express-handlebars')
+require('dotenv').config();
 
 module.exports.send = (req, res, next) => {
   const transport = MailConfig.SMTPTransport
@@ -17,14 +18,14 @@ module.exports.send = (req, res, next) => {
   }))
 
   const options = {
-    from: `\"${payload.name}\" <${payload.name}>`,
-    to: MailConfig.receipent,
+    from: MailConfig.recipient,
+    to: payload.email,
     subject: 'Website Contact',
     template: 'contact',
     context: {
       name: payload.name,
-      email: payload.name.email,
-      address: payload.name.message
+      email: payload.email,
+      address: payload.message
     }
   }
 
