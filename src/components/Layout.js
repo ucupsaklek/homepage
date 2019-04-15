@@ -29,7 +29,8 @@ export default class Layout extends PureComponent {
           <meta property="og:title" content="Plasma Chamber | Cryptoeconomics Lab" />
           <meta property="og:type" content="website" />
           <meta property="og:description" content="Plasma Chamber by Cryptoeconomics Lab. Plasma Chamber is a DApps development framework that guarantees security, scalability, and usability utilizing Plasma technology." />
-          <meta property="og:image" content="/static/images/plasma-chamber-logo-vertical.png" />
+          <meta property="og:image" content="https://www.cryptoeconomicslab.com/static/images/plasma-chamber-logo-vertical.png
+" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@cryptoeconlab" />
           <meta property="og:site_name" content="Plasma Chamber | Cryptoeconomics Lab" />
