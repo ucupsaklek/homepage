@@ -26,7 +26,7 @@ const Footer = (props) => (
         </li>
         <li>
           <Link href='/#usecase'>
-            Use case
+            Use Case
           </Link>
         </li>
         <li>

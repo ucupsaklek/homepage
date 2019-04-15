@@ -9,8 +9,7 @@ import ContactUsForm from '../src/components/ContactUsForm'
 export default (props) => (
   <React.Fragment>
     <Head>
-      <title>Plasma Chamber</title>
-      <meta property='og:title' content={'Plasma Chamber'} />
+      <title>Plasma Chamber | Cryptoeconomics Lab</title>
     </Head>
 
     <div id="top" className='general'>

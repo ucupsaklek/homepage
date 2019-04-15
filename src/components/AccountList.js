@@ -3,6 +3,18 @@ import { Media } from 'reactstrap'
 
 const AccountList = (props) => (
   <div className='account-wrapper'>
+    <Media href='https://t.me/plasmachamber' target='_blank'>
+      <Media left>
+        <Media object src='/static/images/desktop/telegram@3x.png' alt='Telegram' />
+      </Media>
+      <Media body>
+        <Media heading>
+          Telegram
+        </Media>
+        Get close with us, make some discussion in the community.
+      </Media>
+    </Media>
+
     <Media href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
       <Media left>
         <Media object src='/static/images/desktop/github_2.png' alt='Github' />
@@ -24,18 +36,6 @@ const AccountList = (props) => (
           Medium
         </Media>
         Read our documentation and publication.
-      </Media>
-    </Media>
-
-    <Media href='https://t.me/plasmachamber' target='_blank'>
-      <Media left>
-        <Media object src='/static/images/desktop/telegram@3x.png' alt='Telegram' />
-      </Media>
-      <Media body>
-        <Media heading>
-          Telegram
-        </Media>
-        Get close with us, make some discussion in the community.
       </Media>
     </Media>
   </div>

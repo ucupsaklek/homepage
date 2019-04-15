@@ -52,7 +52,7 @@ class Header extends React.Component {
           <Container>
             <NavbarBrand href='/'>
               <div className='logo'>
-                <img src='/static/images/logo@3x.png' alt='cryptoeconomicslab' />
+                <img src='/static/images/logo.svg' alt='Cryptoeconomics Lab' />
               </div>
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''} />
@@ -66,7 +66,7 @@ class Header extends React.Component {
 
                 <NavItem>
                   <Link href='/#usecase'>
-                    <a>Use case</a>
+                    <a>Use Case</a>
                   </Link>
                 </NavItem>
 
