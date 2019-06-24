@@ -42,7 +42,7 @@ const Footer = (props) => (
       <ul className='products'>
         <li>
           <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
-            Lean More
+            Learn More
           </a>
         </li>
         <li>
