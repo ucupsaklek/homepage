@@ -1,8 +1,8 @@
 # cryptoeconomiclabs.com
-text
+TBD
 
 ## About
-text
+TBD
 
 ## Features
 - Dynamic routing with [express](https://github.com/expressjs/express) and [next-routes](https://github.com/fridays/next-routes).

@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { ListGroup, ListGroupItem, Media } from 'reactstrap'
 
 export default (props) => (
-  <React.Fragment>
+  <>
     <div className='use-case'>
       <div className='head'>
         <h1>Our mission is achive programmable money revolution via the most feasible L2 solution.</h1>
@@ -73,5 +73,5 @@ export default (props) => (
         </Media>
       </Media>
     </div>
-  </React.Fragment>
+  </>
 )

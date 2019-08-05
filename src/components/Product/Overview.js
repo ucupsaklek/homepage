@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Jumbotron, Button, ButtonGroup, Media } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
 export default (props) => (
-  <React.Fragment>
+  <>
     <div className='product-bg product-bg-image' />
     <div className='overview'>
       <Jumbotron>
@@ -60,5 +60,5 @@ export default (props) => (
         </Media>
       </div>
     </div>
-  </React.Fragment>
+  </>
 )

@@ -1,4 +1,4 @@
-import React, { PureComponent, Component } from 'react'
+import React, { PureComponent } from 'react'
 import { Container } from 'reactstrap'
 import { StickyContainer, Sticky } from 'react-sticky'
 import Head from 'next/head'
@@ -23,17 +23,17 @@ export default class Layout extends PureComponent {
       <div>
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-          <meta charset="utf-8" />
-          <meta name="description" content="Plasma Chamber by Cryptoeconomics Lab. Plasma Chamber is a DApps development framework that guarantees security, scalability, and usability utilizing Plasma technology." />
-          <meta property="og:url" content="https://www.cryptoeconomicslab.com" />
-          <meta property="og:title" content="Plasma Chamber | Cryptoeconomics Lab" />
-          <meta property="og:type" content="website" />
-          <meta property="og:description" content="Plasma Chamber by Cryptoeconomics Lab. Plasma Chamber is a DApps development framework that guarantees security, scalability, and usability utilizing Plasma technology." />
-          <meta property="og:image" content="https://www.cryptoeconomicslab.com/static/images/plasma-chamber-logo-vertical.png
-" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@cryptoeconlab" />
-          <meta property="og:site_name" content="Plasma Chamber | Cryptoeconomics Lab" />
+          <meta charSet='utf-8' />
+          <meta name='description' content='Plasma Chamber by Cryptoeconomics Lab. Plasma Chamber is a DApps development framework that guarantees security, scalability, and usability utilizing Plasma technology.' />
+          <meta property='og:url' content='https://www.cryptoeconomicslab.com' />
+          <meta property='og:title' content='Plasma Chamber | Cryptoeconomics Lab' />
+          <meta property='og:type' content='website' />
+          <meta property='og:description' content='Plasma Chamber by Cryptoeconomics Lab. Plasma Chamber is a DApps development framework that guarantees security, scalability, and usability utilizing Plasma technology.' />
+          <meta property='og:image' content='https://www.cryptoeconomicslab.com/static/images/plasma-chamber-logo-vertical.png
+' />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:site' content='@cryptoeconlab' />
+          <meta property='og:site_name' content='Plasma Chamber | Cryptoeconomics Lab' />
 
           <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' />
           <link rel='icon' type='image/x-icon' href='/static/images/favicon.ico' />

@@ -11,9 +11,8 @@ import {
 import Overview from 'components/Product/Overview'
 import Features from 'components/Product/Features'
 import UseCase from 'components/Product/UseCase'
-import Document from 'components/Product/Document'
 
-class Product extends React.Component {
+class Product extends Component {
   constructor (props) {
     super(props)
 
@@ -24,7 +23,7 @@ class Product extends React.Component {
   }
 
   isActive = (path) => {
-    return this.state.active == path
+    return this.state.active === path
   }
 
   componentDidUpdate = () => {
@@ -33,7 +32,7 @@ class Product extends React.Component {
 
   render () {
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>Plasma Chamber | Product</title>
           <meta property='og:title' content={'Plasma Chamber | Product'} />
@@ -83,7 +82,7 @@ class Product extends React.Component {
             </MemoryRouter>
           </Container>
         </div>
-      </React.Fragment>
+      </>
     )
   }
 }

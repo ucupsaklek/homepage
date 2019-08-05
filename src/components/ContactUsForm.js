@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+import { Col, Button, Form, FormGroup, Input } from 'reactstrap'
 import { sendEmail } from 'actions/email'
 
 class ContactUsForm extends React.Component {
@@ -41,6 +41,7 @@ class ContactUsForm extends React.Component {
         this.setState({ isSending: false })
         console.log('res:', res)
       }).catch(function (err) {
+        alert('An error occurred during the contact process.\nPlease try again a little later.')
         console.log(err)
       })
     }
@@ -54,17 +55,17 @@ class ContactUsForm extends React.Component {
 
         <Form onSubmit={this.handleSubmit}>
           <FormGroup row>
-            <Col sm={12}>
+            <Col sm={12} className='h-100'>
               <Input type='text' name='contact_name' value={this.state.name} onChange={this.handleNameChange} id='contact_name' placeholder='Name' required />
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Col sm={12}>
+            <Col sm={12} className='h-100'>
               <Input type='email' name='contact_email' value={this.state.email} onChange={this.handleEmailChange} id='contact_email' placeholder='Email' required />
             </Col>
           </FormGroup>
           <FormGroup row className='message'>
-            <Col sm={12}>
+            <Col sm={12} className='h-100'>
               <Input type='textarea' name='contact_message' value={this.state.message} onChange={this.handleMessageChange} placeholder='Message' required />
             </Col>
           </FormGroup>

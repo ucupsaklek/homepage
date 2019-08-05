@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Footer = (props) => (
+const Footer = () => (
   <div className='wrapper'>
     <div className='item'>
       <h5>GET IN TOUCH</h5>
@@ -21,17 +21,17 @@ const Footer = (props) => (
       <ul className='products'>
         <li>
           <Link href='/#top'>
-            Top
+            <a>Top</a>
           </Link>
         </li>
         <li>
           <Link href='/#usecase'>
-            Use Case
+            <a>Use Case</a>
           </Link>
         </li>
         <li>
           <Link href='/#roadmap'>
-            Roadmap
+            <a>Roadmap</a>
           </Link>
         </li>
       </ul>

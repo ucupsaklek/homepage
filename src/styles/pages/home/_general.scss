@@ -3,13 +3,13 @@ $general-padding-top: 79px;
 $general-y-pos: 58px;
 $general-button-height: 45px;
 
-$height: $general-height - ($general-y-pos + $general-padding-top);
+$height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
 .general {
   margin: 0 auto;
+  // margin-bottom: 48px;
   height: $height;
   padding-top: $general-padding-top;
-  margin-bottom: 48px;
   position: relative;
 
   @media (max-width: $screen-lg - 1) {

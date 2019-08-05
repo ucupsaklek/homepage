@@ -4,14 +4,10 @@ import { Container, Row, Col, Jumbotron, Media, Card, CardImg, CardText, CardBod
   CardTitle, CardSubtitle } from 'reactstrap'
 import ContactUsForm from '../src/components/ContactUsForm'
 
-class Company extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
+class Company extends Component {
   render () {
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>Plasma Chamber | Company</title>
           <meta property='og:title' content={'Plasma Chamber | Company'} />
@@ -152,7 +148,7 @@ class Company extends React.Component {
             </Container>
           </div>
         </div>
-      </React.Fragment>
+      </>
     )
   }
 }

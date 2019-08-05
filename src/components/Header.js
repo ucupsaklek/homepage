@@ -7,12 +7,8 @@ import {
   NavbarBrand,
   NavbarToggler,
   Nav,
-  NavItem,
-  Dropdown,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap'
+  NavItem
+} from 'reactstrap'
 
 class Header extends React.Component {
   constructor (props) {

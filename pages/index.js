@@ -1,18 +1,32 @@
-import React, { Component } from 'react'
-import { Container, Row, Col, Jumbotron, Button, ButtonGroup, Media,Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap'
-import Link from 'next/link'
+import React from 'react'
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  CardImg,
+  CardText,
+  CardTitle,
+  CardSubtitle,
+  Col,
+  Container,
+  Jumbotron,
+  Media,
+  Row
+} from 'reactstrap'
 import Head from 'next/head'
 import RoadmapList from '../src/components/RoadmapList'
 import AccountList from '../src/components/AccountList'
 import ContactUsForm from '../src/components/ContactUsForm'
+import SubscribeNews from '../src/components/SubscribeNews'
 
-export default (props) => (
-  <React.Fragment>
+export default () => (
+  <>
     <Head>
       <title>Plasma Chamber | Cryptoeconomics Lab</title>
     </Head>
 
-    <div id="top" className='general'>
+    <div id='top' className='general'>
       <div className='head-bg' />
       <Container>
         <Row>
@@ -26,7 +40,7 @@ export default (props) => (
 
               <h1>General Purpose Plasma</h1>
               <p className='lead'>Plasma Chamber is a DApps development framework that guarantees security, scalability, and usability utilizing Plasma technology.</p>
-              <p className='lead'>
+              <div className='lead'>
                 <ButtonGroup>
                   <Button color='default'>
                     <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
@@ -39,7 +53,7 @@ export default (props) => (
                     </a>
                   </Button>
                 </ButtonGroup>
-              </p>
+              </div>
             </Jumbotron>
           </Col>
           <Col xs={12} md={7}>
@@ -49,7 +63,9 @@ export default (props) => (
       </Container>
     </div>
 
-    <div id="usecase" className='description'>
+    <SubscribeNews />
+
+    <div id='usecase' className='description'>
       <Jumbotron className='heading heading-guarantee'>
         <h1>Usable and Secure, Both Guaranteed</h1>
         <p className='lead'>Build your scalable, secure DApps with Plasma Chamber: a DApps development framework with Plasma enbedded in.</p>
@@ -61,7 +77,7 @@ export default (props) => (
             <Media body>
               <Media object src='/static/images/desktop/ic-pos@2x.png' alt='Generic placeholder image' />
               <Media heading>
-                Payment / Money<br/>
+                Payment / Money<br />
                 Transfer Application
               </Media>
             </Media>
@@ -73,7 +89,7 @@ export default (props) => (
             <Media body>
               <Media object src='/static/images/desktop/ic-marketplace@2x.png' alt='Generic placeholder image' />
               <Media heading>
-                E-Commerce / Online<br/>
+                E-Commerce / Online<br />
                 C2C Merketplace
               </Media>
             </Media>
@@ -93,7 +109,7 @@ export default (props) => (
       </Row>
     </div>
 
-    <div id="roadmap" className='roadmap'>
+    <div id='roadmap' className='roadmap'>
       <div className='roadmap-bg' />
       <Container>
         <div className='title'>
@@ -111,7 +127,7 @@ export default (props) => (
       </Container>
     </div>
 
-    <Container id="team">
+    <Container id='team'>
       <Jumbotron className='heading heading-team'>
         <h1>Meet Our Team</h1>
         <p className='lead'>Cryptoeconomics Lab is a team of distributed entrepreneurs, engineers, and blockchain experts.</p>
@@ -169,5 +185,5 @@ export default (props) => (
         </Row>
       </Container>
     </div>
-  </React.Fragment>
+  </>
 )

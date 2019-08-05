@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
-import { Container, Row, Col, Jumbotron, Button, ButtonGroup, Media } from 'reactstrap'
-import Link from 'next/link'
+import React from 'react'
+import { Container, Row, Col, Jumbotron, Button, ButtonGroup } from 'reactstrap'
 import Head from 'next/head'
 import RoadmapList from '../src/components/RoadmapList'
 import AccountList from '../src/components/AccountList'
 import ContactUsForm from '../src/components/ContactUsForm'
 
-export default (props) => (
-  <React.Fragment>
+export default () => (
+  <>
     <Head>
       <title>Plasma Chamber</title>
       <meta property='og:title' content={'Plasma Chamber'} />
@@ -106,5 +105,5 @@ export default (props) => (
         </Row>
       </Container>
     </div>
-  </React.Fragment>
+  </>
 )

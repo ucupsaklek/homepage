@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { sendEmail } from 'actions/email'
 import Head from 'next/head'
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import AccountList from '../src/components/AccountList'
 
-class ContactPage extends React.Component {
+class ContactPage extends Component {
   constructor () {
     super()
 
@@ -40,7 +40,7 @@ class ContactPage extends React.Component {
 
   render () {
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>Plasma Chamber | Contact</title>
           <meta property='og:title' content={'Plasma Chamber | Contact'} />
@@ -98,7 +98,7 @@ class ContactPage extends React.Component {
             </Container>
           </div>
         </div>
-      </React.Fragment>
+      </>
     )
   }
 }

@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
 import { isBrowser } from 'react-device-detect'
 import {
-  Container,
   Card,
-  CardImg,
-  CardText,
   CardBody,
-  CardLink,
-  CardTitle,
-  CardSubtitle
+  CardTitle
 } from 'reactstrap'
 import Slider from 'react-slick'
 
