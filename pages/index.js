@@ -15,11 +15,11 @@ class Index extends Component {
           <title>Plasma Chamber | Cryptoeconomics Lab</title>
         </Head>
 
-        <div>
+        <div className='general-wrapper'>
           <General />
         </div>
 
-        <div>
+        <div className='usecase-wrapper'>
           <Usecase />
         </div>
 

@@ -5,11 +5,51 @@ $general-button-height: 45px;
 
 $height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
+.general-wrapper {
+  background-image: linear-gradient(to bottom, #E0EAF5, #F0F5FB);
+}
+
+.head-bg {
+  background-image: url('/static/images/desktop/bg-header.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  display: block;
+  // height: $general-height + $general-y-pos + 8px;
+  width: 100%;
+  z-index: -1;
+
+  @media (max-width: $screen-lg - 1) {
+    $divider: $screen-desktop-max/$screen-lg;
+
+    background-size: contain;
+    background-position: 50% 100%;
+    height: ceil($height/$divider) + ceil($general-padding-top/$divider);
+  }
+
+  @media (max-width: $screen-md - 1) {
+    $divider: $screen-desktop-max/$screen-md;
+
+    top: -$general-y-pos;
+    height: 100%;
+  }
+
+  @media (max-width: $screen-sm - 1) {
+    background-image: url('/static/images/mobile/bg-header.png');
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top:-$general-y-pos;
+    left: 0;
+    height: 665px;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
 .general {
-  margin: 0 auto;
-  height: $height;
-  padding-top: $general-padding-top;
-  position: relative;
+  margin: $base-margin * 4 auto 0;
+  z-index: 1;
 
   @media (max-width: $screen-lg - 1) {
     $divider: $screen-desktop-max/$screen-lg;
@@ -35,65 +75,10 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
     margin-bottom: 91px;
   }
 
-  .head-bg {
-    &:after {
-      background-image: url('/static/images/desktop/bg-header.png');
-      background-repeat: no-repeat;
-      background-position: top;
-      background-size: cover;
-      content: "";
-      display: block;
-      position: absolute;
-      top: -$general-y-pos;
-      right: 0;
-      height: $general-height + $general-y-pos + 8px;
-      width: 100%;
-      z-index: -1;
-    }
-
-    @media (max-width: $screen-lg - 1) {
-      $divider: $screen-desktop-max/$screen-lg;
-
-      &:after {
-        background-size: cover;
-        background-position: 50% 100%;
-        height: ceil($height/$divider) + ceil($general-padding-top/$divider);
-      }
-    }
-
-    @media (max-width: $screen-md - 1) {
-      $divider: $screen-desktop-max/$screen-md;
-
-      &:after {
-        background-size: cover;
-        background-position: contain;
-        top: -$general-y-pos;
-        height: 100%;
-      }
-    }
-
-    @media (max-width: $screen-sm - 1) {
-      &:after {
-        background-image: url('/static/images/mobile/bg-header.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        content: "";
-        display: block;
-        position: absolute;
-        top:-$general-y-pos;
-        left: 0;
-        height: 665px;
-        width: 100%;
-        z-index: -1;
-      }
-    }
-  }
-
   .illus-header {
     width: 703px;
     height: 684px;
-    position: relative;
+    // position: relative;
 
     @media (max-width: $screen-lg - 1) {
       width: 560px;
@@ -119,11 +104,8 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      content: "";
+      content: '';
       display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
@@ -132,8 +114,7 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
   .jumbotron {
     background: none;
-    padding-left: 0;
-    padding: 99px 12px;
+    padding: 0 12px;
 
     @media (max-width: $screen-md - 1) {
       padding: 33px 6px;
@@ -148,11 +129,11 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
   .intro {
     display: flex;
     background-color: $blue-lighter;
-    color: $blue-base;
+    // opacity: 0.43;
     border-radius: 22px;
     height: 44px;
     width: ceil($screen-lg/3);
-    margin-bottom: 64px;
+    margin-bottom: $base-margin * 2;
     font-size: $font-size-large;
 
     @media (max-width: $screen-lg - 1) {
@@ -189,7 +170,7 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
     .desc {
       text-align: center;
-      color: $blue-base;
+      color: $text-color;
       text-transform: capitalize;
       padding: 8px 0 8px 16px;
       font-size: $font-size-large;
@@ -240,7 +221,8 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
   h1 {
     line-height: 1.45;
-    margin-bottom: 24px;
+    margin-bottom: $base-margin;
+    text-align: left;
 
     @media (max-width: $screen-lg - 1) {
       font-size: $font-size-h2;
@@ -259,8 +241,10 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
   .lead {
     line-height: 1.42;
-    font-size: $font-size-h3;
+    color: $text-color;
+    font-size: $font-size-base + 4;
     margin-bottom: 64px;
+    text-align: left;
 
     @media (max-width: $screen-lg - 1) {
       font-size: $font-size-large;
@@ -331,10 +315,11 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
       padding: 16px 0 0 0;
     }
   }
-}
 
-button {
-  a {
-    display: block;
+  .scroll-down-wrapper {
+    img {
+      margin: 0 auto;
+      display: block;
+    }
   }
 }
