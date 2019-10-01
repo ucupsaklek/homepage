@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'next/link'
 
-class Copyrights extends React.Component {
+class Copyrights extends Component {
   constructor (props) {
     super(props)
 

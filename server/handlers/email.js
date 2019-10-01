@@ -1,3 +1,4 @@
+const path = require('path')
 const fs = require('fs')
 const moment = require('moment')
 const MailConfig = require('../email/config')
@@ -5,34 +6,28 @@ const handlebars = require('handlebars')
 require('dotenv').config()
 
 module.exports.send = (req, res) => {
-  const payload = req.body
-  console.log('[' + moment().format('YYYY-MM-DD HH:mm:ss Z') + ']', 'payload:', payload)
+  try {
+    const payload = req.body
+    console.log('[' + moment().format('YYYY-MM-DD HH:mm:ss Z') + ']', 'payload:', payload)
 
-  const fileName = '/../email/contact.hbs'
-  const replacements = {
-    name: payload.name,
-    email: payload.email,
-    message: payload.message
+    const fileName = '/../email/contact.hbs'
+    const replacements = {
+      name: payload.name,
+      email: payload.email,
+      message: payload.message
+    }
+    const subject = '[CEL] Thank you for your inquiry'
+    sendMail(res, fileName, replacements, payload.email, subject)
+  } catch (e) {
+    console.log(e)
   }
-  const subject = '[CEL] Thank you for your inquiry'
-  sendMail(res, fileName, replacements, payload.email, subject)
-}
-
-module.exports.subscribe = (req, res) => {
-  const payload = req.body
-  console.log('[' + moment().format('YYYY-MM-DD HH:mm:ss Z') + ']', 'payload:', payload)
-
-  const fileName = '/../email/subscribe.hbs'
-  const replacements = {
-    email: payload.email
-  }
-  const subject = '[CEL] Thank you for subscribing our news'
-  sendMail(res, fileName, replacements, payload.email, subject)
 }
 
 function sendMail (res, fileName, replacements, toAddr, subject) {
   const transport = MailConfig.SMTPTransport
-  readHTMLFile(__dirname + fileName, function (err, file) {
+
+  fs.readFile(path.join(__dirname, fileName), { encoding: 'utf-8' }, (err, file) => {
+    if (err) throw Error
     const template = handlebars.compile(file)
     const fileToSend = template(replacements)
     const options = {
@@ -53,15 +48,5 @@ function sendMail (res, fileName, replacements, toAddr, subject) {
         res.json(info)
       }
     })
-  })
-}
-
-function readHTMLFile (path, callback) {
-  fs.readFile(path, { encoding: 'utf-8' }, function (err, html) {
-    if (err) {
-      throw err
-    } else {
-      callback(null, html)
-    }
   })
 }

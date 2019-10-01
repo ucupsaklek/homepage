@@ -10,7 +10,7 @@ import ReactGA from 'react-ga'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'styles/main.scss'
 
-export default class Layout extends PureComponent {
+class Layout extends PureComponent {
   componentDidMount () {
     if (process.env.NODE_ENV === 'production') {
       ReactGA.initialize('UA-138240546-1')
@@ -20,7 +20,7 @@ export default class Layout extends PureComponent {
 
   render () {
     return (
-      <div>
+      <>
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
           <meta charSet='utf-8' />
@@ -61,7 +61,9 @@ export default class Layout extends PureComponent {
             <Copyrights />
           </Container>
         </footer>
-      </div>
+      </>
     )
   }
 }
+
+export default Layout

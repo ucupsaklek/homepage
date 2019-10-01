@@ -21,6 +21,7 @@
     "nodemailer": "^6.0.0",
     "nodemailer-express-handlebars": "^3.0.0",
     "normalize-scss": "^7.0.1",
+    "path": "^0.12.7",
     "prop-types": "^15.6.1",
     "react": "^16.8.1",
     "react-device-detect": "^1.6.2",

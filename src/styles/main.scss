@@ -2,13 +2,12 @@
 @import './base';
 @import './mixins';
 
+@import './components/connect';
+@import './components/contact';
+@import './components/general';
 @import './components/header';
 @import './components/footer';
 @import './components/button';
 @import './components/icon';
-@import './components/navbar';
-
-@import './pages/home';
-@import './pages/product';
-@import './pages/contact';
-@import './pages/company';
+@import './components/team';
+@import './components/usecase';

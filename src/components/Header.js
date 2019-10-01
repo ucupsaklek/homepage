@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'next/link'
 import {
   Container,
@@ -10,7 +10,7 @@ import {
   NavItem
 } from 'reactstrap'
 
-class Header extends React.Component {
+class Header extends Component {
   constructor (props) {
     super(props)
 
