@@ -9,6 +9,7 @@ import ContactUsForm from '../src/components/ContactUsForm'
 import Product from '../src/components/Product'
 import Framework from '../src/components/Framework'
 import Service from '../src/components/Service'
+import Video from '../src/components/Video'
 
 class Index extends Component {
   render () {
@@ -36,6 +37,10 @@ class Index extends Component {
 
         <div id='service-wrapper'>
           <Service />
+        </div>
+
+        <div id='video-wrapper'>
+          <Video />
         </div>
 
         <div>

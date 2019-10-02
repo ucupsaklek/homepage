@@ -1,0 +1,14 @@
+#video-wrapper {
+  margin-top: $base-margin * 8;
+
+  .jumbotron {
+    margin-bottom: $base-margin * 5;
+  }
+
+  iframe {
+    width: 808px;
+    height: 505px;
+    display: block;
+    margin: 0 auto;
+  }
+}
