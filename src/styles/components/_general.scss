@@ -11,7 +11,7 @@ $height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
 .head-bg {
   background-image: url('/static/images/desktop/bg-header.png');
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: top;
   background-size: contain;
   display: block;
