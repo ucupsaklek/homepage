@@ -8,6 +8,7 @@ import Usecase from '../src/components/Usecase'
 import ContactUsForm from '../src/components/ContactUsForm'
 import Product from '../src/components/Product'
 import Framework from '../src/components/Framework'
+import Service from '../src/components/Service'
 
 class Index extends Component {
   render () {
@@ -31,6 +32,10 @@ class Index extends Component {
 
         <div id='framework-wrapper'>
           <Framework />
+        </div>
+
+        <div id='service-wrapper'>
+          <Service />
         </div>
 
         <div>
