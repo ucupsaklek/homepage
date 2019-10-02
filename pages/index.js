@@ -43,12 +43,12 @@ class Index extends Component {
           <Video />
         </div>
 
-        <div>
-          <Connect />
+        <div id='team-wrapper'>
+          <Team />
         </div>
 
         <div>
-          <Team />
+          <Connect />
         </div>
 
         <div>

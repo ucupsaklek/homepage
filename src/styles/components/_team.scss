@@ -1,54 +1,53 @@
-.teams {
-  @include x-display-flex;
-  @include x-flex-direction(row);
+#team-wrapper {
+  margin-top: $base-margin * 8;
 
-  @media (max-width: $screen-sm - 1) {
-    @include x-flex-direction(column);
-    width: 288px;
-    margin: 0 auto;
+  .jumbotron {
+    margin-bottom: $base-margin * 5;
   }
 
-  margin-bottom: 100px;
-
-  .card {
-    width: 256px;
-    margin-right: 53px;
-    border: 0;
-
-    &:last-child{
-      margin-right: 0;
-    }
-
-    &-img-top {
-      width: 256px;
-      height: 256px;
-    }
-
-    &-body {
-      padding: 16px 0;
-      text-align: center;
-      font-size: $font-size-large;
-      color: $text-light;
-    }
-
-    &-title {
-      font-size: $font-size-h3;
-      font-weight: bold;
-      line-height: 1.42;
-    }
-
-    &-subtitle {
-      font-weight: bold;
-      line-height: 1.44;
-      margin-bottom: 8px;
-    }
+  .teams {
+    @include x-display-flex;
+    @include x-flex-direction(row);
 
     @media (max-width: $screen-sm - 1) {
       @include x-flex-direction(column);
+      width: 288px;
       margin: 0 auto;
+    }
 
-      &:last-child{
-        margin-right: auto;
+    .card {
+      border: 0;
+      margin-bottom: $base-margin;
+
+      &-img-top {
+        width: 256px;
+        height: 256px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      &-body {
+        padding: $base-margin 0;
+        text-align: center;
+        font-size: $font-size-large;
+        color: $text-light;
+      }
+
+      &-title {
+        font-size: $font-size-h3;
+        font-weight: bold;
+        line-height: 1.42;
+      }
+
+      &-subtitle {
+        font-weight: bold;
+        line-height: 1.44;
+        margin-bottom: $base-margin / 2;
+      }
+
+      @media (max-width: $screen-sm - 1) {
+        @include x-flex-direction(column);
+        margin: 0 auto;
       }
     }
   }
