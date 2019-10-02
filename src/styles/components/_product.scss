@@ -1,0 +1,26 @@
+#product-wrapper {
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
+  padding-top: $base-margin * 6;
+
+  #product {
+    padding-top: $base-margin * 2;
+    margin: 0 auto;
+    width: 1040px;
+    height: 364px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 34px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+
+    .jumbotron {
+      margin-bottom: $base-margin * 5;
+    }
+
+    .row {
+      div[class*='col-'] {
+        text-align: center;
+      }
+    }
+  }
+}

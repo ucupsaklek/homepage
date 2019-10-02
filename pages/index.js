@@ -6,6 +6,7 @@ import General from '../src/components/General'
 import Team from '../src/components/Team'
 import Usecase from '../src/components/Usecase'
 import ContactUsForm from '../src/components/ContactUsForm'
+import Product from '../src/components/Product'
 
 class Index extends Component {
   render () {
@@ -15,12 +16,16 @@ class Index extends Component {
           <title>Plasma Chamber | Cryptoeconomics Lab</title>
         </Head>
 
-        <div className='general-wrapper'>
+        <div id='general-wrapper'>
           <General />
         </div>
 
-        <div className='usecase-wrapper'>
+        <div id='usecase-wrapper'>
           <Usecase />
+        </div>
+
+        <div id='product-wrapper'>
+          <Product />
         </div>
 
         <div>

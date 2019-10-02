@@ -5,7 +5,7 @@ $general-button-height: 45px;
 
 $height: $general-height - ($general-y-pos + $general-padding-top + 48);
 
-.general-wrapper {
+#general-wrapper {
   background-image: linear-gradient(to bottom, #E0EAF5, #F0F5FB);
 }
 
