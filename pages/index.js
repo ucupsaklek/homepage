@@ -10,6 +10,7 @@ import Product from '../src/components/Product'
 import Framework from '../src/components/Framework'
 import Service from '../src/components/Service'
 import Video from '../src/components/Video'
+import Donors from '../src/components/Donors'
 
 class Index extends Component {
   render () {
@@ -45,6 +46,10 @@ class Index extends Component {
 
         <div id='team-wrapper'>
           <Team />
+        </div>
+
+        <div id='donors-wrapper'>
+          <Donors />
         </div>
 
         <div>
