@@ -12,17 +12,17 @@ class Framework extends Component {
           <Col md={6}>
             <Row className='parallel-section-icons-wrapper'>
               <Col md={6}>
-                <img src='/static/images/svg/ic-finality.svg' className='parallel-section-icon' />
+                <img src='/static/images/svg/fe-frontend-sdk.svg' className='parallel-section-icon' alt='Secure' />
                 <p className='parallel-section-icon-title'>Secure</p>
                 <p className='parallel-section-icon-description'>Build your Dapps’ frontend with our SDK</p>
               </Col>
               <Col md={6}>
-                <img src='/static/images/svg/ic-finality.svg' className='parallel-section-icon' />
+                <img src='/static/images/svg/fe-ovm-client.svg' className='parallel-section-icon' alt='OVM Multi-platform Client' />
                 <p className='parallel-section-icon-title'>OVM Multi-platform Client</p>
                 <p className='parallel-section-icon-description'>Our Client Supports various platforms: Web, Android, and iOS</p>
               </Col>
               <Col md={6} className='mt-60'>
-                <img src='/static/images/svg/ic-finality.svg' className='parallel-section-icon' />
+                <img src='/static/images/svg/fe-development-language.svg' className='parallel-section-icon' alt='Development Language' />
                 <p className='parallel-section-icon-title'>Development Language</p>
                 <p className='parallel-section-icon-description'>Develop your general application with the language</p>
               </Col>
