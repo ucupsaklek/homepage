@@ -1,0 +1,66 @@
+#framework-wrapper {
+  max-width: $screen-desktop-max;
+  margin: 0 auto;
+  padding-top: $base-margin * 13;
+  width: 1040px;
+
+  .framework-icons-wrapper {
+    div[class*='col-'] {
+      height: 270px;
+
+      &:last-child {
+        margin-top: $base-margin * 4;
+      }
+    }
+
+    .framework-icon {
+      width: 128px;
+      height: 128px;
+    }
+
+    .framework-icon-title {
+      margin-top: $base-margin;
+      font-size: $base-font-size + 4;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.44;
+      letter-spacing: normal;
+      color: #323232;
+    }
+
+    .framework-icon-description {
+      margin-top: $base-margin / 2;
+    }
+  }
+
+  .framework-desc-wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    .framework-desc-title {
+    }
+
+    .framework-desc-body {
+      margin-top: $base-margin;
+    }
+
+    .framework-desc-btn-wrapper {
+      margin-top: $base-margin * 4;
+
+      button {
+        width: 192px;
+        height: 44px;
+        text-transform: none;
+
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}

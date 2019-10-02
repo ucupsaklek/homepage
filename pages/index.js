@@ -7,6 +7,7 @@ import Team from '../src/components/Team'
 import Usecase from '../src/components/Usecase'
 import ContactUsForm from '../src/components/ContactUsForm'
 import Product from '../src/components/Product'
+import Framework from '../src/components/Framework'
 
 class Index extends Component {
   render () {
@@ -26,6 +27,10 @@ class Index extends Component {
 
         <div id='product-wrapper'>
           <Product />
+        </div>
+
+        <div id='framework-wrapper'>
+          <Framework />
         </div>
 
         <div>
