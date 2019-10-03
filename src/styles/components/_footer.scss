@@ -1,33 +1,10 @@
 .footer {
   background: #FFFFFF;
-  height: 208px;
   max-width: $screen-desktop-max;
   margin: 0 auto;
-  position: relative;
-
-  @media (max-width: $screen-sm) {
-    height: auto;
-  }
-
-  .lang-select:before {
-    background-image: url(/static/images/desktop/ic-chat.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 4px;
-    left: inherit;
-    right: 56px;
-    height: 14px;
-    width: 14px;
-  }
 
   .wrapper {
-    padding-top: 54px;
-    @include x-display-flex
-    @include x-flex-wrap(wrap)
+    padding-top: $base-margin * 3;
 
     @media (max-width: $screen-xs) {
       @include x-justify-content(center);
@@ -42,11 +19,12 @@
     }
 
     .item {
-      margin: 0 32px;
+      margin: 0 $base-margin * 2;
       width: 128px;
+      float: left;
 
       @media (max-width: $screen-sm) {
-        margin: 0 16px 24px 0;
+        margin: 0 $base-margin $base-margin * 1.5 0;
         width: calc(50% - 8px);
       }
 
@@ -55,14 +33,14 @@
         width: 420px;
 
         @media (max-width: $screen-sm) {
-          margin: 0 0 32px 0;
+          margin: 0 0 $base-margin * 2 0;
           width: 100%;
         }
       }
 
       @media (max-width: $screen-sm) {
         &:nth-child(2n + 1) {
-          margin: 0 0 24px 0;
+          margin: 0 0 $base-margin * 1.5 0;
         }
       }
 
@@ -71,7 +49,7 @@
       }
 
       .address {
-        margin-top: 8px;
+        margin-top: $base-margin / 2;
       }
 
       h5 {
@@ -81,10 +59,10 @@
       ul {
         list-style: none;
         padding: 0;
-        margin-top: 24px;
+        margin-top: $base-margin * 1.5;
 
         li {
-          padding-bottom: 15px;
+          padding-bottom: $base-margin;
 
           a {
             height: 20px;
@@ -95,8 +73,13 @@
     }
   }
 
+  hr {
+    clear: both;
+  }
+
   .copyrights {
-    margin: 30px 0;
+    clear: both;
+    margin: $base-margin * 2 0;
     background: #FFFFFF;
     @include x-display-flex;
     @include x-flex-direction(row);
@@ -104,7 +87,7 @@
     @media (max-width: $screen-sm) {
       @include x-justify-content(center);
       margin: 0 auto;
-      padding-bottom: 24px;
+      padding-bottom: $base-margin * 1.5;
       width: 100%;
     }
 
@@ -125,9 +108,7 @@
       flex: 1;
 
       li {
-        width: 24px;
-        height: 24px;
-        margin-right: 32px;
+        margin-right: $base-margin * 2;
 
         &:last-child {
           margin-right: 0;
@@ -141,56 +122,12 @@
         }
       }
     }
-
-    .dropdown {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-
-      &.options {
-        width: 65px;
-        margin-left: 65px;
-
-        .dropdown-menu {
-          z-index: 10001;
-          top: -12px!important;
-          width: 160px;
-          border-radius: 4px;
-          box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
-          border: solid 1px $blue-lighter;
-          background-color: $body-bg;
-          padding: 24px 16px;
-
-          .dropdown-item {
-            height: 24px;
-            margin-bottom: 24px;
-            font-size: $font-size-medium;
-            color: #333;
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-        .nav-link {
-          padding: 0;
-        }
-
-        a {
-          color: $link-color;
-          font-size: $font-size-medium;
-          font-family: $font-family-base;
-          height: 24px;
-        }
-      }
-    }
   }
 
   .company {
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: $base-margin * 1.5;
 
     @media (max-width: $screen-sm) {
       padding-top: 0;
