@@ -13,9 +13,9 @@ class Video extends Component {
         </Jumbotron>
 
         <iframe src='https://www.youtube.com/embed/87TJbdKtyis'
-          frameborder='0'
+          frameBorder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-          allowfullscreen
+          allowFullScreen
         />
       </>
     )
