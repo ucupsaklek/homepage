@@ -52,7 +52,7 @@ class Index extends Component {
           <Donors />
         </div>
 
-        <div>
+        <div id='connect-wrapper'>
           <Connect />
         </div>
 

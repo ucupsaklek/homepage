@@ -1,5 +1,6 @@
 #donors-wrapper {
   margin-top: $base-margin * 8;
+  padding-bottom: $base-margin * 8;
   background-image: linear-gradient(to bottom, #ffffff, #d1e0f0);
 
   .jumbotron {
@@ -9,7 +10,7 @@
   .donors-icon-wrapper {
     width: 264px;
     height: 164px;
-    margin: 0 auto $base-margin * 4;
+    margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px 4px rgba(218, 218, 218, 0.16);
     background-color: #ffffff;
