@@ -56,7 +56,7 @@ class Index extends Component {
           <Connect />
         </div>
 
-        <div>
+        <div id='contact-wrapper'>
           <ContactUsForm />
         </div>
       </>

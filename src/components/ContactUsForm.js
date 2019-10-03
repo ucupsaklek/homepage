@@ -15,16 +15,8 @@ class ContactUsForm extends Component {
     }
   }
 
-  handleNameChange = (e) => {
-    this.setState({ name: e.target.value })
-  }
-
-  handleEmailChange = (e) => {
-    this.setState({ email: e.target.value })
-  }
-
-  handleMessageChange = (e) => {
-    this.setState({ message: e.target.value })
+  handleInputChange = async (e) => {
+    await this.setState({ [e.target.name]: e.target.value })
   }
 
   handleSubmit = async (event) => {
@@ -32,13 +24,14 @@ class ContactUsForm extends Component {
     this.setState({ isSending: true })
 
     const valid = event.target.checkValidity()
-
     if (valid) {
-      this.props.sendEmail(this.state).then((res) => {
-        this.setState({ name: '' })
-        this.setState({ email: '' })
-        this.setState({ message: '' })
-        this.setState({ isSending: false })
+      this.props.sendEmail(this.state).then(async (res) => {
+        await this.setState({
+          name: '',
+          email: '',
+          message: '',
+          isSending: false
+        })
         console.log('res:', res)
       }).catch(function (err) {
         window.alert('An error occurred during the contact process.\nPlease try again a little later.')
@@ -49,43 +42,44 @@ class ContactUsForm extends Component {
 
   render () {
     return (
-      <div className='contact' id='contact'>
-        <div className='message-bg' />
-        <Container>
-          <Row>
-            <Col xs={12} md={12} lg={5}>
-              <div className='contact-wrapper'>
-                <h2>Send Us A Message</h2>
-                <p>Feel free to contact us for any suggestion or partnership offer!</p>
+      <>
+        <div id='contact'>
+          <Container>
+            <Row>
+              <Col xs={12} md={12} lg={5}>
+                <div className='contact-form-wrapper'>
+                  <h2>Send Us A Message</h2>
+                  <p>Feel free to contact us for any suggestion or partnership offer!</p>
 
-                <Form onSubmit={this.handleSubmit}>
-                  <FormGroup row>
-                    <Col sm={12} className='h-100'>
-                      <Input type='text' name='contact_name' value={this.state.name} onChange={this.handleNameChange} id='contact_name' placeholder='Name' required />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col sm={12} className='h-100'>
-                      <Input type='email' name='contact_email' value={this.state.email} onChange={this.handleEmailChange} id='contact_email' placeholder='Email' required />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row className='message'>
-                    <Col sm={12} className='h-100'>
-                      <Input type='textarea' name='contact_message' value={this.state.message} onChange={this.handleMessageChange} placeholder='Message' required />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup check row>
-                    <Button disabled={this.state.isSending}>Send</Button>
-                  </FormGroup>
-                </Form>
-              </div>
-            </Col>
-            <Col xs={12} md={12} lg={7}>
-              <div className='banner illus illus-message' />
-            </Col>
-          </Row>
-        </Container>
-      </div>
+                  <Form onSubmit={this.handleSubmit}>
+                    <FormGroup row>
+                      <Col sm={12}>
+                        <Input type='text' name='name' value={this.state.name} onChange={this.handleInputChange} placeholder='Name' required />
+                      </Col>
+                    </FormGroup>
+                    <FormGroup row>
+                      <Col sm={12}>
+                        <Input type='email' name='email' value={this.state.email} onChange={this.handleInputChange} placeholder='Email' required />
+                      </Col>
+                    </FormGroup>
+                    <FormGroup row className='message'>
+                      <Col sm={12}>
+                        <Input type='textarea' name='message' value={this.state.message} onChange={this.handleInputChange} placeholder='Message' required />
+                      </Col>
+                    </FormGroup>
+                    <FormGroup check row>
+                      <Button disabled={this.state.isSending}>Send</Button>
+                    </FormGroup>
+                  </Form>
+                </div>
+              </Col>
+              <Col xs={12} md={12} lg={7}>
+                <div className='banner illus-message' />
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </>
     )
   }
 }
