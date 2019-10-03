@@ -23,7 +23,20 @@
       bottom: 0;
       left: 0;
       margin: auto;
-      width: 100%;
+
+      &.ef-donors-img {
+        width: 100%;
+      }
+
+      &.tf-donors-img {
+        width: 50%;
+        margin-top: $base-margin;
+      }
+
+      &.gitcoin-donors-img {
+        width: 90%;
+        margin-top: $base-margin * 2.5;
+      }
     }
   }
 }

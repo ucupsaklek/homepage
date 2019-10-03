@@ -19,19 +19,19 @@ class Donors extends Component {
           <Row>
             <Col md={4}>
               <div className='donors-icon-wrapper'>
-                <img src='/static/images/desktop/ef-grant.png' alt='Ethereum Foundation Grants' />
+                <img src='/static/images/desktop/ef-grant.png' alt='Ethereum Foundation Grants' className='ef-donors-img' />
               </div>
             </Col>
 
             <Col md={4}>
               <div className='donors-icon-wrapper'>
-                <img src='/static/images/desktop/tf-grant.png' alt='Tezos Foundation Grants' />
+                <img src='/static/images/desktop/tf-grant.png' alt='Tezos Foundation Grants' className='tf-donors-img' />
               </div>
             </Col>
 
             <Col md={4}>
               <div className='donors-icon-wrapper'>
-                <img src='/static/images/desktop/gitcoin-grant.png' alt='Gitcoin Grants' />
+                <img src='/static/images/desktop/gitcoin-grant.png' alt='Gitcoin Grants' className='gitcoin-donors-img' />
               </div>
             </Col>
           </Row>
