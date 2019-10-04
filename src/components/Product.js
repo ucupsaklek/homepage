@@ -15,20 +15,20 @@ class Product extends Component {
         </Jumbotron>
 
         <Row>
-          <Col md={3}>
-            <img src='/static/images/svg/ic-finality.svg' />
+          <Col xs={6} md={3}>
+            <img src='/static/images/svg/ic-secure.svg' alt='Secure' />
             <p>Secure</p>
           </Col>
-          <Col md={3}>
-            <img src='/static/images/svg/ic-finality.svg' />
+          <Col xs={6} md={3}>
+            <img src='/static/images/svg/ic-scalable.svg' alt='Scalable' />
             <p>Scalable</p>
           </Col>
-          <Col md={3}>
-            <img src='/static/images/svg/ic-finality.svg' />
+          <Col xs={6} md={3}>
+            <img src='/static/images/svg/ic-less-gas.svg' alt='Less Gas Cost' />
             <p>Less Gas Cost</p>
           </Col>
-          <Col md={3}>
-            <img src='/static/images/svg/ic-finality.svg' />
+          <Col xs={6} md={3}>
+            <img src='/static/images/svg/ic-finality.svg' alt='Operator-backend Instant Finality' />
             <p>
               Operator-backend
               <br />
