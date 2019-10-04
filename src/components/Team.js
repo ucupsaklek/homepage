@@ -22,7 +22,7 @@ class Team extends Component {
         </Jumbotron>
 
         <Row className='teams'>
-          <Col md={4}>
+          <Col sm={12} md={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-taku@2x.png' alt='Taku Kataoka' />
               <CardBody>
@@ -33,29 +33,29 @@ class Team extends Component {
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col sm={12} md={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-shogo@2x.png' alt='Shogo Ochiai' />
               <CardBody>
                 <CardTitle>Shogo Ochiai</CardTitle>
-                <CardSubtitle>COO</CardSubtitle>
+                <CardSubtitle>Chief Economist</CardSubtitle>
                 <CardText>Shogo was the former CTO of an Indonesian fashion e-commerce app, and is a co-researcher at the University of Tokyo.</CardText>
               </CardBody>
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col sm={12} md={4}>
             <Card>
-              <CardImg top src='/static/images/desktop/img-syuhei@2x.png' alt='Syuhei Hiya' />
+              <CardImg top src='/static/images/desktop/img-syuhei@2x.png' alt='Shuhei Hiya' />
               <CardBody>
-                <CardTitle>Syuhei Hiya</CardTitle>
+                <CardTitle>Shuhei Hiya</CardTitle>
                 <CardSubtitle>Chief Scientist</CardSubtitle>
-                <CardText>Syuhei has been the CEO of Firebase competitor PaaS. He was also a MITOU Super Creator in 2010.</CardText>
+                <CardText>Shuhei has been the CEO of Firebase competitor PaaS. He was also a MITOU Super Creator in 2010.</CardText>
               </CardBody>
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col sm={12} md={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-yuriko@2x.png' alt='Yuriko Nishijima' />
               <CardBody>
@@ -66,7 +66,7 @@ class Team extends Component {
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col sm={12} md={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-yuriko@2x.png' alt='Takamichi Tsutsumi' />
               <CardBody>
@@ -77,7 +77,7 @@ class Team extends Component {
             </Card>
           </Col>
 
-          <Col md={4}>
+          <Col sm={12} md={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-yuriko@2x.png' alt='Daiki Sekiguchi' />
               <CardBody>
