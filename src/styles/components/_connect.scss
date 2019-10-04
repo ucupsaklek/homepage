@@ -4,16 +4,36 @@
 
 #connect {
   margin: 0 auto;
-  padding: $base-margin * 3 0;
+  padding-top: $base-margin * 3;
 
-  @media (max-width: $screen-md - 1) {
-    height: auto;
-    padding-bottom: 0;
+  @media (max-width: $screen-md) {
+    padding-top: $base-margin * 2;
   }
 
   h2 {
     margin-bottom: $base-margin * 4;
     text-align: center;
+
+    @media (max-width: $screen-md) {
+      margin-bottom: $base-margin * 1.5;
+    }
+  }
+
+  .row {
+    padding-bottom: $base-margin * 3;
+
+    @media (max-width: $screen-md) {
+      padding-bottom: $base-margin * 1.5;
+    }
+  }
+
+  div[class*='col-'] {
+    &:nth-child(2),
+    &:nth-child(3) {
+      @media (max-width: $screen-md) {
+        margin-top: $base-margin;
+      }
+    }
   }
 
   .media {
@@ -23,16 +43,6 @@
     box-shadow: 0 22px 24px 0 rgba(0, 0, 0, 0.08);
     background-color: #fafcff;
     margin: 0 32px;
-
-    @media (max-width: $screen-sm) {
-      margin: 0;
-      width: 328px;
-    }
-
-    @media (max-width: $screen-xs) {
-      margin: 0;
-      width: 336px;
-    }
 
     &-left {
       width: 84px;
@@ -46,17 +56,20 @@
     &-a {
       cursor: pointer;
     }
+
     &:hover {
       text-decoration: none;
     }
 
     &-body {
+      font-size: $font-size-base + 2;
       padding: $base-margin * 1.5 0 $base-margin * 1.5 $base-margin;
       color: $text-light;
     }
 
     &-heading {
-      font-size: $font-size-h3;
+      font-size: $font-size-base + 2;
+      font-weight: bold;
       margin-bottom: $base-margin / 2;
     }
   }
