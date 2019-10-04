@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Footer from 'components/Footer'
 import Copyrights from 'components/Copyrights'
 import ReactGA from 'react-ga'
+import { StickyContainer } from 'react-sticky'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'styles/main.scss'
@@ -37,9 +38,11 @@ class Layout extends PureComponent {
           <link rel='icon' type='image/x-icon' href='/static/images/favicon.ico' />
         </Head>
 
-        <section className='content'>
-          { this.props.children }
-        </section>
+        <StickyContainer>
+          <section className='content'>
+            { this.props.children }
+          </section>
+        </StickyContainer>
 
         <footer className='footer'>
           <Container>

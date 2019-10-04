@@ -8,13 +8,21 @@ import {
   Row
 } from 'reactstrap'
 import Header from './Header'
+import { Sticky } from 'react-sticky'
 
 class General extends Component {
   render () {
     return (
       <>
         <div className='head-bg'>
-          <Header />
+          <Sticky>
+            {({
+              style,
+              isSticky
+            }) => (
+              <Header sticky={isSticky} style={style} />
+            )}
+          </Sticky>
           <div id='top' className='general'>
             <Container>
               <Row>

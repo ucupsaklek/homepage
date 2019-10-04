@@ -2,19 +2,14 @@
   header {
     min-height: 58px;
     z-index: 10;
-    // position: absolute;
-    // top: 21px;
-    // left: 0;
-    // right: 0;
     margin: 0 auto;
     padding-top: 21px;
     width: $screen-default;
 
     &.sticky {
-      box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.17);
-      z-index: 1001;
-      background-color: $body-bg;
-      padding-bottom: 14px;
+      width: $screen-default !important;
+      right: 0;
+      margin: 0 auto;
     }
 
     .lang-select:before {
