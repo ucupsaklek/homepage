@@ -26,7 +26,7 @@ class General extends Component {
           <div id='top' className='general'>
             <Container>
               <Row>
-                <Col xs={12} md={5}>
+                <Col md={12} lg={5}>
                   <Jumbotron>
                     <div className='intro'>
                       <div className='desc'>
@@ -36,28 +36,23 @@ class General extends Component {
 
                     <h1>Build Your Secure & Usable Dapps Without Any Hassle</h1>
                     <p className='lead'>Plasma Chamber is a DApps development framework that guarantees to make the app secure, scalable, and usable with the Layer 2 technology.</p>
-                    <div className='lead'>
+                    <div className='lead lead-btn-wrapper'>
                       <ButtonGroup>
-                        <Button color='default'>
-                          <a href='https://github.com/cryptoeconomicslab/plasma-chamber' target='_blank'>
-                            Learn More
-                          </a>
-                        </Button>
                         <Button color='primary'>
-                          <a href='https://github.com/cryptoeconomicslab/plasma-chamber/blob/master/README.md#getting-started' className='color-white' target='_blank'>
-                            Get Started
+                          <a href='#contact-wrapper' className='color-white'>
+                            Contact us!
                           </a>
                         </Button>
                       </ButtonGroup>
                     </div>
                   </Jumbotron>
                 </Col>
-                <Col xs={12} md={7}>
+                <Col md={12} lg={7}>
                   <div className='banner illus-header' />
                 </Col>
               </Row>
             </Container>
-            <div className='scroll-down-wrapper'>
+            <div className='scroll-down-wrapper d-none d-lg-block'>
               <img src='/static/images/desktop/scroll-down.svg' />
             </div>
           </div>

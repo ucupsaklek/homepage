@@ -53,60 +53,30 @@ class Header extends Component {
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#use-case'>
+                      <Link href='/#usecase-wrapper'>
                         <a>Use Case</a>
                       </Link>
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#our-framework'>
-                        <a>Our Framework</a>
-                      </Link>
-                    </NavItem>
-
-                    <NavItem>
-                      <Link href='/#our-service'>
+                      <Link href='/#product-wrapper'>
                         <a>Our Service</a>
                       </Link>
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#faq'>
-                        <a>FAQ</a>
-                      </Link>
-                    </NavItem>
-
-                    <NavItem>
-                      <Link href='/#connect'>
-                        <a>Connect</a>
-                      </Link>
-                    </NavItem>
-
-                    <NavItem>
-                      <Link href='/#team'>
+                      <Link href='/#team-wrapper'>
                         <a>Team</a>
                       </Link>
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#contact'>
+                      <Link href='/#contact-wrapper'>
                         <a>Contact</a>
                       </Link>
                     </NavItem>
                   </Nav>
                 </Collapse>
-                {/* <Dropdown nav className="options d-sm-none d-none d-lg-block"
-                  isOpen={this.state.optionOpen}
-                  toggle={this.toggleOption}
-                >
-                  <DropdownToggle nav caret className="lang-select">
-                    English
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>English</DropdownItem>
-                    <DropdownItem>Japan</DropdownItem>
-                  </DropdownMenu>
-                </Dropdown> */}
               </Container>
             </Navbar>
           </header>

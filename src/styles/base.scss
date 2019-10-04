@@ -71,50 +71,7 @@ h5 {
 
 .jumbotron {
   margin: 0 auto;
-  max-width: 885px;
   background: none;
   padding: 0;
   text-align: center;
-
-  @media (max-width: $screen-sm - 1) {
-    margin: 0 auto;
-    max-width: 288px;
-  }
-
-  &.title {
-    margin-bottom: 296px;
-
-    .lead {
-      font-size: $font-size-h3;
-      line-height: 1.42;
-
-      @media (max-width: $screen-sm - 1) {
-        font-size: $font-size-large;
-      }
-    }
-  }
-
-  &.heading {
-    width: 652px;
-    text-align: center;
-    margin-bottom: 99px;
-
-    @media (max-width: $screen-sm - 1) {
-      margin-top: 72px;
-      margin-bottom: 72px;
-    }
-
-    .lead {
-      font-size: $font-size-h4;
-    }
-  }
-
-  h2 {
-    line-height: 1.35;
-    margin-bottom: $base-margin;
-
-    @media (max-width: $screen-sm - 1) {
-      font-size: $font-size-h3;
-    }
-  }
 }
