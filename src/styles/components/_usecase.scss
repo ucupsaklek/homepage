@@ -9,30 +9,42 @@
     margin-bottom: $base-margin * 5;
   }
 
-  .jumbotron,
-  .slick-slider {
-    max-width: $screen-desktop-max;
-  }
-
   .slick-slider {
     margin: 0 auto;
     .slick-track {
     }
     .slick-slide {
-      img,
-      .description-title,
-      .description-body {
+      .description-wrapper {
         width: 542px;
-      }
-
-      img {
-        height: 305px;
-        margin: 0 auto;
-      }
-      .description-title, .description-body {
         margin: 0 auto;
         text-align: center;
       }
+
+      img {
+        width: 542px;
+        height: 305px;
+        margin: 0 auto $base-margin;
+      }
+
+      .description-title {
+        font-size: $font-size-base + 10;
+        font-weight: bold;
+      }
+
+      .description-body {
+        margin-top: $base-margin;
+        font-size: $font-size-base + 2;
+      }
+    }
+  }
+
+  .slick-btn-wrapper {
+    text-align: center;
+
+    .slick-prev-btn {
+    }
+
+    .slick-next-btn {
     }
   }
 }
