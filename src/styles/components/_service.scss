@@ -3,4 +3,9 @@
   margin: 0 auto;
   padding-top: $base-margin * 8;
   width: 1040px;
+
+  @media (max-width: $screen-md) {
+    padding-top: $base-margin * 5;
+    width: 80%;
+  }
 }

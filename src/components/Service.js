@@ -18,10 +18,11 @@ class Service extends Component {
             </div>
             <div className='parallel-section-desc-btn-wrapper'>
               <button className='btn btn-primary'>
-                <a href='#contact' className='color-white'>Contact us!</a>
+                <a href='#contact-wrapper' className='color-white'>Contact us!</a>
               </button>
             </div>
           </Col>
+
           <Col md={6}>
             <Row className='parallel-section-icons-wrapper'>
               <Col md={6}>
@@ -29,11 +30,13 @@ class Service extends Component {
                 <p className='parallel-section-icon-title'>Aggregator Service</p>
                 <p className='parallel-section-icon-description'>Use a secure network and trust-less transaction aggregator service</p>
               </Col>
+
               <Col md={6}>
                 <img src='/static/images/svg/fe-monitoring.svg' className='parallel-section-icon' alt='Monitoring Service' />
                 <p className='parallel-section-icon-title'>Monitoring Service</p>
                 <p className='parallel-section-icon-description'>Get monitoring and operational data</p>
               </Col>
+
               <Col md={6} className='mt-60'>
                 <img src='/static/images/svg/fe-consulting.svg' className='parallel-section-icon' alt='Consulting Service' />
                 <p className='parallel-section-icon-title'>Consulting Service</p>

@@ -1,9 +1,16 @@
 .parallel-section-icons-wrapper {
-  div[class*='col-'] {
-    height: 270px;
+  @media (max-width: $screen-md) {
+    margin-top: $base-margin * 2;
+  }
 
-    &:last-child {
-      margin-top: $base-margin * 4;
+  div[class*='col-'] {
+    &:first-child,
+    &:nth-child(2) {
+      margin-bottom: $base-margin * 4;
+
+      @media (max-width: $screen-md) {
+        margin-bottom: $base-margin;
+      }
     }
   }
 
@@ -21,10 +28,20 @@
     line-height: 1.44;
     letter-spacing: normal;
     color: #323232;
+
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin / 2;
+      font-size: $base-font-size + 2;
+    }
   }
 
   .parallel-section-icon-description {
     margin-top: $base-margin / 2;
+    font-size: $base-font-size + 2;
+
+    @media (max-width: $screen-md) {
+      font-size: $base-font-size - 2;
+    }
   }
 }
 
@@ -36,20 +53,31 @@
   left: 0;
   margin: auto;
 
-  .parallel-section-desc-title {
-  }
-
   .parallel-section-desc-body {
+    font-size: $font-size-base + 4;
     margin-top: $base-margin;
+
+    @media (max-width: $screen-md) {
+      font-size: $font-size-base + 2;
+    }
   }
 
   .parallel-section-desc-btn-wrapper {
     margin-top: $base-margin * 4;
 
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin * 1.5;
+    }
+
     button {
       width: 192px;
       height: 44px;
       text-transform: none;
+
+      @media (max-width: $screen-md) {
+        width: 139px;
+        border-radius: 2px;
+      }
 
       a {
         display: block;
