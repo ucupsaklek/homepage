@@ -1,8 +1,24 @@
 #video-wrapper {
   margin-top: $base-margin * 8;
 
+  @media (max-width: $screen-md) {
+    margin-top: $base-margin * 4;
+  }
+
   .jumbotron {
     margin-bottom: $base-margin * 5;
+
+    @media (max-width: $screen-md) {
+      margin-bottom: $base-margin * 3;
+    }
+
+    .lead {
+      font-size: $base-font-size + 4;
+
+      @media (max-width: $screen-md) {
+        font-size: $base-font-size + 2;
+      }
+    }
   }
 
   iframe {
@@ -10,5 +26,10 @@
     height: 505px;
     display: block;
     margin: 0 auto;
+
+    @media (max-width: $screen-sm) {
+      width: 288px;
+      height: 288px;
+    }
   }
 }
