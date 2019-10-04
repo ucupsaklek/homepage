@@ -3,8 +3,43 @@
   padding-bottom: $base-margin * 8;
   background-image: linear-gradient(to bottom, #ffffff, #d1e0f0);
 
+  @media (max-width: $screen-md) {
+    margin-top: $base-margin * 5;
+  }
+
   .jumbotron {
-    margin-bottom: $base-margin * 5;
+    .lead {
+      font-size: $font-size-base + 4;
+      margin-top: $base-margin;
+
+      @media (max-width: $screen-md) {
+        font-size: $font-size-base + 2;
+        margin-top: $base-margin / 2;
+      }
+    }
+  }
+
+  .row {
+    margin-top: $base-margin * 5;
+
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin * 1.5;
+    }
+  }
+
+  div[class*='col-'] {
+    &:first-child {
+      @media (max-width: $screen-md) {
+        margin-top: $base-margin * 1.5;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      @media (max-width: $screen-md) {
+        margin-top: $base-margin - 4;
+      }
+    }
   }
 
   .donors-icon-wrapper {
@@ -15,6 +50,11 @@
     box-shadow: 0 4px 8px 4px rgba(218, 218, 218, 0.16);
     background-color: #ffffff;
     text-align: center;
+
+    @media (max-width: $screen-md) {
+      width: 200px;
+      height: 124px;
+    }
 
     img {
       position: relative;
@@ -31,11 +71,19 @@
       &.tf-donors-img {
         width: 50%;
         margin-top: $base-margin;
+
+        @media (max-width: $screen-md) {
+          margin-top: $base-margin - 4;
+        }
       }
 
       &.gitcoin-donors-img {
         width: 90%;
         margin-top: $base-margin * 2.5;
+
+        @media (max-width: $screen-md) {
+          margin-top: $base-margin * 2;
+        }
       }
     }
   }
