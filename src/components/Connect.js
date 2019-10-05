@@ -13,7 +13,7 @@ class Connect extends Component {
         <Container id='connect'>
           <h2>We’d love hear from you</h2>
           <Row>
-            <Col md={4}>
+            <Col md={12} lg={4}>
               <Media href='https://t.me/cryptoeocnomicslab' target='_blank'>
                 <Media left>
                   <Media object src='/static/images/desktop/telegram@3x.png' alt='Telegram' />
@@ -26,7 +26,8 @@ class Connect extends Component {
                 </Media>
               </Media>
             </Col>
-            <Col md={4}>
+
+            <Col md={12} lg={4}>
               <Media href='https://github.com/cryptoeconomicslab/plasma-rust-framework/' target='_blank'>
                 <Media left>
                   <Media object src='/static/images/desktop/github_2.png' alt='Github' />
@@ -39,7 +40,8 @@ class Connect extends Component {
                 </Media>
               </Media>
             </Col>
-            <Col md={4}>
+
+            <Col md={12} lg={4}>
               <Media href='https://medium.com/cryptoeconomics-lab' target='_blank'>
                 <Media left>
                   <Media object src='/static/images/desktop/medium_2.png' alt='Medium' />

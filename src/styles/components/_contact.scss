@@ -9,7 +9,13 @@ $illus-width: 493px;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
-  padding-bottom: $base-margin * 8;
+  padding-bottom: $base-margin * 4;
+
+  @media (max-width: $screen-md) {
+    background-image: url('/static/images/svg/mobile/contact-bg.svg');
+    padding-top: $base-margin * 4;
+    padding-bottom: $base-margin * 2.5;
+  }
 }
 
 #contact {
@@ -17,133 +23,73 @@ $illus-width: 493px;
     margin-top: $base-margin * 8;
 
     &:after {
-      background-image: url('/static/images/desktop/illus-message@3x.png');
+      background-image: url('/static/images/svg/illus-message.svg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       content: '';
       display: block;
-      width: $illus-width;
-      height: $illus-height;
+      width: 544px;
+      height: 448px;
       margin: 0 0 0 auto;
     }
 
-    @media (max-width: $screen-md - 1) {
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin * 1.5;
       padding-bottom: 24px;
-      height: ceil($illus-height/2);
-      width: ceil($illus-width/2);
       margin: 0 auto;
       text-align: center;
       padding: 32px 16px;
 
       &:after {
-        background-image: url('/static/images/illus-message@3x.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        content: '';
-        display: block;
-        position: absolute; /* could also be absolute */
-        top: 0;
-        width: 231px;
-        height: 190px;
-        margin-top: 98px;
-        margin-left: 62px;
-      }
-    }
-
-    // CHECK NEXT
-    @media (max-width: $screen-sm - 1) {
-      padding-bottom: 24px;
-      height: 360px;
-      width: 360px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 32px 16px;
-
-      &:after {
-        background-image: url('/static/images/mobile/illus-message@3x.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        content: "";
-        display: block;
-        position: absolute; /* could also be absolute */
-        top: 0;
-        width: 231px;
-        height: 190px;
-        margin-top: 98px;
-        margin-left: 62px;
-        z-index: -1;
-      }
-    }
-
-    @media (max-width: $screen-xs) {
-      padding-bottom: 24px;
-      height: 288px;
-      width: 288px;
-      margin: 0 auto;
-      text-align: center;
-
-      &:after {
-        background-image: url('/static/images/mobile/illus-message@3x.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        content: "";
-        display: block;
-        position: absolute; /* could also be absolute */
-        top: 0;
-        width: 231px;
-        height: 190px;
-        margin-top: 57px;
-        margin-left: 32px;
-        z-index: -1;
+        background-image: url('/static/images/svg/illus-message.svg');
+        background-size: contain;
+        height: 288px;
+        width: 288px;
+        margin: 0 auto;
+        padding: 0;
       }
     }
   }
 
   .contact-form-wrapper {
-    width: $contact-form-width;
+    width: 448px;
     margin: $base-margin * 4 auto 0;
     border-radius: 4px;
     box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
     padding: $base-margin * 1.5;
     background-color: $body-bg;
 
-    @media (max-width: $screen-md - 1) {
+    @media (max-width: $screen-md) {
+      width: 288px;
       margin: 0 auto;
+      padding: $base-margin * 1.5 $base-margin;
       text-align: center;
-      padding: 16px;
-      width: $contact-form-width;
-      height: $contact-form-height;
-    }
-
-    // CHECK NEXT
-    @media (max-width: $screen-sm - 1) {
-      margin: 0 auto;
-      text-align: center;
-      padding: 16px;
-      width: auto;
-    }
-
-    @media (max-width: $screen-xs) {
-      margin: 0 auto;
-      text-align: center;
-      padding: 16px;
-      width: auto;
     }
   }
 
   h2 {
     text-align: center;
-    margin-bottom: $base-margin;
+    font-weight: bold;
   }
 
   p {
     text-align: center;
     font-size: $font-size-large;
-    margin-bottom: $base-margin * 1.5;
+    margin-top: $base-margin;
+
+    @media (max-width: $screen-md) {
+      font-size: $font-size-base + 2;
+      margin-top: $base-margin / 2;
+    }
+  }
+
+  form {
+    margin-top: $base-margin * 1.5;
+
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin;
+    }
   }
 }
 
@@ -154,14 +100,18 @@ $illus-width: 493px;
   margin: 0 0 $base-margin / 2 0;
   font-size: $font-size-medium;
 
+  @media (max-width: $screen-md) {
+    margin-top: $base-margin;
+  }
+
   .form-control {
     height: 100%;
     border: 0;
     background-color: $blue-lighter;
-
-    @media (max-width: $screen-xs) {
-      padding: 0;
-    }
+    font-size: $font-size-base;
+    padding-left: 0;
+    padding-top: $base-margin - 5;
+    border-radius: 4px;
 
     &:focus {
       box-shadow: none;
@@ -198,5 +148,11 @@ $illus-width: 493px;
     background-color: $btn-default-bg;
     font-size: $font-size-medium;
     font-weight: bold;
+    text-transform: none;
+    border-radius: 2px;
+
+    @media (max-width: $screen-md) {
+      font-size: $font-size-base;
+    }
   }
 }

@@ -44,6 +44,10 @@
     background-color: #fafcff;
     margin: 0 32px;
 
+    @media (max-width: $screen-md) {
+      margin: 0 auto;
+    }
+
     &-left {
       width: 84px;
       height: 125px;
