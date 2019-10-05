@@ -7,23 +7,29 @@
   }
 
   .jumbotron {
-    margin-bottom: $base-margin * 5;
-
-    @media (max-width: $screen-md) {
-      margin-bottom: $base-margin * 1.5;
-    }
-
     h2 {
-      margin-bottom: $base-margin;
+      margin-top: $base-margin * 3;
 
       @media (max-width: $screen-md) {
-        margin-bottom: $base-margin / 2;
+        margin-top: $base-margin * 1.5;
+      }
+    }
+
+    p {
+      margin-top: $base-margin;
+
+      @media (max-width: $screen-md) {
+        margin-top: $base-margin / 2;
       }
     }
   }
 
   .slick-slider {
-    margin: 0 auto;
+    margin: $base-margin * 3 auto 0;
+
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin * 1.5;
+    }
 
     .slick-slide {
       .description-wrapper {
@@ -46,14 +52,18 @@
         }
 
         @media (max-width: $screen-sm) {
-          width: 100%;
-          height: auto;
+          width: 288px;
+          height: 162px;
         }
       }
 
       .description-title {
         font-size: $font-size-base + 10;
         font-weight: bold;
+
+        @media (max-width: $screen-md) {
+          font-size: $font-size-base + 4;
+        }
       }
 
       .description-body {
@@ -62,6 +72,7 @@
 
         @media (max-width: $screen-md) {
           margin-top: $base-margin / 2;
+          font-size: $font-size-base - 2;
         }
       }
     }
@@ -73,6 +84,16 @@
 
     @media (max-width: $screen-md) {
       margin-top: $base-margin / 2;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-left: $base-margin + 4;
+      }
     }
   }
 }

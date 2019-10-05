@@ -25,7 +25,7 @@ class Usecase extends Component {
       centerMode: true,
       infinite: false,
       initialSlide: 0,
-      slidesToShow: 3,
+      slidesToShow: 1,
       swipeToSlide: true,
       speed: 500,
       arrows: false,
@@ -96,8 +96,8 @@ class Usecase extends Component {
           </Slider>
 
           <div className='slick-btn-wrapper'>
-            <button className='btn btn-primary slick-prev-btn' onClick={this.slickPrev}>Prev</button>
-            <button className='btn btn-primary slick-next-btn' onClick={this.slickNext}>Next</button>
+            <img src='/static/images/desktop/ic-pos@2x.png' alt='Use Case Prev' onClick={this.slickPrev} />
+            <img src='/static/images/desktop/ic-pos@2x.png' alt='Use Case Next' onClick={this.slickNext} />
           </div>
         </div>
       </>
