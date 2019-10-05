@@ -1,8 +1,8 @@
 #team-wrapper {
-  margin-top: $base-margin * 8;
+  padding-top: $base-margin * 8;
 
   @media (max-width: $screen-md) {
-    margin-top: $base-margin * 4;
+    padding-top: $base-margin * 4;
   }
 
   .jumbotron {

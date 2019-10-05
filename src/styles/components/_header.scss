@@ -5,6 +5,10 @@
     padding-top: $base-margin * 1.5;
     width: $screen-default;
 
+    @media (max-width: $screen-md) {
+      padding-top: 0;
+    }
+
     &.sticky {
       width: $screen-default;
       margin: 0;
@@ -24,6 +28,10 @@
       border-radius: 8px;
       color: $link-color;
       background-color: #fff;
+
+      @media (max-width: $screen-md) {
+        border-radius: 0;
+      }
 
       .navbar-brand {
         width: 235px;

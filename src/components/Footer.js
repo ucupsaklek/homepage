@@ -23,18 +23,23 @@ class Footer extends Component {
             <h5>Page</h5>
             <ul className='products'>
               <li>
-                <Link href='/#top'>
-                  <a>Top</a>
+                <Link href='/#general-wrapper'>
+                  <a>Home</a>
                 </Link>
               </li>
               <li>
-                <Link href='/#usecase'>
+                <Link href='/#usecase-wrapper'>
                   <a>Use Case</a>
                 </Link>
               </li>
               <li>
-                <Link href='/#roadmap'>
-                  <a>Roadmap</a>
+                <Link href='/#product-wrapper'>
+                  <a>Our Service</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/#team-wrapper'>
+                  <a>Team</a>
                 </Link>
               </li>
             </ul>
