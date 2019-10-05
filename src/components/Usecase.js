@@ -28,6 +28,7 @@ class Usecase extends Component {
       slidesToShow: 3,
       swipeToSlide: true,
       speed: 500,
+      arrows: false,
       responsive: [
         {
           breakpoint: 992,
