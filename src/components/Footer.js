@@ -7,7 +7,7 @@ class Footer extends Component {
       <>
         <div className='wrapper'>
           <div className='item'>
-            <h5>GET IN TOUCH</h5>
+            <h5>Cryptoeconomics Lab</h5>
 
             <div className='address'>
               <p>

@@ -1,59 +1,56 @@
 .footer {
-  background: #FFFFFF;
-  max-width: $screen-desktop-max;
-  margin: 0 auto;
+  background: #fafcff;
 
   .wrapper {
     padding-top: $base-margin * 3;
+    display: flex;
+    flex-wrap: wrap;
 
-    @media (max-width: $screen-xs) {
-      @include x-justify-content(center);
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    @media (min-width: $screen-xs) and (max-width: $screen-sm) {
-      @include x-justify-content(center);
-      margin: 0 auto;
-      width: 100%;
+    @media (max-width: $screen-md) {
+      padding-top: $base-margin * 1.5;
     }
 
     .item {
       margin: 0 $base-margin * 2;
       width: 128px;
-      float: left;
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $screen-md) {
         margin: 0 $base-margin $base-margin * 1.5 0;
         width: calc(50% - 8px);
       }
 
       &:first-child {
         margin-left: 0;
-        width: 420px;
+        width: 360px;
 
-        @media (max-width: $screen-sm) {
-          margin: 0 0 $base-margin * 2 0;
+        @media (max-width: $screen-md) {
           width: 100%;
         }
       }
 
-      @media (max-width: $screen-sm) {
-        &:nth-child(2n + 1) {
+      &:nth-child(2n + 1) {
+        @media (max-width: $screen-md) {
           margin: 0 0 $base-margin * 1.5 0;
         }
       }
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      .address {
-        margin-top: $base-margin / 2;
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-bottom: 0;
       }
 
       h5 {
         font-weight: bold;
+        font-size: $font-size-base + 2;
+      }
+
+      .address {
+        margin-top: $base-margin / 2;
+        font-size: $font-size-base - 2;
+
+        @media (max-width: $screen-md) {
+          font-size: $font-size-base - 4;
+        }
       }
 
       ul {
@@ -61,49 +58,48 @@
         padding: 0;
         margin-top: $base-margin * 1.5;
 
+        @media (max-width: $screen-md) {
+          margin-top: $base-margin;
+        }
+
         li {
           padding-bottom: $base-margin;
 
+          @media (max-width: $screen-md) {
+            padding-bottom: $base-margin / 2;
+          }
+
           a {
-            height: 20px;
             color: #696C75;
+            font-size: $font-size-base - 2;
+
+            @media (max-width: $screen-md) {
+              font-size: $font-size-base - 4;
+            }
           }
         }
       }
     }
   }
 
-  hr {
-    clear: both;
-  }
-
   .copyrights {
-    clear: both;
-    margin: $base-margin * 2 0;
-    background: #FFFFFF;
-    @include x-display-flex;
-    @include x-flex-direction(row);
+    padding: $base-margin 0 $base-margin * 1.5;
+    background: #fafcff;
+    display: flex;
 
-    @media (max-width: $screen-sm) {
-      @include x-justify-content(center);
-      margin: 0 auto;
-      padding-bottom: $base-margin * 1.5;
-      width: 100%;
+    @media (max-width: $screen-md) {
+      padding-bottom: $base-margin;
     }
 
     h5 {
       font-weight: bold;
       flex: 1;
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
     }
 
     .social {
-      align-self: center;
-      @include x-display-flex;
+      display: flex;
       justify-content: center;
-      align-items: center;
       list-style: none;
       flex: 1;
 
@@ -116,9 +112,10 @@
 
         a {
           display: block;
-        }
-        a:hover {
-          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -128,9 +125,6 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: $base-margin * 1.5;
-
-    @media (max-width: $screen-sm) {
-      padding-top: 0;
-    }
+    font-size: $font-size-base - 2;
   }
 }
