@@ -96,7 +96,13 @@
 
     .btn {
       font-size: $font-size-medium;
-      padding: $base-margin / 2 $base-margin * 2;
+      text-transform: none;
+      padding: 0;
+
+      a {
+        display: block;
+        padding: $base-margin / 2 $base-margin * 2;
+      }
     }
   }
 
