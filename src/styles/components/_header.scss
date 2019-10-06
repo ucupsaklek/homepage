@@ -31,6 +31,7 @@
 
       @media (max-width: $screen-md) {
         border-radius: 0;
+        padding: $base-margin;
       }
 
       .navbar-brand {
