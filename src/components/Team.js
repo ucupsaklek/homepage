@@ -83,7 +83,7 @@ class Team extends Component {
               <CardBody>
                 <CardTitle>Daiki Sekiguchi</CardTitle>
                 <CardSubtitle>BizDev & Engineeer</CardSubtitle>
-                <CardText>Daiki was the freelance engineer who specialized the blockchain apps. He is developing the use case of the OVM with some companies.</CardText>
+                <CardText>Daiki used to be a freelance engineer who specializes blockchain application development. At CEL, He is in charge of creating use cases of the Layer2 solutions with clients.</CardText>
               </CardBody>
             </Card>
           </Col>
