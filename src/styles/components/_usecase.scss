@@ -33,7 +33,7 @@
 
     .slick-slide {
       .description-wrapper {
-        width: 542px;
+        width: 574px;
         margin: 0 auto;
         text-align: center;
 
@@ -43,17 +43,21 @@
       }
 
       img {
-        width: 542px;
-        height: 305px;
+        background-color: #FFF;
+        border-radius: 8px;
+        width: 574px;
+        height: 321px;
         margin: 0 auto $base-margin;
+        padding: $base-margin $base-margin / 2;
 
         @media (max-width: $screen-md) {
           margin-bottom: $base-margin / 2;
         }
 
         @media (max-width: $screen-sm) {
-          width: 288px;
-          height: 162px;
+          padding: $base-margin / 2 $base-margin / 4;
+          width: 304px;
+          height: 170px;
         }
       }
 
@@ -87,8 +91,8 @@
     }
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 48px;
+      height: 48px;
       cursor: pointer;
 
       &:last-child {

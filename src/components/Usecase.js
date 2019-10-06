@@ -33,7 +33,8 @@ class Usecase extends Component {
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 1,
+            centerPadding: '8px'
           }
         }
       ]
@@ -49,7 +50,7 @@ class Usecase extends Component {
 
           <Slider ref='slider' {...slickSettings}>
             <div key={1}>
-              <img src='/static/images/desktop/ic-pos@2x.png' alt='Payment' />
+              <img src='/static/images/svg/tmp-payment.svg' alt='Payment' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>Payment</h3>
                 <div className='description-body'>
@@ -59,7 +60,7 @@ class Usecase extends Component {
             </div>
 
             <div key={2}>
-              <img src='/static/images/desktop/ic-pos@2x.png' alt='DEX' />
+              <img src='/static/images/svg/tmp-payment.svg' alt='DEX' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>DEX</h3>
                 <div className='description-body'>
@@ -71,7 +72,7 @@ class Usecase extends Component {
             </div>
 
             <div key={3}>
-              <img src='/static/images/desktop/ic-pos@2x.png' alt='Electricity Trading' />
+              <img src='/static/images/svg/tmp-payment.svg' alt='Electricity Trading' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>Electricity Trading</h3>
                 <div className='description-body'>
@@ -83,7 +84,7 @@ class Usecase extends Component {
             </div>
 
             <div key={4}>
-              <img src='/static/images/desktop/ic-pos@2x.png' alt='GAME' />
+              <img src='/static/images/svg/tmp-payment.svg' alt='GAME' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>GAME</h3>
                 <div className='description-body'>
@@ -96,8 +97,8 @@ class Usecase extends Component {
           </Slider>
 
           <div className='slick-btn-wrapper'>
-            <img src='/static/images/desktop/ic-pos@2x.png' alt='Use Case Prev' onClick={this.slickPrev} />
-            <img src='/static/images/desktop/ic-pos@2x.png' alt='Use Case Next' onClick={this.slickNext} />
+            <img src='/static/images/svg/slick-back.svg' alt='Use Case Prev' onClick={this.slickPrev} />
+            <img src='/static/images/svg/slick-back.svg' alt='Use Case Next' onClick={this.slickNext} />
           </div>
         </div>
       </>
