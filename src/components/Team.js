@@ -22,7 +22,7 @@ class Team extends Component {
         </Jumbotron>
 
         <Row className='teams'>
-          <Col sm={12} md={4}>
+          <Col md={12} lg={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-taku@2x.png' alt='Taku Kataoka' />
               <CardBody>
@@ -33,7 +33,7 @@ class Team extends Component {
             </Card>
           </Col>
 
-          <Col sm={12} md={4}>
+          <Col md={12} lg={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-shogo@2x.png' alt='Shogo Ochiai' />
               <CardBody>
@@ -44,46 +44,46 @@ class Team extends Component {
             </Card>
           </Col>
 
-          <Col sm={12} md={4}>
+          <Col md={12} lg={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-syuhei@2x.png' alt='Shuhei Hiya' />
               <CardBody>
                 <CardTitle>Shuhei Hiya</CardTitle>
                 <CardSubtitle>Chief Scientist</CardSubtitle>
-                <CardText>Shuhei has been the CEO of Firebase competitor PaaS. He was also a MITOU Super Creator in 2010.</CardText>
+                <CardText>Shuhei won MITOU Super Creator Award in 2010. He founded the company building Backend as a Service for IoT in 2012. He transfered the ownership of the service to othe IoT company. After working at some IoT startups, he joined Cryptoeconomcis Lab in 2018.</CardText>
               </CardBody>
             </Card>
           </Col>
 
-          <Col sm={12} md={4}>
+          <Col md={12} lg={4}>
             <Card>
               <CardImg top src='/static/images/desktop/img-yuriko@2x.png' alt='Yuriko Nishijima' />
               <CardBody>
                 <CardTitle>Yuriko Nishijima</CardTitle>
                 <CardSubtitle>Researcher & Developer</CardSubtitle>
-                <CardText>Yuriko researches Plasma and focuses on the production of the blockchain technology.</CardText>
+                <CardText>Yuriko researches Plamda and focuses on the production of the blockchain technology.</CardText>
               </CardBody>
             </Card>
           </Col>
 
-          <Col sm={12} md={4}>
+          <Col md={12} lg={4}>
             <Card>
-              <CardImg top src='/static/images/desktop/img-yuriko@2x.png' alt='Takamichi Tsutsumi' />
+              <CardImg top src='/static/images/desktop/img-takamichi.png' alt='Takamichi Tsutsumi' />
               <CardBody>
                 <CardTitle>Takamichi Tsutsumi</CardTitle>
                 <CardSubtitle>Software Engineer</CardSubtitle>
-                <CardText>Takamichi</CardText>
+                <CardText>Software Engineeer</CardText>
               </CardBody>
             </Card>
           </Col>
 
-          <Col sm={12} md={4}>
+          <Col md={12} lg={4}>
             <Card>
-              <CardImg top src='/static/images/desktop/img-yuriko@2x.png' alt='Daiki Sekiguchi' />
+              <CardImg top src='/static/images/desktop/img-daiki.png' alt='Daiki Sekiguchi' />
               <CardBody>
                 <CardTitle>Daiki Sekiguchi</CardTitle>
                 <CardSubtitle>BizDev & Engineeer</CardSubtitle>
-                <CardText>Daiki</CardText>
+                <CardText>Daiki was the freelance engineer who specialized the blockchain apps. He is developing the use case of the OVM with some companies.</CardText>
               </CardBody>
             </Card>
           </Col>
