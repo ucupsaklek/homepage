@@ -50,17 +50,17 @@ class Usecase extends Component {
 
           <Slider ref='slider' {...slickSettings}>
             <div key={1}>
-              <img src='/static/images/svg/tmp-payment.svg' alt='Payment' />
+              <img src='/static/images/svg/usecase-payment.svg' alt='Payment' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>Payment</h3>
                 <div className='description-body'>
-                  The most basic, yet fundamental/ widely used functionality on various applications.
+                  The most basic, yet fundamental / widely used functionality on various applications.
                 </div>
               </div>
             </div>
 
             <div key={2}>
-              <img src='/static/images/svg/tmp-payment.svg' alt='DEX' />
+              <img src='/static/images/svg/usecase-dex.svg' alt='DEX' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>DEX</h3>
                 <div className='description-body'>
@@ -72,7 +72,7 @@ class Usecase extends Component {
             </div>
 
             <div key={3}>
-              <img src='/static/images/svg/tmp-payment.svg' alt='Electricity Trading' />
+              <img src='/static/images/svg/usecase-electricity.svg' alt='Electricity Trading' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>Electricity Trading</h3>
                 <div className='description-body'>
@@ -84,7 +84,7 @@ class Usecase extends Component {
             </div>
 
             <div key={4}>
-              <img src='/static/images/svg/tmp-payment.svg' alt='GAME' />
+              <img src='/static/images/svg/usecase-game.svg' alt='GAME' />
               <div className='description-wrapper'>
                 <h3 className='description-title'>GAME</h3>
                 <div className='description-body'>
@@ -98,7 +98,7 @@ class Usecase extends Component {
 
           <div className='slick-btn-wrapper'>
             <img src='/static/images/svg/slick-back.svg' alt='Use Case Prev' onClick={this.slickPrev} />
-            <img src='/static/images/svg/slick-back.svg' alt='Use Case Next' onClick={this.slickNext} />
+            <img src='/static/images/svg/slick-next.svg' alt='Use Case Next' onClick={this.slickNext} />
           </div>
         </div>
       </>
