@@ -7,6 +7,7 @@ import {
   Jumbotron,
   Row
 } from 'reactstrap'
+import Link from 'next/link'
 import Header from './Header'
 import { Sticky } from 'react-sticky'
 
@@ -53,7 +54,9 @@ class General extends Component {
               </Row>
             </Container>
             <div className='scroll-down-wrapper d-none d-lg-block'>
-              <img src='/static/images/desktop/scroll-down.svg' />
+              <Link href='#usecase-wrapper'>
+                <a><img src='/static/images/svg/scroll-down.svg' /></a>
+              </Link>
             </div>
           </div>
         </div>
