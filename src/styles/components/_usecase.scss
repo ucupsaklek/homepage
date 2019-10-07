@@ -76,6 +76,7 @@
 
         @media (max-width: $screen-md) {
           margin-top: $base-margin / 2;
+          padding: 0 $base-margin;
           font-size: $font-size-base - 2;
         }
       }

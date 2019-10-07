@@ -23,7 +23,7 @@ class Usecase extends Component {
   render () {
     const slickSettings = {
       centerMode: true,
-      infinite: false,
+      infinite: true,
       initialSlide: 0,
       slidesToShow: 1,
       swipeToSlide: true,
