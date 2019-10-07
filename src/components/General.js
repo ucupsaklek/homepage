@@ -7,16 +7,16 @@ import {
   Jumbotron,
   Row
 } from 'reactstrap'
-import Link from 'next/link'
 import Header from './Header'
 import { Sticky } from 'react-sticky'
+import { Link } from 'react-scroll'
 
 class General extends Component {
   render () {
     return (
       <>
         <div className='head-bg'>
-          <Sticky>
+          <Sticky topOffset={72}>
             {({
               style,
               isSticky
@@ -40,9 +40,9 @@ class General extends Component {
                     <div className='lead lead-btn-wrapper'>
                       <ButtonGroup>
                         <Button color='primary'>
-                          <a href='#contact-wrapper' className='color-white'>
+                          <Link smooth offset={-32} to='contact-wrapper'>
                             Contact us!
-                          </a>
+                          </Link>
                         </Button>
                       </ButtonGroup>
                     </div>
@@ -54,8 +54,8 @@ class General extends Component {
               </Row>
             </Container>
             <div className='scroll-down-wrapper d-none d-lg-block'>
-              <Link href='#usecase-wrapper'>
-                <a><img src='/static/images/svg/scroll-down.svg' /></a>
+              <Link smooth offset={-32} to='usecase-wrapper'>
+                <img src='/static/images/svg/scroll-down.svg' />
               </Link>
             </div>
           </div>

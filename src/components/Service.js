@@ -3,6 +3,7 @@ import {
   Col,
   Row
 } from 'reactstrap'
+import { Link } from 'react-scroll'
 
 class Service extends Component {
   render () {
@@ -18,7 +19,9 @@ class Service extends Component {
             </div>
             <div className='parallel-section-desc-btn-wrapper'>
               <button className='btn btn-primary'>
-                <a href='#contact-wrapper' className='color-white'>Contact us!</a>
+                <Link smooth offset={-32} to='contact-wrapper'>
+                  Contact us!
+                </Link>
               </button>
             </div>
           </Col>

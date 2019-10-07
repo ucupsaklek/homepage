@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
+import { Link } from 'react-scroll'
 
 class Footer extends Component {
   render () {
@@ -23,23 +23,23 @@ class Footer extends Component {
             <h5>Page</h5>
             <ul className='products'>
               <li>
-                <Link href='/#general-wrapper'>
-                  <a>Home</a>
+                <Link smooth to='general-wrapper'>
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href='/#usecase-wrapper'>
-                  <a>Use Case</a>
+                <Link smooth offset={-32} to='usecase-wrapper'>
+                  Use Case
                 </Link>
               </li>
               <li>
-                <Link href='/#product-wrapper'>
-                  <a>Our Service</a>
+                <Link smooth offset={-64} to='product-wrapper'>
+                  Our Service
                 </Link>
               </li>
               <li>
-                <Link href='/#team-wrapper'>
-                  <a>Team</a>
+                <Link smooth offset={-32} to='team-wrapper'>
+                  Team
                 </Link>
               </li>
             </ul>
@@ -91,7 +91,9 @@ class Footer extends Component {
 
             <ul className='links'>
               <li>
-                <a href='/#contact'>Contact</a>
+                <Link smooth offset={-32} to='contact-wrapper'>
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>

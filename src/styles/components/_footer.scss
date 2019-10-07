@@ -72,9 +72,14 @@
           a {
             color: #696C75;
             font-size: $font-size-base - 2;
+            cursor: pointer;
 
             @media (max-width: $screen-md) {
               font-size: $font-size-base - 4;
+            }
+
+            &:hover {
+              text-decoration: underline;
             }
           }
         }

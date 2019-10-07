@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
 import {
   Container,
   Collapse,
@@ -9,6 +8,10 @@ import {
   Nav,
   NavItem
 } from 'reactstrap'
+import {
+  animateScroll as scroll,
+  Link
+} from 'react-scroll'
 
 class Header extends Component {
   constructor (props) {
@@ -26,6 +29,10 @@ class Header extends Component {
 
   toggleOption= () => {
     this.setState({ optionOpen: !this.state.optionOpen })
+  }
+
+  scrollToTop = () => {
+    scroll.scrollToTop()
   }
 
   render () {
@@ -47,32 +54,32 @@ class Header extends Component {
                 <Collapse isOpen={this.state.menuOpen} navbar>
                   <Nav navbar>
                     <NavItem>
-                      <Link href='/#top'>
-                        <a>Home</a>
+                      <Link smooth to='general-wrapper'>
+                        Home
                       </Link>
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#usecase-wrapper'>
-                        <a>Use Case</a>
+                      <Link smooth offset={-32} to='usecase-wrapper'>
+                        Use Case
                       </Link>
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#product-wrapper'>
-                        <a>Our Service</a>
+                      <Link smooth offset={-64} to='product-wrapper'>
+                        Our Service
                       </Link>
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#team-wrapper'>
-                        <a>Team</a>
+                      <Link smooth offset={-32} to='team-wrapper'>
+                        Team
                       </Link>
                     </NavItem>
 
                     <NavItem>
-                      <Link href='/#contact-wrapper'>
-                        <a>Contact</a>
+                      <Link smooth offset={-32} to='contact-wrapper'>
+                        Contact
                       </Link>
                     </NavItem>
                   </Nav>
