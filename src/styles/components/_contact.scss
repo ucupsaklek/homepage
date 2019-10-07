@@ -136,18 +136,18 @@ $illus-width: 493px;
     }
   }
 
-  .form-check {
-    padding: 0;
-    margin: 0;
+  .contact-submit-btn-wrapper {
+    margin-top: $base-margin * 1.5;
+
+    div[class*='col-'] {
+      padding: 0;
+    }
 
     button {
-      margin-top: $base-margin * 1.5;
       padding: $base-margin / 2 0;
       width: 100%;
-      border-radius: 4px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
       color: $btn-default-color;
-      background-color: $btn-default-bg;
       font-size: $font-size-medium;
       font-weight: bold;
       text-transform: none;

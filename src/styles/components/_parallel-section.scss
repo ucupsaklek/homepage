@@ -81,6 +81,10 @@
 
       a {
         display: block;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

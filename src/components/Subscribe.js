@@ -63,7 +63,7 @@ class Subscribe extends Component {
                   </FormGroup>
 
                   <FormGroup>
-                    <Button className='btn btn-primary' disabled={this.state.isSending}>Send</Button>
+                    <Button color='primary' disabled={this.state.isSending}>Send</Button>
                   </FormGroup>
                 </Form>
               </Col>

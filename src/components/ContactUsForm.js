@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  FormGroup,
+  Input,
+  Row
+} from 'reactstrap'
 import { sendEmail } from 'actions/contact'
 
 class ContactUsForm extends Component {
@@ -57,22 +65,28 @@ class ContactUsForm extends Component {
                         <Input type='text' name='name' value={this.state.name} onChange={this.handleInputChange} placeholder='Name' required />
                       </Col>
                     </FormGroup>
+
                     <FormGroup row>
                       <Col sm={12}>
                         <Input type='email' name='email' value={this.state.email} onChange={this.handleInputChange} placeholder='Email' required />
                       </Col>
                     </FormGroup>
+
                     <FormGroup row className='message'>
                       <Col sm={12}>
                         <Input type='textarea' name='message' value={this.state.message} onChange={this.handleInputChange} placeholder='Message' required />
                       </Col>
                     </FormGroup>
-                    <FormGroup check row>
-                      <Button disabled={this.state.isSending}>Send</Button>
+
+                    <FormGroup row className='contact-submit-btn-wrapper'>
+                      <Col sm={12}>
+                        <Button color='primary' disabled={this.state.isSending}>Send</Button>
+                      </Col>
                     </FormGroup>
                   </Form>
                 </div>
               </Col>
+
               <Col xs={12} md={12} lg={7}>
                 <div className='banner illus-message' />
               </Col>
