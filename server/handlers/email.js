@@ -18,7 +18,7 @@ module.exports.send = (req, res) => {
     }
     const subject = '[CEL] Thank you for your inquiry'
 
-    sendMail(res, fileName, replacements, payload.email, subject)
+    sendMail(res, fileName, replacements, payload.email, MailConfig.recipient, subject)
   } catch (e) {
     console.log(e)
   }
@@ -35,13 +35,13 @@ module.exports.subscribe = (req, res) => {
     }
     const subject = '[CEL] Thank you for subscribing our news'
 
-    sendMail(res, fileName, replacements, payload.email, subject)
+    sendMail(res, fileName, replacements, payload.email, '', subject)
   } catch (e) {
     console.log(e)
   }
 }
 
-function sendMail (res, fileName, replacements, toAddr, subject) {
+function sendMail (res, fileName, replacements, toAddr, ccAddr, subject) {
   const transport = MailConfig.SMTPTransport
 
   fs.readFile(path.join(__dirname, fileName), { encoding: 'utf-8' }, (err, file) => {
@@ -51,7 +51,7 @@ function sendMail (res, fileName, replacements, toAddr, subject) {
     const options = {
       from: MailConfig.recipient,
       to: toAddr,
-      cc: MailConfig.recipient,
+      cc: ccAddr,
       bcc: process.env.EMAIL_BCC,
       subject: subject,
       html: fileToSend
