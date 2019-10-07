@@ -107,6 +107,9 @@
   }
 
   .scroll-down-wrapper {
+    top: $base-margin * 1.5;
+    position: relative;
+
     img {
       margin: 0 auto;
       display: block;
