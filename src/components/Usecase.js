@@ -36,6 +36,11 @@ class Usecase extends Component {
             slidesToShow: 1,
             centerPadding: '8px'
           }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+          }
         }
       ]
     }

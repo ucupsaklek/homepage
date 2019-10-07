@@ -54,7 +54,13 @@
           margin-bottom: $base-margin / 2;
         }
 
-        @media (max-width: $screen-sm) {
+        // @NOTE: Happen the bug in the Slick
+        @media (max-width: 375px) {
+          width: 245px;
+          height: 160px;
+        }
+
+        @media (min-width: 376px) and (max-width: $screen-sm) {
           padding: $base-margin / 2 $base-margin / 4;
           width: 304px;
           height: 170px;
