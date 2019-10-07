@@ -1,2 +1,2 @@
-# cryptoeconomiclabs.com
+# Cryptoeconomics Lab
 https://cryptoeconomicslab.com
