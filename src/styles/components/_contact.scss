@@ -7,12 +7,16 @@ $illus-width: 493px;
 #contact-wrapper {
   background-image: url('/static/images/svg/contact-bg.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
   background-position: top;
   padding-bottom: $base-margin * 4;
 
+  @media (min-width: $screen-desktop-max) {
+    background-size: 100%;
+  }
+
   @media (max-width: $screen-md) {
     background-image: url('/static/images/svg/mobile/contact-bg.svg');
+    background-size: 100%;
     padding-top: $base-margin * 4;
     padding-bottom: $base-margin * 2.5;
   }
