@@ -17,6 +17,24 @@ module.exports.send = (req, res) => {
       message: payload.message
     }
     const subject = '[CEL] Thank you for your inquiry'
+
+    sendMail(res, fileName, replacements, payload.email, subject)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+module.exports.subscribe = (req, res) => {
+  try {
+    const payload = req.body
+    console.log('[' + moment().format('YYYY-MM-DD HH:mm:ss Z') + ']', 'payload:', payload)
+
+    const fileName = '/../email/subscribe.hbs'
+    const replacements = {
+      email: payload.email
+    }
+    const subject = '[CEL] Thank you for subscribing our news'
+
     sendMail(res, fileName, replacements, payload.email, subject)
   } catch (e) {
     console.log(e)

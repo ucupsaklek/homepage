@@ -11,6 +11,7 @@ import Framework from '../src/components/Framework'
 import Service from '../src/components/Service'
 import Video from '../src/components/Video'
 import Donors from '../src/components/Donors'
+import Subscribe from '../src/components/Subscribe'
 
 class Index extends Component {
   render () {
@@ -38,6 +39,10 @@ class Index extends Component {
 
         <div id='service-wrapper'>
           <Service />
+        </div>
+
+        <div id='subscribe-wrapper'>
+          <Subscribe />
         </div>
 
         <div id='video-wrapper'>

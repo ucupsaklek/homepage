@@ -38,6 +38,7 @@ class General extends Component {
                     </div>
                   </Jumbotron>
                 </Col>
+
                 <Col md={12} lg={7}>
                   <div className='banner illus-header' />
                 </Col>

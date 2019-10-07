@@ -33,6 +33,7 @@ app.prepare().then(() => {
   })
 
   server.post('/email/contact', emailHandler.send)
+  server.post('/email/subscribe', emailHandler.subscribe)
 
   startServer()
 

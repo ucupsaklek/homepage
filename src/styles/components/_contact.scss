@@ -95,68 +95,67 @@ $illus-width: 493px;
       margin-top: $base-margin;
     }
   }
-}
-
-.form-group {
-  height: 48px;
-  border-radius: 4px;
-  background-color: $blue-lighter;
-  margin: 0 0 $base-margin / 2 0;
-  font-size: $font-size-medium;
-
-  @media (max-width: $screen-md) {
-    margin-top: $base-margin;
-  }
-
-  .form-control {
-    height: 100%;
-    border: 0;
+  .form-group {
+    height: 48px;
+    border-radius: 4px;
     background-color: $blue-lighter;
-    font-size: $font-size-base;
-    padding-left: 0;
-    padding-top: $base-margin - 5;
-    border-radius: 4px;
-
-    &:focus {
-      box-shadow: none;
-
-      &::-webkit-input-placeholder {
-        color: transparent;
-      }
-      &::-moz-placeholder {
-        color: transparent;
-      }
-    }
-
-    &:-moz-placeholder {
-      color: transparent;
-    }
-  }
-
-  &.message {
-    height: 104px;
-  }
-}
-
-.form-check {
-  padding: 0;
-  margin: 0;
-
-  button {
-    margin-top: $base-margin * 1.5;
-    padding: $base-margin / 2 0;
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
-    color: $btn-default-color;
-    background-color: $btn-default-bg;
+    margin: 0 0 $base-margin / 2 0;
     font-size: $font-size-medium;
-    font-weight: bold;
-    text-transform: none;
-    border-radius: 2px;
 
     @media (max-width: $screen-md) {
+      margin-top: $base-margin;
+    }
+
+    .form-control {
+      height: 100%;
+      border: 0;
+      background-color: $blue-lighter;
       font-size: $font-size-base;
+      padding-left: 0;
+      padding-top: $base-margin - 5;
+      border-radius: 4px;
+
+      &:focus {
+        box-shadow: none;
+
+        &::-webkit-input-placeholder {
+          color: transparent;
+        }
+        &::-moz-placeholder {
+          color: transparent;
+        }
+      }
+
+      &:-moz-placeholder {
+        color: transparent;
+      }
+    }
+
+    &.message {
+      height: 104px;
+    }
+  }
+
+  .form-check {
+    padding: 0;
+    margin: 0;
+
+    button {
+      margin-top: $base-margin * 1.5;
+      padding: $base-margin / 2 0;
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+      color: $btn-default-color;
+      background-color: $btn-default-bg;
+      font-size: $font-size-medium;
+      font-weight: bold;
+      text-transform: none;
+      border-radius: 2px;
+
+      @media (max-width: $screen-md) {
+        font-size: $font-size-base;
+      }
     }
   }
 }

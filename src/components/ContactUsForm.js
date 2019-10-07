@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
-import { sendEmail } from 'actions/email'
+import { sendEmail } from 'actions/contact'
 
 class ContactUsForm extends Component {
   constructor () {
