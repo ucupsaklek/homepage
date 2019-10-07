@@ -39,7 +39,7 @@ class Team extends Component {
               <CardBody>
                 <CardTitle>Shogo Ochiai</CardTitle>
                 <CardSubtitle>Chief Economist</CardSubtitle>
-                <CardText>Shogo was the former CTO of an Indonesian fashion e-commerce app, and is a co-researcher at the University of Tokyo.</CardText>
+                <CardText>Shogo is a market analyst and a developer. He is in charge of OVM adoption. Project reseacher of cryptoeconomics at U.Tokyo</CardText>
               </CardBody>
             </Card>
           </Col>
@@ -61,7 +61,7 @@ class Team extends Component {
               <CardBody>
                 <CardTitle>Yuriko Nishijima</CardTitle>
                 <CardSubtitle>Researcher & Developer</CardSubtitle>
-                <CardText>Yuriko researches Plasma and focuses on the production of the blockchain technology.</CardText>
+                <CardText>Yuriko researches and develops a second layer application framework in the R&D team.</CardText>
               </CardBody>
             </Card>
           </Col>
