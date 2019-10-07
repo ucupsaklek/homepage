@@ -61,7 +61,7 @@ class Team extends Component {
               <CardBody>
                 <CardTitle>Yuriko Nishijima</CardTitle>
                 <CardSubtitle>Researcher & Developer</CardSubtitle>
-                <CardText>Yuriko researches Plamda and focuses on the production of the blockchain technology.</CardText>
+                <CardText>Yuriko researches Plasma and focuses on the production of the blockchain technology.</CardText>
               </CardBody>
             </Card>
           </Col>
