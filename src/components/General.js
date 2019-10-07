@@ -7,8 +7,6 @@ import {
   Jumbotron,
   Row
 } from 'reactstrap'
-import Header from './Header'
-import { Sticky } from 'react-sticky'
 import { Link } from 'react-scroll'
 
 class General extends Component {
@@ -16,14 +14,6 @@ class General extends Component {
     return (
       <>
         <div className='head-bg'>
-          <Sticky topOffset={72}>
-            {({
-              style,
-              isSticky
-            }) => (
-              <Header sticky={isSticky} style={style} />
-            )}
-          </Sticky>
           <div id='top' className='general'>
             <Container>
               <Row>

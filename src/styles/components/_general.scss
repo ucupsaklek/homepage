@@ -21,7 +21,8 @@
 }
 
 .general {
-  margin: $base-margin * 4 auto 0;
+  margin: 0 auto;
+  padding-top: $base-margin * 4;
   z-index: 1;
 
   .illus-header {
