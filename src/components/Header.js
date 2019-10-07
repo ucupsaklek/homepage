@@ -38,56 +38,54 @@ class Header extends Component {
   render () {
     return (
       <>
-        <div className='header'>
-          <header className={(this.props.sticky || this.state.menuOpen ? 'sticky' : '')} style={this.props.style}>
-            <Navbar
-              expand={'lg'}
-              light
-            >
-              <Container>
-                <NavbarBrand href='/'>
-                  <div className='logo'>
-                    <img src='/static/images/logo.svg' alt='Cryptoeconomics Lab' />
-                  </div>
-                </NavbarBrand>
-                <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''} />
-                <Collapse isOpen={this.state.menuOpen} navbar>
-                  <Nav navbar>
-                    <NavItem>
-                      <Link smooth to='general-wrapper'>
-                        Home
-                      </Link>
-                    </NavItem>
+        <header className={(this.props.sticky || this.state.menuOpen ? 'sticky' : '')} style={this.props.style}>
+          <Navbar
+            expand={'lg'}
+            light
+          >
+            <Container>
+              <NavbarBrand href='/'>
+                <div className='logo'>
+                  <img src='/static/images/logo.svg' alt='Cryptoeconomics Lab' />
+                </div>
+              </NavbarBrand>
+              <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''} />
+              <Collapse isOpen={this.state.menuOpen} navbar>
+                <Nav navbar>
+                  <NavItem>
+                    <Link smooth onClick={this.scrollToTop} to='#'>
+                      Home
+                    </Link>
+                  </NavItem>
 
-                    <NavItem>
-                      <Link smooth offset={-32} to='usecase-wrapper'>
-                        Use Case
-                      </Link>
-                    </NavItem>
+                  <NavItem>
+                    <Link smooth offset={-32} to='usecase-wrapper'>
+                      Use Case
+                    </Link>
+                  </NavItem>
 
-                    <NavItem>
-                      <Link smooth offset={-64} to='product-wrapper'>
-                        Our Service
-                      </Link>
-                    </NavItem>
+                  <NavItem>
+                    <Link smooth offset={-64} to='product-wrapper'>
+                      Our Service
+                    </Link>
+                  </NavItem>
 
-                    <NavItem>
-                      <Link smooth offset={-32} to='team-wrapper'>
-                        Team
-                      </Link>
-                    </NavItem>
+                  <NavItem>
+                    <Link smooth offset={-32} to='team-wrapper'>
+                      Team
+                    </Link>
+                  </NavItem>
 
-                    <NavItem>
-                      <Link smooth offset={-32} to='contact-wrapper'>
-                        Contact
-                      </Link>
-                    </NavItem>
-                  </Nav>
-                </Collapse>
-              </Container>
-            </Navbar>
-          </header>
-        </div>
+                  <NavItem>
+                    <Link smooth offset={-32} to='contact-wrapper'>
+                      Contact
+                    </Link>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+            </Container>
+          </Navbar>
+        </header>
       </>
     )
   }

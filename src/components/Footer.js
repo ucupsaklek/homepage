@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-scroll'
-
+import {
+  animateScroll as scroll,
+  Link
+} from 'react-scroll'
 class Footer extends Component {
+  scrollToTop = () => {
+    scroll.scrollToTop()
+  }
+
   render () {
     return (
       <>
@@ -23,7 +29,7 @@ class Footer extends Component {
             <h5>Page</h5>
             <ul className='products'>
               <li>
-                <Link smooth to='general-wrapper'>
+                <Link smooth onClick={this.scrollToTop} to='#'>
                   Home
                 </Link>
               </li>
