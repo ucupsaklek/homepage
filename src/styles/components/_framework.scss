@@ -1,0 +1,11 @@
+#framework-wrapper {
+  margin: 0 auto;
+  padding-top: $base-margin * 13;
+  max-width: $screen-desktop-max;
+  width: 1040px;
+
+  @media (max-width: $screen-md) {
+    padding-top: $base-margin * 8;
+    width: 80%;
+  }
+}

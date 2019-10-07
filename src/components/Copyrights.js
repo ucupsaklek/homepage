@@ -1,65 +1,34 @@
-import React from 'react'
-import {
-  Button,
-  ButtonGroup,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+import React, { Component } from 'react'
 
-  class Copyrights extends React.Component {
-    constructor (props) {
-      super(props)
+class Copyrights extends Component {
+  render () {
+    return (
+      <>
+        <div className='copyrights'>
+          <h5 className='d-none d-md-block'>&copy; 2018-2019 Cryptoeconomics Lab, Inc. All rights reserved.</h5>
 
-      this.state = {
-        open: false,
-      }
-    }
+          <ul className='social'>
+            <li className='icon-github icon-small'>
+              <a href='https://github.com/cryptoeconomicslab/plasma-rust-framework/' target='_blank'>&nbsp;</a>
+            </li>
 
-    toggle = () => {
-      this.setState({ open: !this.state.open})
-    }
+            <li className='icon-medium icon-small'>
+              <a href='https://medium.com/cryptoeconomics-lab' target='_blank'>&nbsp;</a>
+            </li>
 
-    onMouseOver = () => {
-      this.setState({ open: true})
-    }
+            <li className='icon-telegram icon-small'>
+              <a href='https://t.me/plasmachamber' target='_blank'>&nbsp;</a>
+            </li>
 
-    onMouseLeave = () => {
-      this.setState({ open: false})
-    }
-
-    render () {
-      return (
-        <React.Fragment>
-          <div className="copyrights">
-            <h5 className="d-none d-md-block">2019 Cryptoeconomic Labs</h5>
-
-            <ul className="social">
-              <li className="icon-github icon-small"></li>
-              <li className="icon-medium icon-small"></li>
-              <li className="icon-telegram icon-small"></li>
-            </ul>
-
-            <Dropdown nav className="options"
-              onMouseOver={this.onMouseOver}
-              isOpen={this.state.open}
-              toggle={this.toggle}
-            >
-              <DropdownToggle nav className="lang-select">
-                English
-              </DropdownToggle>
-              <DropdownMenu onMouseLeave={this.onMouseLeave}>
-                <DropdownItem>English</DropdownItem>
-                <DropdownItem>Japan</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </div>
-
-          <h5 className="company d-lg-none d-xs-block">2019 Cryptoeconomic Labs</h5>
-        </React.Fragment>
-      )
-    }
+            <li className='icon-twitter icon-small'>
+              <a href='https://t.me/plasmachamber' target='_blank'>&nbsp;</a>
+            </li>
+          </ul>
+        </div>
+        <h5 className='company d-lg-none d-xs-block'>&copy; 2018-2019 Cryptoeconomics Lab, Inc. All rights reserved.</h5>
+      </>
+    )
   }
+}
 
-
-export default Copyrights;
+export default Copyrights

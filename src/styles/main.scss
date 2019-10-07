@@ -2,13 +2,23 @@
 @import './base';
 @import './mixins';
 
+@import './components/connect';
+@import './components/contact';
+@import './components/general';
 @import './components/header';
 @import './components/footer';
 @import './components/button';
 @import './components/icon';
-@import './components/navbar';
+@import './components/team';
+@import './components/usecase';
+@import './components/product';
+@import './components/framework';
+@import './components/service';
+@import './components/video';
+@import './components/donors';
+@import './components/subscribe';
 
-@import './pages/home';
-@import './pages/product';
-@import './pages/contact';
-@import './pages/company';
+@import './components/parallel-section';
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';

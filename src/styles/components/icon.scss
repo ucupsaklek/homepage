@@ -1,18 +1,23 @@
 .icon {
   &-github {
-    background-image: url('../../static/images/desktop/github.png');
+    background-image: url('../../static/images/svg/icon-github.svg');
   }
 
   &-medium {
-    background-image: url('../../static/images/desktop/medium.png');
+    background-image: url('../../static/images/svg/icon-medium.svg');
   }
 
   &-telegram {
-    background-image: url('../../static/images/desktop/telegram.png');
+    background-image: url('../../static/images/svg/icon-telegram.svg');
+  }
+
+  &-twitter {
+    background-image: url('../../static/images/svg/icon-twitter.svg');
   }
 
   &-small {
     width: 24px;
     height: 24px;
+    background-size: 100%;
   }
 }

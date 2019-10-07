@@ -1,4 +1,3 @@
-
 const path = require('path')
 const express = require('express')
 const compression = require('compression')
@@ -6,6 +5,7 @@ const next = require('next')
 const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const routes = require('../routes')
+require('dotenv').config()
 
 const port = parseInt(process.env.PORT, 10) || 3100
 const dev = process.env.NODE_ENV !== 'production'
@@ -33,6 +33,7 @@ app.prepare().then(() => {
   })
 
   server.post('/email/contact', emailHandler.send)
+  server.post('/email/subscribe', emailHandler.subscribe)
 
   startServer()
 

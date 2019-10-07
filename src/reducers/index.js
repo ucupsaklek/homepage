@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import email from './email'
+import contact from './contact'
 
 export default combineReducers({
-  email
+  contact
 })

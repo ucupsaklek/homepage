@@ -1,5 +1,4 @@
-import React from 'react'
-import Link from 'next/link'
+import React, { Component } from 'react'
 import {
   Container,
   Collapse,
@@ -7,111 +6,87 @@ import {
   NavbarBrand,
   NavbarToggler,
   Nav,
-  NavItem,
-  Dropdown,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap'
+  NavItem
+} from 'reactstrap'
+import {
+  animateScroll as scroll,
+  Link
+} from 'react-scroll'
 
-class Header extends React.Component {
+class Header extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
       menuOpen: props.menuOpen,
-      connectOpen: false,
-      optionOpen: false,
+      optionOpen: false
     }
   }
 
   toggleMenu = () => {
-    this.setState({ menuOpen: !this.state.menuOpen})
-  }
-
-  toggleConnect = () => {
-    this.setState({ connectOpen: !this.state.connectOpen})
+    this.setState({ menuOpen: !this.state.menuOpen })
   }
 
   toggleOption= () => {
-    this.setState({ optionOpen: !this.state.optionOpen})
+    this.setState({ optionOpen: !this.state.optionOpen })
+  }
+
+  scrollToTop = () => {
+    scroll.scrollToTop()
   }
 
   render () {
     return (
-      <header className={"header " + (this.props.sticky || this.state.menuOpen ? 'sticky' : '')} style={this.props.style}>
-        <Navbar
-          expand={'lg'}
-          light
-        >
-          <Container>
+      <>
+        <header className={(this.props.sticky || this.state.menuOpen ? 'sticky' : '')} style={this.props.style}>
+          <Navbar
+            expand={'lg'}
+            light
+          >
+            <Container>
               <NavbarBrand href='/'>
-                <div className="logo">
-                  <img src="/static/images/logo@3x.png" alt="cryptoeconomicslab"/>
+                <div className='logo'>
+                  <img src='/static/images/logo.svg' alt='Cryptoeconomics Lab' />
                 </div>
               </NavbarBrand>
-              <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''}/>
+              <NavbarToggler onClick={this.toggleMenu} className={this.state.menuOpen ? 'opened' : ''} />
               <Collapse isOpen={this.state.menuOpen} navbar>
-              <Nav navbar>
-                <NavItem onClick={this.toggleMenu}>
-                  <Link href='/plasma-chamber'>
-                    <a>Plasma Chamber</a>
-                  </Link>
-                </NavItem>
-                <NavItem onClick={this.toggleMenu}>
-                  <Link href='/company'>
-                    <a>Company</a>
-                  </Link>
-                </NavItem>
+                <Nav navbar>
+                  <NavItem>
+                    <Link smooth onClick={this.scrollToTop} to='#'>
+                      Home
+                    </Link>
+                  </NavItem>
 
-                <Dropdown nav inNavbar
-                  isOpen={this.state.connectOpen}
-                  toggle={this.toggleConnect}
-                >
-                  <DropdownToggle nav caret>
-                    Connect
-                  </DropdownToggle>
-                  <DropdownMenu left={0}>
-                    <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='https://t.me/plasmaqanda'>
-                        <a>Telegram</a>
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='https://github.com/cryptoeconomicslab/plasma-chamber'>
-                        <a>Github</a>
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem onClick={this.toggleMenu}>
-                      <Link href='https://medium.com/cryptoeconomics-lab'>
-                        <a>Medium</a>
-                      </Link>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
+                  <NavItem>
+                    <Link smooth offset={-32} to='usecase-wrapper'>
+                      Use Case
+                    </Link>
+                  </NavItem>
 
-                <NavItem>
-                  <Link href='/contact'>
-                    <a>Contact</a>
-                  </Link>
-                </NavItem>
-              </Nav>
-            </Collapse>
-            <Dropdown nav className="options d-sm-none d-none d-lg-block"
-              isOpen={this.state.optionOpen}
-              toggle={this.toggleOption}
-            >
-              <DropdownToggle nav caret className="lang-select">
-                English
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem>English</DropdownItem>
-                <DropdownItem>Japan</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </Container>
-        </Navbar>
-      </header>
+                  <NavItem>
+                    <Link smooth offset={-64} to='product-wrapper'>
+                      Our Service
+                    </Link>
+                  </NavItem>
+
+                  <NavItem>
+                    <Link smooth offset={-32} to='team-wrapper'>
+                      Team
+                    </Link>
+                  </NavItem>
+
+                  <NavItem>
+                    <Link smooth offset={-32} to='contact-wrapper'>
+                      Contact
+                    </Link>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+            </Container>
+          </Navbar>
+        </header>
+      </>
     )
   }
 }
@@ -121,8 +96,7 @@ class Header extends React.Component {
  */
 Header.defaultProps = {
   sticky: false,
-  menuOpen: false,
+  menuOpen: false
 }
-
 
 export default Header

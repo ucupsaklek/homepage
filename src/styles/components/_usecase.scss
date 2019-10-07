@@ -1,0 +1,104 @@
+#usecase-wrapper {
+  background-image: linear-gradient(to bottom, #F0F5FB, #FFF);
+  padding-top: $base-margin * 8;
+
+  @media (max-width: $screen-md) {
+    padding-top: $base-margin * 4;
+  }
+
+  .jumbotron {
+    h2 {
+      margin-top: $base-margin * 3;
+
+      @media (max-width: $screen-md) {
+        margin-top: $base-margin * 1.5;
+      }
+    }
+
+    p {
+      margin-top: $base-margin;
+
+      @media (max-width: $screen-md) {
+        margin-top: $base-margin / 2;
+      }
+    }
+  }
+
+  .slick-slider {
+    margin: $base-margin * 3 auto 0;
+
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin * 1.5;
+    }
+
+    .slick-slide {
+      .description-wrapper {
+        width: 574px;
+        margin: 0 auto;
+        text-align: center;
+
+        @media (max-width: $screen-md) {
+          width: 100%;
+        }
+      }
+
+      img {
+        background-color: #FFF;
+        border-radius: 8px;
+        width: 574px;
+        height: 321px;
+        margin: 0 auto $base-margin;
+        padding: $base-margin $base-margin / 2;
+
+        @media (max-width: $screen-md) {
+          margin-bottom: $base-margin / 2;
+        }
+
+        @media (max-width: $screen-sm) {
+          padding: $base-margin / 2 $base-margin / 4;
+          width: 304px;
+          height: 170px;
+        }
+      }
+
+      .description-title {
+        font-size: $font-size-base + 10;
+        font-weight: bold;
+
+        @media (max-width: $screen-md) {
+          font-size: $font-size-base + 4;
+        }
+      }
+
+      .description-body {
+        font-size: $font-size-base + 2;
+        margin-top: $base-margin;
+
+        @media (max-width: $screen-md) {
+          margin-top: $base-margin / 2;
+          padding: 0 $base-margin;
+          font-size: $font-size-base - 2;
+        }
+      }
+    }
+  }
+
+  .slick-btn-wrapper {
+    text-align: center;
+    margin-top: $base-margin;
+
+    @media (max-width: $screen-md) {
+      margin-top: $base-margin / 2;
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-left: $base-margin + 4;
+      }
+    }
+  }
+}

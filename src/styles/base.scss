@@ -1,4 +1,4 @@
-@import "~normalize-scss/sass/normalize/import-now";
+@import '~normalize-scss/sass/normalize/import-now';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 
-h1 {
+h1, h2 {
   color: $blue-base;
   font-size: $font-size-h1;
 
@@ -59,4 +59,19 @@ h5 {
 .divider {
   height: 13px;
   border-bottom: 1px solid #f5f9fc;
+}
+
+.color-white {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.jumbotron {
+  margin: 0 auto;
+  background: none;
+  padding: 0;
+  text-align: center;
 }

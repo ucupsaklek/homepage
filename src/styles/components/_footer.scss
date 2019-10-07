@@ -1,94 +1,86 @@
 .footer {
-  background: #FFFFFF;
-  height: 208px;
-  max-width: $screen-desktop-max;
-  margin: 0 auto;
-  position: relative;
-
-  @media (max-width: $screen-sm) {
-    height: auto;
-  }
-
-  .lang-select:before {
-    background-image: url(/static/images/desktop/ic-chat.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 4px;
-    left: inherit;
-    right: 56px;
-    height: 14px;
-    width: 14px;
-  }
+  background: #fafcff;
 
   .wrapper {
-    padding-top: 54px;
-    @include x-display-flex
-    @include x-flex-wrap(wrap)
+    padding-top: $base-margin * 3;
+    display: flex;
+    flex-wrap: wrap;
 
-    @media (max-width: $screen-xs) {
-      @include x-justify-content(center);
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    @media (min-width: $screen-xs) and (max-width: $screen-sm) {
-      @include x-justify-content(center);
-      margin: 0 auto;
-      width: 100%;
+    @media (max-width: $screen-md) {
+      padding-top: $base-margin * 1.5;
     }
 
     .item {
-      margin: 0 32px;
+      margin: 0 $base-margin * 2;
       width: 128px;
 
-      @media (max-width: $screen-sm) {
-        margin: 0 16px 24px 0;
+      @media (max-width: $screen-md) {
+        margin: 0 $base-margin $base-margin * 1.5 0;
         width: calc(50% - 8px);
       }
 
       &:first-child {
         margin-left: 0;
-        width: 420px;
+        width: 360px;
 
-        @media (max-width: $screen-sm) {
-          margin: 0 0 32px 0;
+        @media (max-width: $screen-md) {
           width: 100%;
         }
       }
 
-      @media (max-width: $screen-sm) {
-        &:nth-child(2n + 1) {
-          margin: 0 0 24px 0;
+      &:nth-child(2n + 1) {
+        @media (max-width: $screen-md) {
+          margin: 0 0 $base-margin * 1.5 0;
         }
       }
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      .address {
-        margin-top: 8px;
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-bottom: 0;
       }
 
       h5 {
         font-weight: bold;
+        font-size: $font-size-base + 2;
+      }
+
+      .address {
+        margin-top: $base-margin / 2;
+        font-size: $font-size-base - 2;
+
+        @media (max-width: $screen-md) {
+          font-size: $font-size-base - 4;
+        }
       }
 
       ul {
         list-style: none;
         padding: 0;
-        margin-top: 24px;
+        margin-top: $base-margin * 1.5;
+
+        @media (max-width: $screen-md) {
+          margin-top: $base-margin;
+        }
 
         li {
-          padding-bottom: 15px;
+          padding-bottom: $base-margin;
+
+          @media (max-width: $screen-md) {
+            padding-bottom: $base-margin / 2;
+          }
 
           a {
-            height: 20px;
             color: #696C75;
+            font-size: $font-size-base - 2;
+            cursor: pointer;
+
+            @media (max-width: $screen-md) {
+              font-size: $font-size-base - 4;
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -96,85 +88,39 @@
   }
 
   .copyrights {
-    margin: 30px 0;
-    background: #FFFFFF;
-    @include x-display-flex;
-    @include x-flex-direction(row);
+    padding: $base-margin 0 $base-margin * 1.5;
+    background: #fafcff;
+    display: flex;
 
-    @media (max-width: $screen-sm) {
-      @include x-justify-content(center);
-      margin: 0 auto;
-      padding-bottom: 24px;
-      width: 100%;
+    @media (max-width: $screen-md) {
+      padding-bottom: $base-margin;
     }
 
     h5 {
       font-weight: bold;
       flex: 1;
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
     }
 
     .social {
-      align-self: center;
-      @include x-display-flex
+      display: flex;
       justify-content: center;
-      align-items: center;
       list-style: none;
       flex: 1;
 
       li {
-        width: 24px;
-        height: 24px;
-        margin-right: 32px;
+        margin-right: $base-margin * 2;
 
         &:last-child {
           margin-right: 0;
         }
-      }
-    }
-
-    .dropdown {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-
-      &.options {
-        width: 65px;
-        margin-left: 65px;
-
-        .dropdown-menu {
-          z-index: 10001;
-          top: -12px!important;
-          width: 160px;
-          border-radius: 4px;
-          box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.14);
-          border: solid 1px $blue-lighter;
-          background-color: $body-bg;
-          padding: 24px 16px;
-
-          .dropdown-item {
-            height: 24px;
-            margin-bottom: 24px;
-            font-size: $font-size-medium;
-            color: #333;
-
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-        .nav-link {
-          padding: 0;
-        }
 
         a {
-          color: $link-color;
-          font-size: $font-size-medium;
-          font-family: $font-family-base;
-          height: 24px;
+          display: block;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -183,6 +129,7 @@
   .company {
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: $base-margin * 1.5;
+    font-size: $font-size-base - 2;
   }
 }

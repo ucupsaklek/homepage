@@ -1,107 +1,72 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Jumbotron, Button, ButtonGroup, Media } from 'reactstrap'
-import Link from 'next/link'
+
 import Head from 'next/head'
-import RoadmapList from '../src/components/RoadmapList'
-import AccountList from '../src/components/AccountList'
+import Connect from '../src/components/Connect'
+import General from '../src/components/General'
+import Team from '../src/components/Team'
+import Usecase from '../src/components/Usecase'
 import ContactUsForm from '../src/components/ContactUsForm'
+import Product from '../src/components/Product'
+import Framework from '../src/components/Framework'
+import Service from '../src/components/Service'
+import Video from '../src/components/Video'
+import Donors from '../src/components/Donors'
+import Subscribe from '../src/components/Subscribe'
 
-export default (props) => (
-  <React.Fragment>
-    <Head>
-      <title>Plasma Chamber</title>
-      <meta property='og:title' content={'Plasma Chamber'} />
-    </Head>
+class Index extends Component {
+  render () {
+    return (
+      <>
+        <Head>
+          <title>Plasma Chamber | Cryptoeconomics Lab</title>
+        </Head>
 
-    <div className="general">
-      <div className="head-bg"></div>
-      <Container>
-        <Row>
-          <Col xs={12} md={5}>
-            <Jumbotron>
-              <div className="intro">
-                <div className="title">
-                  <span>New</span>
-                </div>
-                <div className="desc">
-                  <span>Introducing <b>Plasma Chamber</b></span>
-                </div>
-              </div>
-
-              <h1>General Purpose Plasma</h1>
-              <p className="lead">Plasma Cash based #plapps framework with many fancy gadgets.</p>
-              <p className="lead">
-               <Button color="primary">Let's Talk With Us</Button>
-              </p>
-            </Jumbotron>
-          </Col>
-          <Col xs={12} md={7}>
-            <div className="banner illus-header">
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-
-    <div className="introduction">
-      <div className="plasma-bg"></div>
-      <Container>
-        <Row>
-          <Col xs={12} md={6}>
-            <div className="banner illus-plasma">
-            </div>
-          </Col>
-          <Col xs={12} md={6}>
-            <Jumbotron>
-              <h1>Introducing Plasma Chamber</h1>
-              <p className="lead">A framework to build usable Dapps on Plasma without sacrificing security .</p>
-              <div className="lead">
-                <ButtonGroup>
-                  <Button color="default">
-                    <Link href="/plasma-chamber">
-                      <a>Learn More</a>
-                    </Link>
-                  </Button>
-                  <Button color="primary">Get Started</Button>
-                </ButtonGroup>
-              </div>
-            </Jumbotron>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-
-    <div className="roadmap" id="#company">
-      <div className="roadmap-bg"></div>
-      <Container>
-        <div className="title">
-          <h1>Roadmap</h1>
-          <p>Implementation to the real world mass adoption of public Blockchain </p>
+        <div id='general-wrapper'>
+          <General />
         </div>
-        <RoadmapList />
-      </Container>
-    </div>
 
-    <div className="connect" id="#connect">
-      <Container>
-        <h1>We’d love hear from you</h1>
-        <AccountList />
-      </Container>
-    </div>
+        <div id='usecase-wrapper'>
+          <Usecase />
+        </div>
 
-    <div className="contact" id="#contact">
-      <div className="message-bg"></div>
-      <Container>
-        <Row>
-          <Col xs={12} md={12} lg={5}>
-            <ContactUsForm />
-          </Col>
-          <Col xs={12} md={12} lg={7}>
-            <div className="banner illus illus-message">
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  </React.Fragment>
-)
+        <div id='product-wrapper'>
+          <Product />
+        </div>
+
+        <div id='framework-wrapper'>
+          <Framework />
+        </div>
+
+        <div id='service-wrapper'>
+          <Service />
+        </div>
+
+        <div id='subscribe-wrapper'>
+          <Subscribe />
+        </div>
+
+        <div id='video-wrapper'>
+          <Video />
+        </div>
+
+        <div id='team-wrapper'>
+          <Team />
+        </div>
+
+        <div id='donors-wrapper'>
+          <Donors />
+        </div>
+
+        <div id='connect-wrapper'>
+          <Connect />
+        </div>
+
+        <div id='contact-wrapper'>
+          <ContactUsForm />
+        </div>
+      </>
+    )
+  }
+}
+
+export default Index
